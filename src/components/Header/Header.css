@@ -1,0 +1,32 @@
+.appbar{
+    background: green;
+    background-color: green;
+}
+
+.toolbar{
+    background-color: white;
+    border: 0.5px solid rgb(153, 150, 150);
+    height: auto;
+}
+
+.toolbar2{
+    background-color: white;
+    border: 0.5px solid rgb(153, 150, 150);
+    height: auto;
+}
+
+.toolbar3{
+    background-color: rgb(35, 36, 35);
+    border: 0.5px solid rgb(153, 150, 150);
+    height: auto;
+}
+
+.temp{
+    width:80%;
+    margin: 0 auto;
+}
+
+.typography{
+    color: black;
+    text-align: center;
+}
