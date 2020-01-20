@@ -3,7 +3,18 @@
     text-align: center;
 }
 
-ul {
+.toolbar{
+    border-top: 0.5px solid #dcdcdc;
+    border-bottom: 0.5px solid #dcdcdc;
+}
+
+.navbar{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+/* ul {
     list-style:none;
     text-align: center;
 }
@@ -15,20 +26,22 @@ ul li {
     margin: 100px;
 }
 
-.temp{
-    float: left;
-    width: 100%;
-}
-
-.contact{
-    float: left;
-    width: 100%;
-    height: auto;
-    display: table;
-}
-
 p {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-}
+} */
+
+/* <div className='toolbar'>
+                    <div className='navbar'>
+                    <Typography style={{color: 'black'}} variant="h3" noWrap>
+                        GUHARI SERVICE
+                    </Typography>
+                    <ul>
+                        <li><a href="http://localhost:3000">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a> <br/> <a>aa</a></li>
+                        <li><a href="localhost:3000">bb</a> <br/> <a>bb</a></li>
+                        <li><a href="localhost:3000">cc</a> <br/> <a>cc</a></li>
+                        <li><a href="localhost:3000">dd</a> <br/> <a>dd</a></li>
+                    </ul>
+                    </div>
+                </div> */
