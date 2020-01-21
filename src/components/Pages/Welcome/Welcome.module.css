@@ -1,0 +1,15 @@
+.content{
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: hidden;
+}
+
+.link {
+    color: gray;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #00F;
+    text-decoration: none;
+}

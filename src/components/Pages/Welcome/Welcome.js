@@ -4,7 +4,11 @@ import Welcome1 from './contents/Welcome1';
 import Welcome2 from './contents/Welcome2';
 import Welcome3 from './contents/Welcome3';
 import Welcome4 from './contents/Welcome4';
-import './Welcome.css';
+import Background from '../../../images/image1.jpg';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import style from './Welcome.module.css';
 
 class Welcome extends Component{
 
@@ -28,12 +32,21 @@ class Welcome extends Component{
         }
 
         return(
-            <div className='content'>
-                <Link to='/welcome/1'>담임목사환영사</Link>
-                <Link to='/welcome/2'>연혁</Link>
-                <Link to='/welcome/3'>섬기는분들</Link>
-                <Link to='/welcome/4'>찾아오시는 길</Link>
-                {page}
+            <div className={style.content}>
+                {/* <div style={{backgroundImage: `url(${Background})`}}>흠</div> */}
+                <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
+                <MenuList style={{width: '20%', float: 'left'}}>
+                <MenuItem>교회소개</MenuItem>
+                <Link to='/welcome/1' className={style.link}><MenuItem>담임목사환영사</MenuItem></Link>
+                <Link to='/welcome/2' className={style.link}><MenuItem>연혁</MenuItem></Link>
+                <Link to='/welcome/3' className={style.link}><MenuItem>섬기는분들</MenuItem></Link>
+                <Link to='/welcome/4' className={style.link}><MenuItem>찾아오시는 길</MenuItem></Link>
+                </MenuList>
+                <div style={{width: '80%', float: 'left'}}>
+                    <div style={{marginTop: '10px', marginLeft: '10px'}}>
+                        {page}
+                    </div>
+                </div>
             </div>
         )
     };
