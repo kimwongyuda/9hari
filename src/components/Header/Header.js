@@ -1,8 +1,7 @@
 import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
 import style from './Header.module.css';
-import Typography from '@material-ui/core/Typography';
+import logo from '../../images/logo.jpg';
 
 class Header extends Component{
 
@@ -46,7 +45,7 @@ class Header extends Component{
 
     getheaders(idx){
         const ret = this.state.headers[idx].map((item,idx2) => {return (
-            <div className={style.element}><Link to={this.state.links[idx][idx2]} className={style.link}>{item}</Link></div>);});
+            <div className={style.element}><Link to={this.state.links[idx][idx2]} className={style.link3}>{item}</Link></div>);});
 
         return ret;
     }
@@ -54,27 +53,29 @@ class Header extends Component{
     render(){
         return(
             <div className= {style.appbar}>
-                <div className={style.toolbar} style={{height: '25px', overflow: 'hidden', backgroundColor: 'rgba(0,0,0,0.1)'}}>
-                    <div className={style.navbar} style={{backgroundColor: '#A52A2A'}}>
+                <div className={style.toolbar} style={{height: '25px', overflow: 'hidden'}}>
+                    <div className={style.navbar} style={{backgroundColor: 'white'}}>
                         <div className={style.element} style={{float: 'left'}}><Link to="/" className={style.link}>처음으로</Link></div>
                         <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link}>회원가입</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link}>아이디/패스워드 찾기</Link></div>
                         <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link}>로그인</Link></div>
                     </div>
                 </div>
                 <div className={style.toolbar} style={{height: '100px', overflow: 'hidden'}}>
                     <div className={style.navbar}>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/welcome/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(0)}>교회소개</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/worship/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(1)}>예배</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/sermon/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(2)}>설교와 말씀</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/group/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(3)}>부서 및 모임</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/event/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(4)}>선교와 행사</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/academy/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>구하리 학원</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/cafe/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(6)}>구하리 카페</Link></div>
-                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/suggest/1" className={style.link} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(7)}>건의사항</Link></div>
+                        <div className={style.element} style={{marginTop: '10px'}}><Link to="/" ><img src={logo}></img></Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/welcome/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(0)}>교회소개</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/worship/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(1)}>예배</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/sermon/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(2)}>설교와 말씀</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/group/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(3)}>부서 및 모임</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/event/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(4)}>선교와 행사</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/academy/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>구하리 학원</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/cafe/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(6)}>구하리 카페</Link></div>
+                        <div className={style.element} style={{marginTop: '38px'}}><Link to="/suggest/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(7)}>건의사항</Link></div>
                     </div>
                 </div>
-                <div className={style.toolbar} style={{height: '25px', overflow: 'hidden', backgroundColor: 'rgba(0,0,0,0.1)'}}>
-                    <div className={style.navbar} style={{backgroundColor: '#A52A2A'}}>
+                <div className={style.toolbar} style={{height: '25px', overflow: 'hidden', backgroundColor: 'rgba(0,0,0,0.25)'}}>
+                    <div className={style.navbar}>
                     {this.state.showResults.map((item,idx) => { return (
                         this.state.showResults[idx] && this.getheaders(idx)
                     );})

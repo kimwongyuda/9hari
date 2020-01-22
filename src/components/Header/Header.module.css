@@ -41,12 +41,14 @@
 }
 
 .toolbar{
+    border-bottom: 0.1px solid #DCDCDC;
 }
 
 .navbar{
     margin-left: 20%;
     margin-right: 20%;
     height: 100%;
+    border-bottom: 0.1px solid #DCDCDC;
 }
 
 .typography{
@@ -68,9 +70,32 @@ button{
 }
 
 .link:hover {
-    color: #00F;
+    color: #0000FF;
     text-decoration: none;
 }
+
+.link2 {
+    color: black;
+    text-decoration: none;
+    font-family:'Nanum Gothic1';
+}
+
+.link2:hover {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.link3 {
+    color: white;
+    text-decoration: none;
+    font-family:'Nanum Gothic1';
+}
+
+.link3:hover {
+    color: #0000FF;
+    text-decoration: none;
+}
+
 
 .element {
     margin-left: 20px;
