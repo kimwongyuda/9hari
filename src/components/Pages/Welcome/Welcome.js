@@ -5,7 +5,6 @@ import Welcome2 from './contents/Welcome2';
 import Welcome3 from './contents/Welcome3';
 import Welcome4 from './contents/Welcome4';
 import Background from '../../../images/image1.jpg';
-import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import style from './Welcome.module.css';

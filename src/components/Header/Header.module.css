@@ -34,39 +34,36 @@
 
 
 .appbar{
-    position: -webkit-sticky;
-    position: sticky;
+    position: -webkit-sticky; 
+    position: sticky; 
     top: 0;
-    background-color: white;
 }
 
 .toolbar{
+    width: 100%;
     border-bottom: 0.1px solid #DCDCDC;
+    float: left;
 }
 
 .navbar{
-    margin-left: 20%;
-    margin-right: 20%;
-    height: 100%;
-    border-bottom: 0.1px solid #DCDCDC;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 1500px;
 }
 
-.typography{
-    color: black;
-    text-align: center;
-}
-
-.smallmenu{
-}
-
-button{
-    font-size: 65px;
+@media only screen and (min-width:1600px)
+{
+    .navbar{
+        margin-left: calc((100vw - 1500px) / 2);
+        margin-right: calc((100vw - 1500px) / 2);       
+    }
 }
 
 .link {
     color: gray;
     text-decoration: none;
     font-family:'Nanum Gothic1';
+    height: 100%;
 }
 
 .link:hover {
@@ -89,6 +86,9 @@ button{
     color: white;
     text-decoration: none;
     font-family:'Nanum Gothic1';
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
 }
 
 .link3:hover {
@@ -96,10 +96,14 @@ button{
     text-decoration: none;
 }
 
-
 .element {
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+.element2 {
+    margin-left: 33px;
+    margin-right: 33px;
     float: left;
 }

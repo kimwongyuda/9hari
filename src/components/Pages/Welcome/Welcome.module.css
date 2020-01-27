@@ -32,8 +32,9 @@
   }
 
 .content{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 18%;
+    width: 64%;
+    float: left;
     overflow: hidden;
 }
 
