@@ -9,13 +9,41 @@ class Suggest1 extends Component{
 
     render(){
         return(
-            <div>
+            <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '70px', float: 'left', overflow:'hidden'}}>
                    <p style={{fontSize: '25px', float: 'left'}}>건의하기</p>
                </div>
                <div style={{width: '50%', height: '70px', float: 'left', overflow:'hidden'}}>
                    <p style={{float: 'right'}}> 메인 > 건의사항 > 건의하기</p>
                </div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
+               <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
                <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
                <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>
                <div style={{width: '100%', float: 'left'}}>aaaaaaaaaaaaaaaaaaaa</div>

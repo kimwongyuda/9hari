@@ -7,8 +7,8 @@ class Bottom extends Component{
     render(){
         return(
             <div className={style.appbar}>
-                <div className={style.toolbar} style={{backgroundColor: 'white', overflow: 'hidden'}}>
-                    <div className={style.navbar} style={{height: '60px'}}>
+                <div className={style.toolbar} style={{backgroundColor: 'white'}}>
+                    <div className={style.navbar} style={{marginTop: '30px', marginBottom: '30px', height: '300px'}}>
                         <p style={{textAlign: 'center'}}>구하리교회</p>
                     </div>
                 </div>

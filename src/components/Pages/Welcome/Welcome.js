@@ -31,19 +31,22 @@ class Welcome extends Component{
         }
 
         return(
-            <div className={style.content}>
-                {/* <div style={{backgroundImage: `url(${Background})`}}>흠</div> */}
-                <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
-                <MenuList style={{width: '20%', float: 'left'}}>
-                <MenuItem><div className={style.link_}>교회소개</div></MenuItem>
-                <Link to='/welcome/1' className={style.link}><MenuItem><div className={style.link_}>담임목사환영사</div></MenuItem></Link>
-                <Link to='/welcome/2' className={style.link}><MenuItem><div className={style.link_}>연혁</div></MenuItem></Link>
-                <Link to='/welcome/3' className={style.link}><MenuItem><div className={style.link_}>섬기는분들</div></MenuItem></Link>
-                <Link to='/welcome/4' className={style.link}><MenuItem><div className={style.link_}>찾아오시는 길</div></MenuItem></Link>
-                </MenuList>
-                <div style={{width: '80%', float: 'left'}}>
-                    <div style={{marginTop: '10px', marginLeft: '10px'}}>
-                        {page}
+            <div>
+                <div className={style.wrapper}>
+                    <div className={style.content}>
+                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
+                        <MenuList style={{width: '20%', float: 'left'}}>
+                        <MenuItem><div className={style.link_}>교회소개</div></MenuItem>
+                        <Link to='/welcome/1' className={style.link}><MenuItem><div className={style.link_}>담임목사환영사</div></MenuItem></Link>
+                        <Link to='/welcome/2' className={style.link}><MenuItem><div className={style.link_}>연혁</div></MenuItem></Link>
+                        <Link to='/welcome/3' className={style.link}><MenuItem><div className={style.link_}>섬기는분들</div></MenuItem></Link>
+                        <Link to='/welcome/4' className={style.link}><MenuItem><div className={style.link_}>찾아오시는 길</div></MenuItem></Link>
+                        </MenuList>
+                        <div style={{width: '80%', float: 'left'}}>
+                            <div style={{marginTop: '10px'}}>
+                                {page}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,16 +54,5 @@ class Welcome extends Component{
     };
 
 }
-
-// const Welcome = ({match}) => {
-
-//     return(
-//         <div>
-//             <Link to='/welcome'>to welcome</Link>
-//                 <Link to='/history'>to history</Link>
-//                 Welcome
-//         </div>
-//     );
-// }; 
 
 export default Welcome;

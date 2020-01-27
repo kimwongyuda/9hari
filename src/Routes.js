@@ -7,7 +7,7 @@ import Suggest from './components/Pages/Suggest/Suggest';
 import Bottom from './components/Bottom/Bottom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-/* 글자 가운데 정렬, 폰트 나중에 하기*/
+/* Home에서만 sticky 적용됨*/
 export default () => (
     <Router>
         <Header/>

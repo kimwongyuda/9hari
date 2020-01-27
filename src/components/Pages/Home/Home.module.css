@@ -37,30 +37,15 @@
 }
 
 .content{
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 1250px;
-    float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 1250px;
 }
+
 @media only screen and (min-width:1350px)
 {
-    .content{
-        margin-left: calc((100vw - 1250px) / 2);
-        margin-right: calc((100vw - 1250px) / 2);       
-    }
-}
-
-
-.link {
-    color: gray;
-    text-decoration: none;
-}
-
-.link:hover {
-    color: #00F;
-    text-decoration: none;
-}
-
-.link_{
-    font-family: 'Nanum Gothic1';
+  .content{
+      margin-left: calc((100vw - 1250px) / 2);
+      margin-right: calc((100vw - 1250px) / 2);       
+  }
 }
