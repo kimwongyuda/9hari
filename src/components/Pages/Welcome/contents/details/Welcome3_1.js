@@ -9,17 +9,17 @@ class Welcome3_1 extends Component{
 
     render(){
 
-        let people;
-        if(this.props.match.params.people == "1"){
-            people = <p>목사</p>;
+        let page;
+        if(this.props.match.params.page == "1"){
+            page = <p>목사</p>;
         }
         else{
-            people = <p>성도</p>;
+            page = <p>성도</p>;
         }
 
         return(
             <div>
-                {people}
+                {page}
             </div>
         )
     };

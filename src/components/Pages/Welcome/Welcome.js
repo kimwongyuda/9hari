@@ -40,7 +40,7 @@ class Welcome extends Component{
                         <Link to='/welcome/1' className={style.link}><MenuItem><div className={style.link_}>담임목사환영사</div></MenuItem></Link>
                         <Link to='/welcome/2' className={style.link}><MenuItem><div className={style.link_}>연혁</div></MenuItem></Link>
                         <Link to='/welcome/3' className={style.link}><MenuItem><div className={style.link_}>섬기는분들</div></MenuItem></Link>
-                        <Link to='/welcome/4' className={style.link}><MenuItem><div className={style.link_}>찾아오시는 길</div></MenuItem></Link>
+                        <Link to='/welcome/4/1' className={style.link}><MenuItem><div className={style.link_}>찾아오시는 길</div></MenuItem></Link>
                         </MenuList>
                         <div style={{width: '80%', float: 'left'}}>
                             <div style={{marginTop: '10px'}}>
