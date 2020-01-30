@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-class Welcome4_1 extends Component{
+class Welcome3_1 extends Component{
 
     constructor(props){
         super(props);
     }
 
     render(){
+
         let page = this.props.props;
         let content;
         if(page == '1'){
@@ -15,6 +16,9 @@ class Welcome4_1 extends Component{
         }
         else if(page == '2'){
             content = <div>b</div>
+        }
+        else if(page == '3'){
+            content = <div>c</div>
         }
 
         return(
@@ -26,4 +30,4 @@ class Welcome4_1 extends Component{
 
 }
 
-export default Welcome4_1;
+export default Welcome3_1;

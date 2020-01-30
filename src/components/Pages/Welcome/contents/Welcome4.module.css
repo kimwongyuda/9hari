@@ -56,3 +56,17 @@
     float: left;
     margin-bottom: 10px;
 }
+
+.smallbox{
+    background-color: #7ca3cf;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 33.3%;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.smallbox:hover{
+    background-color: #005bab;
+}

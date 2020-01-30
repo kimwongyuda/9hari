@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import style from './Home.module.css';
+import './Home.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,7 +16,6 @@ const photos = [
     }
 ]
 
-
 class Home extends Component{
 
     render(){
@@ -24,22 +24,23 @@ class Home extends Component{
             fade: true,
             infinite: true, 
             autoplay: true,
+            arrows: true,
             autoplaySpeed: 3000,
             speed: 500,
-            arrows: false,
             slidesToShow: 1,
             slidesToScroll: 1,
           };
 
         return(
             <div>
-                <div className={style.wrapper} style={{marginTop: '10px', marginBottom: '10px'}}>
-                    <div className={style.content} style={{marginTop: '10px', marginBottom: '10px', height: '350px'}}>
+                <div className={style.wrapper} style={{height: '130px'}}>a</div>
+                <div className={style.wrapper} style={{marginBottom: '10px'}}>
+                    <div style={{width: '100%', height: '800px'}}>
                     <Slider {...settings}>
                         {photos.map((photo)=>{
                             return(
                                 <div>
-                                    <img src={photo.url} style={{width: '100%', height: '300px', objectFit: 'fill'}}></img>
+                                    <img src={photo.url} style={{width: '100%', height: '800px', objectFit: 'fill'}}></img>
                                 </div>
                             )
                         })
@@ -47,69 +48,9 @@ class Home extends Component{
                     </Slider>
                     </div>
                 </div>
-                
+                <div>aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+
                 <br></br>
-                
-                <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
             </div>
         )
     };

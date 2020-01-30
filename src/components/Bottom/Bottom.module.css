@@ -1,3 +1,61 @@
+@font-face {
+    font-family: 'Nanum Barun Gothic1';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../fonts/NanumBarunGothic/NanumBarunGothic.eot');
+    src: url('../../fonts/NanumBarunGothic/NanumBarunGothic.woff') format('woff'),
+         url('../../fonts/NanumBarunGothic/NanumBarunGothic.ttf') format('truetype');
+  }
+
+ @font-face {
+    font-family: 'Nanum Barun Gothic2';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../fonts/NanumBarunGothic/NanumBarunGothicBold.eot');
+    src: url('../../fonts/NanumBarunGothic/NanumBarunGothicBold.woff') format('woff'),
+         url('../../fonts/NanumBarunGothic/NanumBarunGothicBold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Nanum Gothic1';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../fonts/NanumGothic/NanumGothic-Regular.eot');
+    src: url('../../fonts/NanumGothic/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/NanumGothic/NanumGothic-Regular.woff2') format('woff2'),
+         url('../../fonts/NanumGothic/NanumGothic-Regular.woff') format('woff'),
+         url('../../fonts/NanumGothic/NanumGothic-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Nanum Gothic2';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../fonts/NanumGothic/NanumGothic-Bold.eot');
+    src: url('../../fonts/NanumGothic/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/NanumGothic/NanumGothic-Bold.woff2') format('woff2'),
+         url('../../fonts/NanumGothic/NanumGothic-Bold.woff') format('woff'),
+         url('../../fonts/NanumGothic/NanumGothic-Bold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Nanum Gothic3';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../fonts/NanumGothic/NanumGothic-ExtraBold.eot');
+    src: url('../../fonts/NanumGothic/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/NanumGothic/NanumGothic-ExtraBold.woff2') format('woff2'),
+         url('../../fonts/NanumGothic/NanumGothic-ExtraBold.woff') format('woff'),
+         url('../../fonts/NanumGothic/NanumGothic-ExtraBold.ttf') format('truetype');
+  }
+
+.text{
+    font-family: 'Nanum Gothic1';
+}
+.text2{
+    font-family: 'Nanum Gothic2';
+}
+
 .appbar{
     float: left;
 }
@@ -6,6 +64,7 @@
     width: 100%;
     border-top: 0.5px solid #dcdcdc;
     border-bottom: 0.5px solid #dcdcdc;
+    float: left;
 }
 
 .navbar{
@@ -21,35 +80,3 @@
         margin-right: calc((100vw - 1250px) / 2);       
     }
 }
-
-/* ul {
-    list-style:none;
-    text-align: center;
-}
-
-ul li {
-    list-style-type: none;
-    outline: 1px dotted red;
-    display: inline-block;
-    margin: 100px;
-}
-
-p {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-} */
-
-/* <div className='toolbar'>
-                    <div className='navbar'>
-                    <Typography style={{color: 'black'}} variant="h3" noWrap>
-                        GUHARI SERVICE
-                    </Typography>
-                    <ul>
-                        <li><a href="http://localhost:3000">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a> <br/> <a>aa</a></li>
-                        <li><a href="localhost:3000">bb</a> <br/> <a>bb</a></li>
-                        <li><a href="localhost:3000">cc</a> <br/> <a>cc</a></li>
-                        <li><a href="localhost:3000">dd</a> <br/> <a>dd</a></li>
-                    </ul>
-                    </div>
-                </div> */
