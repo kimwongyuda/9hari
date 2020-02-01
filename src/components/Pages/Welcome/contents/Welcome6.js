@@ -28,11 +28,11 @@ class Welcome6 extends Component{
                    <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>찾아오시는 길</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: 'blue'}}> 찾아오시는 길</p>
+                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 찾아오시는 길</p>
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
-                <div style={{width: "100%", float:'left'}}>
+                <div style={{width: "100%", float:'left', marginBottom: '50px'}}>
                     {elements.map((value, index) => {
                         return (
                             <div>
@@ -48,21 +48,6 @@ class Welcome6 extends Component{
 
                 {content}
 
-                <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '30px', color: '#6495ED'}}>자가차량 이용 시</span>
-                </div>
-
-                <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '30px', color: '#6495ED'}}>지하철 이용 시</span>
-                </div>
-
-                <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '30px', color: '#6495ED'}}>버스 이용 시</span>
-                </div>
-
-                <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '30px', color: '#6495ED'}}>주차 및 주차 장소 안내</span>
-                </div>
 
             </div>
         )

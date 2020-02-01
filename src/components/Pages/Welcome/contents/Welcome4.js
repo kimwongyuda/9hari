@@ -32,11 +32,11 @@ class Welcome4 extends Component{
                    <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>섬기는분들</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: 'blue'}}> 섬기는분들</p>
+                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 섬기는분들</p>
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
-               <div style={{width: "100%", float:'left'}}>
+               <div style={{width: "100%", float:'left', marginBottom: '50px'}}>
                     {elements.map((value, index) => {
                         return (
                             <div>
