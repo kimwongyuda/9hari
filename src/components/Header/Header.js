@@ -48,15 +48,19 @@ class Header extends Component{
         return ret;
     }
 
+    message(){
+        alert("준비중입니다!")
+    }
+
     render(){
         return(
             <div className= {style.appbar}>
                 <div className={style.toolbar} style={{height: '30px'}}>
                     <div className={style.navbar}>
-                        <div className={style.element} style={{float: 'left'}}><Link to="/" className={style.link} style={{fontSize: '15px'}}>처음으로</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link} style={{fontSize: '15px'}}>회원가입</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link} style={{fontSize: '15px'}}>아이디/패스워드 찾기</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link} style={{fontSize: '15px'}}>로그인</Link></div>
+                        <div className={style.element} style={{float: 'left'}}><Link to="/" className={style.link+' '+style.text2} style={{fontSize: '15px'}}>처음으로</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link+' '+style.text2} style={{fontSize: '15px'}} onClick={this.message}>회원가입</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link+' '+style.text2} style={{fontSize: '15px'}} onClick={this.message}>아이디/패스워드 찾기</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/" className={style.link+' '+style.text2} style={{fontSize: '15px'}} onClick={this.message}>로그인</Link></div>
                     </div>
                 </div>
                 <div className={style.toolbar} style={{height: '100px'}}>

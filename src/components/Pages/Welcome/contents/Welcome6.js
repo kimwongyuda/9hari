@@ -48,7 +48,6 @@ class Welcome6 extends Component{
 
                 {content}
 
-
             </div>
         )
     };
