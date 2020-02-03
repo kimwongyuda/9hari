@@ -14,7 +14,7 @@ class Welcome6_1 extends Component{
     componentDidMount() {                                                    
         const script = document.createElement('script');
         script.async = true;
-        script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=b0722544aafa50045789fde098de4ee1&autoload=false";
+        script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAO_API_KEY}&autoload=false`;
         document.head.appendChild(script);
 
         script.onload = () => {

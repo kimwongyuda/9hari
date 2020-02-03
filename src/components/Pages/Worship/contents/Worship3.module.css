@@ -51,7 +51,7 @@
 }
 
 .box{
-  border-bottom: 0.1px solid #DCDCDC;
+  border-bottom: 0.1px solid #005bab;
   width: 100%;
   float: left;
   margin-bottom: 10px;
@@ -69,4 +69,20 @@
 }
 .smallbox:hover{
   background-color: #005bab;
+}
+
+.table{
+  width: 100%;
+  float: left;
+  border-top: 0.1px solid #DCDCDC;
+  border-left: 0.1px solid #DCDCDC;
+  margin-bottom: 50px;
+}
+
+.td{
+  font-size: 18px;
+  width: 25%;
+  text-align: center;
+  border-bottom: 0.1px solid #DCDCDC;
+  border-right: 0.1px solid #DCDCDC;
 }
