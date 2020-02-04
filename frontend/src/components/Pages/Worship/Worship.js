@@ -54,7 +54,7 @@ class Worship extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/worship/${index+1}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/worship/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -67,7 +67,7 @@ class Worship extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/worship/${index+1}`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/worship/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }
