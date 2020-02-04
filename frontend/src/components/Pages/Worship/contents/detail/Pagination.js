@@ -6,12 +6,29 @@ class Pagination extends Component{
 
     constructor(props){
         super(props);
-        this.state={isshow: false};
-        this.change = this.change.bind(this);
+        this.state={isshow: false, posts: ''};
+        this.change_false = this.change_false.bind(this);
+        this.change_true = this.change_true.bind(this);
     }
 
-    change(){
-        this.setState({isshow: !this.state.isshow});
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({posts: res}))
+        .catch(err => console.log(err));
+    }
+
+    callApi = async () => {
+        const response = await fetch('/api/posts');
+        const body = await response.json();
+        return body;
+    }
+
+    change_false(){
+        this.setState({isshow: false});
+    }
+
+    change_true(){
+        this.setState({isshow: true});
     }
 
     render(){
@@ -20,6 +37,7 @@ class Pagination extends Component{
         console.log(page);
 
         var flag = this.state.isshow;
+        console.log(this.state);
 
         return(
             <div style={{width: '100%', float: 'left'}}>
@@ -30,13 +48,13 @@ class Pagination extends Component{
                     {
                     return <div>
                         <Sermon></Sermon>
-                        <Link to="/worship/4/1" onClick={this.change}>목록으로</Link>
+                        <Link to="/worship/4/1" onClick={this.change_false}>목록으로</Link>
                         </div>
                     } 
                 })()}
 
                 <div>
-                    <Link to="/worship/4/1/1" onClick={this.change}>1번글</Link>
+                    <Link to="/worship/4/1/1" onClick={this.change_true}>1번글</Link>
                     <br></br>
                     <Link to="/worship/4/1">1</Link>
                     <Link to="/worship/4/2">2</Link>
