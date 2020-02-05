@@ -8,10 +8,13 @@ class Sermon extends Component{
     }
 
     render(){
+        
+        const videoSrc = 'https://www.youtube.com/embed/E4kCnWVJagQ';
 
         return(
             <div style={{width: '100%', float: 'left'}}>
-                Sermon
+                Sermon<br></br>
+                <iframe frameBorder="0" width="100%" height="500px" src={videoSrc} allowfullscreen="allowfullscreen"></iframe>
             </div>
         )
     };
