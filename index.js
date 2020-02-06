@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.get('/api/posts', (req,res)=>{
     var temp = 'select * from posts';
     var ret;
+    console.log(connection);
     connection.query(temp, function(err, rows){
         if(err)
         {
