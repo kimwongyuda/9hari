@@ -14,7 +14,7 @@ class Sermon extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                 Sermon<br></br>
-                <iframe frameBorder="0" width="100%" height="500px" src={videoSrc} allowfullscreen="allowfullscreen"></iframe>
+                <iframe frameBorder="0" width="100%" height="500px" src={videoSrc} allowFullScreen="allowfullscreen"></iframe>
             </div>
         )
     };
