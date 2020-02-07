@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import style from './Welcome4_1.module.css';
 import temp from '../../../../../images/temp.jpg'
 
-class Welcome3_1 extends Component{
+class Welcome4_1 extends Component{
 
     constructor(props){
         super(props);
@@ -66,4 +66,4 @@ class Welcome3_1 extends Component{
 
 }
 
-export default Welcome3_1;
+export default Welcome4_1;

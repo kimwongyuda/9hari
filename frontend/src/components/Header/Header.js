@@ -18,7 +18,7 @@ class Header extends Component{
                     ['자유 게시판']],
             links: [['/welcome/1','/welcome/2','/welcome/3','/welcome/4/1','/welcome/5','/welcome/6/1'],
                     ['/worship/1/1','/worship/2/1','/worship/3/1','/worship/4/1'],
-                    ['/ng/1', '/ng/2', '/ng/3', '/ng/4'],
+                    ['/ng/1/1', '/ng/2/1', '/ng/3/1', '/ng/4/1'],
                     ['/group/1', '/group/2', '/group/3', '/group/4', '/group/5'],
                     ['/event/1', '/event/2', '/event/3'],
                     ['/organ/1', '/organ/2'],
@@ -68,7 +68,7 @@ class Header extends Component{
                         <div className={style.element2} style={{marginTop: '10px'}}><Link to="/" ><img src={logo}></img></Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/welcome/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(0)}>교회 소개</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/worship/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(1)}>예배와 말씀</Link></div>
-                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/ng/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(2)}>다음 세대</Link></div>
+                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/ng/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(2)}>다음 세대</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/group/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(3)}>부서 및 모임</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/event/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(4)}>교회 행사</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/organ/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>부속 기관</Link></div>

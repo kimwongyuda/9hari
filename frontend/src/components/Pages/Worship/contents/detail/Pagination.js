@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Sermon from './Sermon.js';
-import style from './Sermon.module.css';
+import style from './Pagination.module.css';
 
-//영상 그대로 및 페이지 2에서는?
 class Pagination extends Component{
 
     constructor(props){
@@ -14,6 +13,8 @@ class Pagination extends Component{
         {this.state={isshow: false, posts: [], type: this.props.props.type};}
         this.change_false = this.change_false.bind(this);
         this.change_true = this.change_true.bind(this);
+        this.views_up = this.views_up.bind(this);
+        this.warpfunc = this.warpfunc.bind(this);
     }
 
     componentDidMount(){
@@ -36,19 +37,34 @@ class Pagination extends Component{
         this.setState({isshow: true});
     }
 
+    views_up(sermon_index){
+        var index = this.state.posts.length - sermon_index;
+        var post_num = this.state.posts[index].pid;
+        const response = fetch(`/api/posts_up/${post_num}`);
+    }
+
+    warpfunc(param){
+        console.log(param);
+        this.change_true();
+        this.views_up(param);
+    }
+
     render(){
-        console.log(this.state);
 
         var posts = this.state.posts;
 
-        //현재 글 개수 9개씩 짜름.
+
+        //현재 글 개수 inputcount개씩 짜름.
         var posts_size = posts.length;
-        var posts_mod = posts_size % 9;
+        var inputcount = 20;
+        var halfcount = parseInt(inputcount/2) + 1;
+        var posts_mod = posts_size % inputcount;
         var posts_list = [];
 
         var page = window.location.pathname.split('/')[3];
         var pageint = parseInt(page);
-
+        if(posts.length!=0)
+        {
         //현재 보여줄 글들
         if(pageint ==1)
         {
@@ -58,15 +74,16 @@ class Pagination extends Component{
             }
         }
         else{
-            for(var i = (pageint-1)*9-(9-posts_mod); i< (pageint-1)*9-(9-posts_mod) + 9; i++)
+            for(var i = (pageint-1)*inputcount-(inputcount-posts_mod); i< (pageint-1)*inputcount-(inputcount-posts_mod) + inputcount; i++)
             {
                 posts_list.push(posts[i]);
             }
         }
+        }
         //
-        var maxpage = parseInt(posts_size/10) + 1;
+        var maxpage = parseInt(posts_size/(inputcount+1)) + 1;
         var pagination = [];
-        if(maxpage <10)
+        if(maxpage <inputcount+1)
         {
             for(var i=0; i<maxpage;i++)
             {
@@ -74,26 +91,35 @@ class Pagination extends Component{
             }
         }
         else{
-            if(pageint < 5)
+            if(pageint < halfcount)
             {
-                pagination= [1,2,3,4,5,6,7,8,9];
+                for(var i=0; i<inputcount;i++)
+                {
+                    pagination.push(i+1);
+                }
             }
-            else if(pageint > maxpage -5)
+            else if(pageint > maxpage - halfcount)
             {
-                pagination= [maxpage-8,maxpage-7,maxpage-6,maxpage-5,maxpage-4,maxpage-3,maxpage-2,maxpage-1,maxpage];
+                for(var i=inputcount-1; i>=0; i--)
+                {
+                    pagination.push(maxpage-i);
+                }
             }
             else
             {
-                pagination= [pageint-4,pageint-3,pageint-2,pageint-1,pageint ,pageint+1,pageint+2,pageint+3,pageint+4];
+                for(var i=-(halfcount-1); i<halfcount;i++ )
+                {
+                    pagination.push(pageint+i);
+                }
             }
         }
         const pagef1 = (<div>
-            { pageint < 10 ? <Link to ={`/worship/4/1`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>
-            : <Link to ={`/worship/4/${pageint-9}`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>}</div>)
+            { pageint < inputcount+1 ? <Link to ={`/worship/4/1`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>
+            : <Link to ={`/worship/4/${pageint-inputcount}`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>}</div>)
 
         const pagef2 = (<div>
-            { pageint > maxpage-10 ? <Link to ={`/worship/4/${maxpage}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>
-            : <Link to ={`/worship/4/${pageint+9}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>}</div>)
+            { pageint > maxpage-(inputcount+1) ? <Link to ={`/worship/4/${maxpage}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>
+            : <Link to ={`/worship/4/${pageint+inputcount}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>}</div>)
 
         const pagilist = pagination.map((value, index) => (
             <div>
@@ -109,19 +135,19 @@ class Pagination extends Component{
             <div style={{width: '100%', float: 'left'}}>
             {index+1!=posts_list.length ?
             <div>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{9*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%'}}>{item.title}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.views}</span></Link>
             </div>
             :
             <div>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{9*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={this.change_true} to ={`/worship/4/${pageint}/${9*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/4/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.views}</span></Link>
             </div>
             }
             </div>
@@ -160,11 +186,11 @@ class Pagination extends Component{
                     <table className={style.table}>
                             <tbody>
                                     <tr> 
-                                        <td className={style.td+' '+style.text2} style={{width: '15%'}}>번호</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '40%'}}>제목</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%'}}>작성자</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%'}}>등록일</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%'}}>조회수</td>
+                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>번호</td>
+                                        <td className={style.td+' '+style.text2} style={{width: '40%', backgroundColor: '#DCDCDC'}}>제목</td>
+                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>작성자</td>
+                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>등록일</td>
+                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>조회수</td>
                                     </tr>   
                                                       
                             </tbody>

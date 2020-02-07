@@ -1,45 +1,30 @@
 import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import style from './Bottom.module.css'
-import logo from '../../images/logo.jpg';
+import home from '../../images/home2_ps.jpg';
 
+// ⓒ 2020 구하리교회. All Rights Reserved. Designed by 김원규
 class Bottom extends Component{
 
     render(){
         return(
             <div className={style.appbar}>
-                <div className={style.toolbar} style={{backgroundColor: 'black'}}>
-                    <div className={style.navbar} style={{marginTop: '30px', marginBottom: '30px', height: '200px'}}>
-
-                        <div style={{width: '50%', color: 'white', float: 'left', height: '100%'}}>
-                            <div style={{width: '50%', float:'left', height: '100%'}}><Link to="/" ><img src={logo}></img></Link></div>
-                            <div style={{width: '50%', color: 'white', float:'left', height: '100%'}}>
-                                <h6 className={style.text} style={{width: '100%', float:'left'}}> ⓒ 2020 구하리교회. 
-                                <br></br>All Rights Reserved.
-                                <br></br> Designed by 김원규</h6>
-                            </div>
+                <div className={style.toolbar} style={{backgroundColor: 'rgb(80, 80, 80)'}}>
+                    <div className={style.navbar} style={{marginTop: '30px', marginBottom: '30px', height: '150px'}}>
+                        <div style={{width: '100%', float: 'left', marginTop: '30px'}}>
+                            <Link to="/"><img style={{width: '40px', objectFit: 'fill', marginBottom: '9px', marginRight: '5px'}}src={home}></img></Link>
+                            <span className={style.text} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>구하리교회</span>
+                            <span className={style.text2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>주소</span>
+                            <span className={style.text} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>경기 용인시 기흥구 마북동 109</span>
+                            <span className={style.text2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>번호</span>
+                            <span className={style.text} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>070-4238-0191</span>
+                            <span className={style.text2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>FAX</span>
+                            <span className={style.text} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>070-4238-0191</span>
+                            <span className={style.text2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>EMAIL</span>
+                            <span className={style.text} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>rladnjsrb9999@khu.ac.kr</span>
                         </div>
-
-                        <div style={{width: '50%', color: 'white', float: 'left'}}>
-                            <h6 className={style.text2}>Contact us</h6>
-                            <ul style={{listStyle: 'none', padding: '0'}}>
-                                <li style={{width: '100%', float: 'left'}}>
-                                    <h6 className={style.text2} style={{width: '60px', float: 'left'}}>주소&nbsp;</h6>
-                                    <h6 className={style.text} style={{width: '400px', float:'left'}}>경기 용인시 기흥구 마북동 109</h6>
-                                </li>
-                                <li style={{width: '100%', float: 'left'}}>
-                                    <h6 className={style.text2} style={{width: '60px', float: 'left'}}>번호&nbsp;</h6>
-                                    <h6 className={style.text} style={{width: '400px', float:'left'}}>070-4238-0191</h6>
-                                </li>
-                                <li style={{width: '100%', float: 'left'}}>
-                                    <h6 className={style.text2} style={{width: '60px', float: 'left'}}>FAX&nbsp;</h6>
-                                    <h6 className={style.text} style={{width: '400px', float:'left'}}>070-4238-0191</h6>
-                                </li>
-                                <li style={{width: '100%', float: 'left'}}>
-                                    <h6 className={style.text2} style={{width: '80px', float: 'left'}}>EMAIL&nbsp;</h6>
-                                    <h6 className={style.text} style={{width: '400px', float:'left'}}>rladnjsrb9999@khu.ac.kr</h6>
-                                </li>
-                            </ul>
+                        <div style={{width: '100%', float: 'left', marginBottom: '30px', marginTop: '10px'}}>
+                            <span className={style.text} style={{width: '100%', textAlign: 'center', display: 'inline-block', color: 'white', fontSize: '20px', marginRight: '20px'}}>ⓒ 2020 구하리교회. All Rights Reserved. Designed by 김원규</span>   
                         </div>
                     </div>
                 </div>

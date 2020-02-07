@@ -54,7 +54,7 @@ class NG extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/ng/${index+1}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/ng/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -67,7 +67,7 @@ class NG extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/ng/${index+1}`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/ng/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }

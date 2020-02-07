@@ -4,7 +4,7 @@ import Worship1 from './contents/Worship1';
 import Worship2 from './contents/Worship2';
 import Worship3 from './contents/Worship3';
 import Worship4 from './contents/Worship4';
-import Background from '../../../images/image1.jpg';
+import background1 from '../../../images/background1.jpg';
 import style from './Worship.module.css';
 
 class Worship extends Component{
@@ -35,9 +35,10 @@ class Worship extends Component{
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper}>
+                    <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
+                    
                     <div className={style.content}>
-                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
-
+                        
                         <div style={{width: '20%', float: 'left', paddingRight: '5px'}}>
                             <span className={style.smallbox0}>예배와 말씀</span>
                             {elements.map((value, index) => {

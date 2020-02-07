@@ -18,7 +18,7 @@ class Worship4 extends Component{
                    <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>특별 예배</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: 'blue'}}> 특별 예배</p>
+                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 특별 예배</p>
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 예배와 말씀 >&nbsp;</p>
                </div>
 

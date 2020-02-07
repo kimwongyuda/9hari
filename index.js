@@ -26,7 +26,7 @@ app.get('/api/posts/:type', (req,res)=>{
     on pid = ps.posts_id) as pus inner join sermons as s
     on pus.sermons_id = s.id;`;
 
-    console.log(temp);
+    
     var ret;
     connection.query(temp, function(err, rows){
         if(err)
@@ -38,11 +38,26 @@ app.get('/api/posts/:type', (req,res)=>{
             var string = JSON.stringify(rows);
             var json = JSON.parse(string);
             json = json.reverse();
-            console.log(json);
+            console.log('request!!')
             ret=json;
             res.send(ret);
         }
     });
+})
+
+app.get('/api/posts_up/:post_num', (req,res)=>{
+    var post_num = req.params.post_num;
+    var temp = `update posts set views = views + 1 where id = ${post_num}`;
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            res.send('success');
+        }
+    })
 })
 
 app.listen(port, ()=>{
