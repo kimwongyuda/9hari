@@ -20,7 +20,7 @@ class NG1 extends Component{
             content = <NG1_1 props='2'></NG1_1>
         }
 
-        const elements = ['유치유년부 소개', '유치유년부 갤러리'];
+        const elements = ['유치유년부 소개', '유치유년부 게시판'];
 
         return(
             <div style={{width: '100%', float: 'left'}}>

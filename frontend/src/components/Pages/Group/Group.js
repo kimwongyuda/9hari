@@ -32,7 +32,7 @@ class Group extends Component{
             page = <Group5></Group5>;
         }
         
-        const elements = ['남전도회', '여전도회', '3040모임', '새가족공부', '제자훈련'];
+        const elements = ['남선교회', '여전도회', '3040모임', '새가족공부', '제자훈련'];
 
 
         return(
@@ -58,7 +58,7 @@ class Group extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/group/${index+1}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/group/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -71,7 +71,7 @@ class Group extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/group/${index+1}`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/group/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }
