@@ -2,19 +2,23 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Sermon from './Sermon.js';
 import style from './Pagination.module.css';
+import dodbogi from '../../../../../images/dodbogi.jpg';
 
 class Pagination extends Component{
 
     constructor(props){
         super(props);
         if(window.location.pathname.split('/').length == 5)
-        {this.state={isshow: true, posts: [], type: this.props.props.type};}
+        {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: ''};}
         else
-        {this.state={isshow: false, posts: [], type: this.props.props.type};}
+        {this.state={isshow: false, posts: [], type: this.props.props.type, option_input: 'title',search_input: ''};}
         this.change_false = this.change_false.bind(this);
         this.change_true = this.change_true.bind(this);
         this.views_up = this.views_up.bind(this);
         this.warpfunc = this.warpfunc.bind(this);
+        this.search = this.search.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeS = this.handleChangeS.bind(this);
     }
 
     componentDidMount(){
@@ -44,9 +48,23 @@ class Pagination extends Component{
     }
 
     warpfunc(param){
-        console.log(param);
         this.change_true();
         this.views_up(param);
+    }
+
+    search(){
+        const response = 
+        fetch(`/api/posts_search/${this.state.option_input}/${this.state.search_input}/${this.state.type}`)
+        .then(res => res.json())
+        .then((res) => {this.setState({posts: res})});
+    }
+
+    handleChange = (e) => {
+        this.setState({search_input: e.target.value});
+    }
+
+    handleChangeS = (e) => {
+        this.setState({option_input: e.target.value});
     }
 
     render(){
@@ -63,6 +81,8 @@ class Pagination extends Component{
 
         var page = window.location.pathname.split('/')[3];
         var pageint = parseInt(page);
+        console.log(posts);
+        console.log(posts_mod);
         if(posts.length!=0)
         {
         //현재 보여줄 글들
@@ -80,6 +100,8 @@ class Pagination extends Component{
             }
         }
         }
+        console.log(posts_list)
+
         //
         var maxpage = parseInt(posts_size/(inputcount+1)) + 1;
         var pagination = [];
@@ -210,6 +232,19 @@ class Pagination extends Component{
                     {pagef2}
                     </div>
 
+                    {/* 검색 기능 */}
+                    <div style={{width: '100%', float: 'left'}}>
+                        <div style={{width: '50%', float: 'left', marginLeft: '25%', marginTop: '20px'}}>
+                            <select onChange={this.handleChangeS} style={{width: '25%', float: 'left',fontSize: '20px', marginRight: '5px', height: '40px'}}>
+                                <option value='title' className={style.text} style={{fontSize: '20px'}}>제목</option>
+                                <option value='words' className={style.text} style={{fontSize: '20px'}}>말씀</option>
+                                <option value='person' className={style.text} style={{fontSize: '20px'}}>설교자</option>
+                                <option value='writer' className={style.text} style={{fontSize: '20px'}}>작성자</option>
+                            </select>
+                            <input type="text" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
+                            <Link to="/worship/4/1"><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
