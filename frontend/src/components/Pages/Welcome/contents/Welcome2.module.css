@@ -70,3 +70,21 @@
 .smallbox:hover{
   background-color: #005bab;
 }
+
+.li:before{
+  content: ' ';
+  background: white;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #005bab;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+  margin-top: 30px;
+}
+
+.li{
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 20px;
+}

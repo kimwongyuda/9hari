@@ -15,7 +15,7 @@ class Welcome1 extends Component{
                    <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>담임목사환영사</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: 'blue'}}> 담임목사환영사</p>
+                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 담임목사환영사</p>
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
