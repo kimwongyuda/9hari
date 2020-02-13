@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Organ1 from './contents/Organ1';
 import Organ2 from './contents/Organ2';
-import Background from '../../../images/image1.jpg';
+import background1 from '../../../images/background1.jpg';
 import style from './Organ.module.css';
 
 class Organ extends Component{
@@ -27,9 +27,10 @@ class Organ extends Component{
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper}>
-                    <div className={style.content}>
-                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
+                    <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
 
+                    <div className={style.content}>
+                        
                         <div style={{width: '20%', float: 'left', paddingRight: '5px'}}>
                             <span className={style.smallbox0}>부속 기관</span>
                             {elements.map((value, index) => {
@@ -46,7 +47,7 @@ class Organ extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/organ/${index+1}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/organ/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -59,7 +60,7 @@ class Organ extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/organ/${index+1}`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/organ/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }

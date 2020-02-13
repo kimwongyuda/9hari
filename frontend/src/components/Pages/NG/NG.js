@@ -4,7 +4,7 @@ import NG1 from './contents/NG1';
 import NG2 from './contents/NG2';
 import NG3 from './contents/NG3';
 import NG4 from './contents/NG4';
-import Background from '../../../images/image1.jpg';
+import background1 from '../../../images/background1.jpg';
 import style from './NG.module.css';
 
 class NG extends Component{
@@ -35,9 +35,10 @@ class NG extends Component{
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper}>
-                    <div className={style.content}>
-                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
+                    <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
 
+                    <div className={style.content}>
+                        
                         <div style={{width: '20%', float: 'left', paddingRight: '5px'}}>
                             <span className={style.smallbox0}>다음 세대</span>
                             {elements.map((value, index) => {

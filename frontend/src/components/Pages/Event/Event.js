@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Event1 from './contents/Event1';
 import Event2 from './contents/Event2';
 import Event3 from './contents/Event3';
-import Background from '../../../images/image1.jpg';
+import background1 from '../../../images/background1.jpg';
 import style from './Event.module.css';
 
 class Event extends Component{
@@ -31,9 +31,11 @@ class Event extends Component{
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper}>
-                    <div className={style.content}>
-                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
+                    <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
+                    
 
+                    <div className={style.content}>
+                        
                         <div style={{width: '20%', float: 'left', paddingRight: '5px'}}>
                             <span className={style.smallbox0}>교회 행사</span>
                             {elements.map((value, index) => {

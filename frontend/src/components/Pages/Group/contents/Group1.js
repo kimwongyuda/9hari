@@ -32,7 +32,7 @@ class Group1 extends Component{
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 부서 및 모임 >&nbsp;</p>
                </div>
 
-                <div style={{width: "100%", float:'left', marginBottom: '50px'}}>
+                <div style={{width: "100%", float:'left', marginBottom: '30px'}}>
                     {elements.map((value, index) => {
                         return (
                             <div>

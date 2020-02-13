@@ -8,8 +8,6 @@ import Event from './components/Pages/Event/Event';
 import Organ from './components/Pages/Organ/Organ';
 import Suggest from './components/Pages/Suggest/Suggest';
 import Worship from './components/Pages/Worship/Worship';
-import Pagination from './components/Pages/Worship/contents/detail/Pagination';
-import Sermon from './components/Pages/Worship/contents/detail/Sermon';
 import Bottom from './components/Bottom/Bottom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 

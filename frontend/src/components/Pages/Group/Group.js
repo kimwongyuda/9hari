@@ -5,7 +5,7 @@ import Group2 from './contents/Group2';
 import Group3 from './contents/Group3';
 import Group4 from './contents/Group4';
 import Group5 from './contents/Group5';
-import Background from '../../../images/image1.jpg';
+import background1 from '../../../images/background1.jpg';
 import style from './Group.module.css';
 
 class Group extends Component{
@@ -32,16 +32,17 @@ class Group extends Component{
             page = <Group5></Group5>;
         }
         
-        const elements = ['남선교회', '여전도회', '3040모임', '새가족공부', '제자훈련'];
+        const elements = ['남선교회', '여전도회', '3040 선교회', '새가족 공부', '찬양대'];
 
 
         return(
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper}>
+                    <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
+                    
                     <div className={style.content}>
-                        <img src={Background} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'full'}}></img>
-
+                        
                         <div style={{width: '20%', float: 'left', paddingRight: '5px'}}>
                             <span className={style.smallbox0}>부서 및 모임</span>
                             {elements.map((value, index) => {

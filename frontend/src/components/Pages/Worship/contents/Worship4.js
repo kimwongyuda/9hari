@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import style from './Worship4.module.css';
 import Pagination from './detail/Pagination';
-import {Link} from 'react-router-dom';
 
 class Worship4 extends Component{
 
@@ -48,7 +47,6 @@ class Worship4 extends Component{
                    <br></br>
                    <br></br>
                    <br></br>
-                   aa
                </div>
             </div>
         )

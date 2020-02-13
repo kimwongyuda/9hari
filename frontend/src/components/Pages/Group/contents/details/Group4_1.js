@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import style from './Group1_1.module.css';
+import style from './Group4_1.module.css';
 import image1 from '../../../../../images/3040_1.jpeg';
 
-class Group1_1 extends Component{
+class Group4_1 extends Component{
 
     constructor(props){
         super(props);
@@ -17,27 +17,20 @@ class Group1_1 extends Component{
             <div>
                 
                 <div style={{width:'100%', float: 'left'}}>
-                    <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>남선교회 소개</span>
-
+                    <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>새가족 공부 소개</span>
                     <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '10px', float:'left'}}>
                             <tbody>
                                     <tr> 
-                                        <td className={style.td+' '+style.text2} rowSpan='1'>항존직 공부 지도</td>
-                                        <td className={style.td+' '+style.text} style={{width: '75%'}}>김인아 목사</td>
-                                    </tr>
-                                    <tr> 
-                                        <td className={style.td+' '+style.text2} rowSpan='1'>제직 훈련 지도</td>
+                                        <td className={style.td+' '+style.text2} rowSpan='1'>새가족 성경 공부 지도</td>
                                         <td className={style.td+' '+style.text} style={{width: '75%'}}>김인아 목사</td>
                                     </tr>
                             </tbody>
                     </table>
-
                 </div>
 
-                {/* 제 1남선교회 */}
                 <div style={{width: '100%', float: 'left', marginBottom: '30px'}}>
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
-                    <span className={style.text2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>제 1남선교회</span>
+                    <span className={style.text2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>새가족부</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
                     <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
@@ -47,34 +40,30 @@ class Group1_1 extends Component{
                     <table className={style.table} style={{width: '90%', marginLeft: '5%', marginTop: '10px'}}>
                         <tbody>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>회장</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>김무령 장로</td>
+                                    <td className={style.td+' '+style.text2} rowSpan='1'>부장</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>이미라</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>부회장</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>전병철 장로</td>
+                                    <td className={style.td+' '+style.text2} rowSpan='4'>부원</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>양행덕</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>총무</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>김진환 집사</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>박혜경</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>서기</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>김종택 집사</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>변갑순</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>회계</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>김진환 집사</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>송윤자</td>
                                 </tr>
                         </tbody>
                 </table>
                 </div>
                 </div>
 
-                {/* 제 2남선교회 */}
                 <div style={{width: '100%', float: 'left', marginBottom: '30px'}}>
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
-                    <span className={style.text2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>제 2남선교회</span>
+                    <span className={style.text2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>새가족 안내부</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
                     <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
@@ -84,20 +73,21 @@ class Group1_1 extends Component{
                     <table className={style.table} style={{width: '90%', marginLeft: '5%', marginTop: '10px'}}>
                         <tbody>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>회장</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>김홍구 장로</td>
+                                    <td className={style.td+' '+style.text2} rowSpan='1'>부장</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>서완석</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>총무</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>이상호 집사</td>
+                                    <td className={style.td+' '+style.text2} rowSpan='4'>부원</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>양행덕</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>서기</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>이재길 집사</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>박혜경</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.text2} rowSpan='1'>회계</td>
-                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>이재길 집사</td>
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>변갑순</td>
+                                </tr>
+                                <tr> 
+                                    <td className={style.td+' '+style.text} style={{width: '75%'}}>송윤자</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -154,4 +144,4 @@ class Group1_1 extends Component{
 
 }
 
-export default Group1_1;
+export default Group4_1;

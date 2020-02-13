@@ -12,7 +12,7 @@ class Header extends Component{
             headers:[['담임목사환영사', '연혁', '목회철학', '섬기는분들', '예배 안내', '찾아오시는 길'],
                     ['주일 예배', '수요 예배', '금요 예배', '특별 예배'],
                     ['유치유년부', '초등부', '중고등부', '청년부'],
-                    ['남선교회', '여전도회', '3040모임', '새가족공부', '제자훈련'],
+                    ['남선교회', '여전도회', '3040 선교회', '새가족 공부', '찬양대'],
                     ['임직식', '전교인 수련회', '성탄절 발표'],
                     ['구하리 학원', '구하리 카페'],
                     ['자유 게시판']],
@@ -21,7 +21,7 @@ class Header extends Component{
                     ['/ng/1/1', '/ng/2/1', '/ng/3/1', '/ng/4/1'],
                     ['/group/1/1', '/group/2/1', '/group/3/1', '/group/4/1', '/group/5/1'],
                     ['/event/1', '/event/2', '/event/3'],
-                    ['/organ/1', '/organ/2'],
+                    ['/organ/1/1', '/organ/2/1'],
                     ['/suggest/1']]
         };
     }
@@ -71,7 +71,7 @@ class Header extends Component{
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/ng/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(2)}>다음 세대</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/group/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(3)}>부서 및 모임</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/event/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(4)}>교회 행사</Link></div>
-                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/organ/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>부속 기관</Link></div>
+                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/organ/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>부속 기관</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/suggest/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(6)}>게시판</Link></div>
                     </div>
                 </div>
