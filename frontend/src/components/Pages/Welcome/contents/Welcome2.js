@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import style from './Welcome2.module.css';
-import headimage from '../../../../images/temp1.jpg';
 import content_image1 from '../../../../images/image3.JPG';
 import content_image2 from '../../../../images/image4.JPG';
-import {Link} from 'react-router-dom';
+import content_image3 from '../../../../images/image5.JPG';
+import content_image4 from '../../../../images/image6.JPG';
+import content_image5 from '../../../../images/image7.JPG';
+import content_image6 from '../../../../images/image8.JPG';
+import content_image7 from '../../../../images/image9.JPG';
+import content_image8 from '../../../../images/image2.JPG';
 
 class Welcome2 extends Component{
 
@@ -54,22 +58,20 @@ class Welcome2 extends Component{
                    <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
-               <img src={headimage} style={{width: '100%', objectFit: 'cover', float:'left', height: '300px', objectPosition: 'center', marginBottom:'10px'}}></img>
-
-
                {/* 연혁 사진 */}
                <div style={{width:'50%', float: 'left'}}>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image1} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image1} style={{width: '50%', marginLeft: '25%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image3} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image4} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image8} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image8} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                </div>
 
                {/* 연혁 내용 */}
