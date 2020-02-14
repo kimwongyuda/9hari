@@ -18,7 +18,7 @@ class NG1_1 extends Component{
                 
                 <div style={{width:'100%', float: 'left'}}>
                     <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>유치유년부 소개</span>
-                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '10px', float:'left'}}>
+                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '30px', float:'left'}}>
                             <tbody>
                                     <tr> 
                                         <td className={style.td+' '+style.text2} rowSpan='1'>예배 시간</td>
@@ -78,15 +78,18 @@ class NG1_1 extends Component{
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>2020년 주제</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>이는 곧 말로 씻어 말씀으로 깨끗하게 하사 거룩하게 하시고(엡 5:26-26)</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>말씀으로 쑥쑥 자라가요!</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목적</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>“1/168 It’s not enough!” 라는 말이 있습니다. 168시간이라는 한 주간의 시간 속에서 1주일에 단 1시간만으로는 자녀들의 신앙이 믿음으로 성장하기에는 너무나 부족합니다.</span>
                         <br></br>
@@ -98,6 +101,7 @@ class NG1_1 extends Component{
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>1) 주일 성수하는 어린이</span>
                         <br></br>

@@ -4,7 +4,7 @@ import './Home.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import home_background1 from '../../../images/home_background1.jpg';
+import home_background1 from '../../../images/home_background1_op70.jpg';
 import home_background2 from '../../../images/home_background2.jpg';
 
 const photos = [

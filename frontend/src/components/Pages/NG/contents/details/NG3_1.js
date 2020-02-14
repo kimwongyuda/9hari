@@ -18,7 +18,7 @@ class NG3_1 extends Component{
                 
                 <div style={{width:'100%', float: 'left'}}>
                     <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>중고등부 소개</span>
-                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '10px', float:'left'}}>
+                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '30px', float:'left'}}>
                             <tbody>
                                     <tr> 
                                         <td className={style.td+' '+style.text2} rowSpan='1'>예배 시간</td>
@@ -87,10 +87,12 @@ class NG3_1 extends Component{
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>2020년 교회 표어</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>말씀으로 세워지는 교회(느2:17, 엡5:26-27)</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>2020년 중고등부 표어</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>하나님을 나의 기준으로 삼자”</span>
                         <br></br>
@@ -99,10 +101,12 @@ class NG3_1 extends Component{
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목적</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>하나님의 말씀으로 참 진리를 무장하고 항상 기도함으로 하나님과 동행하며 매 순간 믿음으로 하나님의 뜻을 선택하여 하나님이 기뻐하시는 예배자가 되게 한다.</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>1) 성경의 각 권의 책의 위치를 알고 찾을 수 있게 한다.</span>
                         <br></br>

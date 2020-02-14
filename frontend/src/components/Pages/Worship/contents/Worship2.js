@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import style from './Worship2.module.css';
 import Pagination from './detail/Pagination';
-import headimage from '../../../../images/temp1.jpg';
+import headimage from '../../../../images/youtube.jpg';
+
 
 class Worship2 extends Component{
 
@@ -22,7 +23,7 @@ class Worship2 extends Component{
 
 
                 {/* 유튜브 홍보 이미지 */}
-                <img src={headimage} style={{width:'100%', float: 'left', objectFit: 'cover', height: '300px', marginBottom: '40px'}}></img>
+                <a href="https://www.youtube.com/channel/UCWn2WDpdx1eZfYmRHwUuyMA" target = "_blank"><img src={headimage} style={{width:'100%', float: 'left', objectFit: 'cover', height: '300px', marginBottom: '40px'}}></img></a>
 
 
                <div className={style.box} style={{marginTop: '10px'}}>

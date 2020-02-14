@@ -18,7 +18,7 @@ class Group2_1 extends Component{
                 
                 <div style={{width:'100%', float: 'left'}}>
                     <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>여전도회 소개</span>
-                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '10px', float:'left'}}>
+                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '30px', float:'left'}}>
                             <tbody>
                                     <tr> 
                                         <td className={style.td+' '+style.text2} rowSpan='1'>항존직 공부 지도</td>
@@ -192,10 +192,12 @@ class Group2_1 extends Component{
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>2020년 주제</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>말씀으로 세워지는 교회(느 2:17, 엡 5:26-26)</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>1) 말씀 안에서 교회 세우기(엡5: 26)</span>
                         <br></br>
@@ -205,6 +207,7 @@ class Group2_1 extends Component{
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>실천 사항</span>
+                        <br></br>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>1) 온전한 예배드리기</span>
                         <br></br>

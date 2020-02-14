@@ -18,7 +18,7 @@ class NG4_1 extends Component{
                 
                 <div style={{width:'100%', float: 'left'}}>
                     <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>청년부 소개</span>
-                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '10px', float:'left'}}>
+                    <table className={style.table} style={{width: '90%', marginLeft: '5%',marginRight: '5%', marginTop: '30px', float:'left'}}>
                             <tbody>
                                     <tr> 
                                         <td className={style.td+' '+style.text2} rowSpan='1'>모임 시간</td>
@@ -72,6 +72,7 @@ class NG4_1 extends Component{
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
                         <br></br>
+                        <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>1) 하나님을 알게 한다.</span>
                         <br></br>
                         <span className={style.text2} style={{fontSize: '20px'}}>2) 하나님이 주신 복을 깨닫게 한다.</span>
@@ -85,6 +86,7 @@ class NG4_1 extends Component{
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                             <span className={style.text2} style={{fontSize: '25px', color: 'rgb(80, 80, 80)'}}>1) 신앙 세우기</span>
                             <br></br>
+                            <br></br>
                             <span className={style.text2} style={{fontSize: '20px'}}>1) 설교 중심으로 은혜 받은 말씀을 다시 모임을 통해 기억하고 삶에 적용하게 한다.</span>
                             <br></br>
                             <span className={style.text2} style={{fontSize: '20px'}}>2) 하나님의 말씀을 체계 있게 배울 수 있게 한다.</span>
@@ -95,6 +97,7 @@ class NG4_1 extends Component{
                         </div>
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                             <span className={style.text2} style={{fontSize: '25px', color: 'rgb(80, 80, 80)'}}>2) 예배 세우기</span>
+                            <br></br>
                             <br></br>
                             <span className={style.text2} style={{fontSize: '20px'}}>1) 찬양팀 </span>
                             <br></br>
@@ -107,6 +110,7 @@ class NG4_1 extends Component{
                         </div>
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                             <span className={style.text2} style={{fontSize: '25px', color: 'rgb(80, 80, 80)'}}>3) 모임 세우기</span>
+                            <br></br>
                             <br></br>
                             <span className={style.text2} style={{fontSize: '20px'}}>1) 평일 모임 </span>
                             <br></br>
@@ -121,6 +125,7 @@ class NG4_1 extends Component{
                         </div>
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                             <span className={style.text2} style={{fontSize: '25px', color: 'rgb(80, 80, 80)'}}>4) 전도</span>
+                            <br></br>
                             <br></br>
                             <span className={style.text2} style={{fontSize: '20px'}}>1) 전도에 필요한 성경말씀, 전달방법, 복음제시, 중보기도 등의 교육을 실행한다.</span>
                             <br></br>
