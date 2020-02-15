@@ -41,7 +41,7 @@ class Welcome extends Component{
 
         return(
             <div>
-                <div className={style.wrapper} style={{height: '130px'}}>a</div>
+                <div className={style.wrapper} style={{height: '120px'}}>a</div>
                 <div className={style.wrapper}>
                     <img src={background1} style={{marginTop: '10px', marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
                     <div className={style.content}>

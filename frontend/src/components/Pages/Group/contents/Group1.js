@@ -25,11 +25,11 @@ class Group1 extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>남선교회</p>
+                   <p className={style.textb2} style={{fontSize: '22px', float: 'left'}}>남선교회</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 남선교회</p>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 부서 및 모임 >&nbsp;</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 남선교회</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 부서 및 모임 >&nbsp;</p>
                </div>
 
                 <div style={{width: "100%", float:'left', marginBottom: '30px'}}>

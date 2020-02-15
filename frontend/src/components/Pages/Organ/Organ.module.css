@@ -1,4 +1,22 @@
 @font-face {
+    font-family: 'Nanum Barun Gothic1';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../fonts/NanumBarunGothic/NanumBarunGothic.eot');
+    src: url('../../../fonts/NanumBarunGothic/NanumBarunGothic.woff') format('woff'),
+         url('../../../fonts/NanumBarunGothic/NanumBarunGothic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Nanum Barun Gothic2';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../fonts/NanumBarunGothic/NanumBarunGothicBold.eot');
+    src: url('../../../fonts/NanumBarunGothic/NanumBarunGothicBold.woff') format('woff'),
+         url('../../../fonts/NanumBarunGothic/NanumBarunGothicBold.ttf') format('truetype');
+  }
+
+@font-face {
     font-family: 'Nanum Gothic1';
     font-style: normal;
     font-weight: 300;
@@ -62,7 +80,7 @@
 }
 
 .link_{
-    font-family: 'Nanum Gothic1';
+    font-family: 'Nanum Barun Gothic1';
 }
 
 .smallbox{
@@ -88,13 +106,13 @@
     font-size: 20px;
     padding-top: 5px;
     padding-left: 5px;
-    font-family: 'Nanum Gothic2';
+    font-family: 'Nanum Barun Gothic2';
 }
 
 .link2 {
     color: black;
     text-decoration: none;
-    font-family: 'Nanum Gothic1';
+    font-family: 'Nanum Barun Gothic1';
 }
 
 .link2:hover {

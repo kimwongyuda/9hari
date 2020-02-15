@@ -21,7 +21,7 @@ class Suggest extends Component{
         return(
             <div>
                 
-                <div className={style.wrapper} style={{height: '130px'}}>
+                <div className={style.wrapper} style={{height: '120px'}}>
                     a
                 </div>
 

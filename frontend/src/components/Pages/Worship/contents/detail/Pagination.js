@@ -208,11 +208,11 @@ class Pagination extends Component{
                     <table className={style.table}>
                             <tbody>
                                     <tr> 
-                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>번호</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '40%', backgroundColor: '#DCDCDC'}}>제목</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>작성자</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>등록일</td>
-                                        <td className={style.td+' '+style.text2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>조회수</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>번호</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '40%', backgroundColor: '#DCDCDC'}}>제목</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>작성자</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>등록일</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>조회수</td>
                                     </tr>   
                                                       
                             </tbody>
@@ -236,12 +236,12 @@ class Pagination extends Component{
                     <div style={{width: '100%', float: 'left'}}>
                         <div style={{width: '50%', float: 'left', marginLeft: '25%', marginTop: '20px'}}>
                             <select onChange={this.handleChangeS} style={{width: '25%', float: 'left',fontSize: '20px', marginRight: '5px', height: '40px'}}>
-                                <option value='title' className={style.text} style={{fontSize: '20px'}}>제목</option>
-                                <option value='words' className={style.text} style={{fontSize: '20px'}}>말씀</option>
-                                <option value='person' className={style.text} style={{fontSize: '20px'}}>설교자</option>
-                                <option value='writer' className={style.text} style={{fontSize: '20px'}}>작성자</option>
+                                <option value='title' className={style.textb} style={{fontSize: '20px'}}>제목</option>
+                                <option value='words' className={style.textb} style={{fontSize: '20px'}}>말씀</option>
+                                <option value='person' className={style.textb} style={{fontSize: '20px'}}>설교자</option>
+                                <option value='writer' className={style.textb} style={{fontSize: '20px'}}>작성자</option>
                             </select>
-                            <input type="text" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
+                            <input type="textb" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
                             <Link to="/worship/4/1"><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
                         </div>
                     </div>

@@ -23,23 +23,23 @@ class Welcome4_1 extends Component{
             content = 
             <div>
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>담임목사</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>담임목사</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={person1} style={{width: '100%', objectFit: 'fill'}}></img>
-                        <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김인아 목사</span>
+                        <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김인아 목사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>총괄</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>총괄</span>
                         <br></br>
                         <br></br>
                     </div>
 
                     <div style={{width:'60%', float: 'left', marginBottom: '30px', marginLeft: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>김인아 목사는</span>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>김인아 목사는</span>
                         <br></br>
                         <br></br>
-                        <span className={style.text} style={{fontSize: '15px'}}>
+                        <span className={style.textb} style={{fontSize: '15px'}}>
                             저는 3대째 예수 믿는 가정인줄 알았는데 저의집안 어르신들께서 제책을 읽으시고 5대째 신앙이라고 말씀해 주셨습니다.
                             그 말씀을 듣고 얼마나 기쁘고 감사 했는지 모릅니다.
                             <br></br>
@@ -84,62 +84,62 @@ class Welcome4_1 extends Component{
             content = 
             <div>
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>부목사</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>부목사</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={person2} style={{width: '100%', objectFit: 'fill'}}></img>
-                        <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이태규 목사</span>
+                        <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이태규 목사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>교구, 행정</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>교구, 행정</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>jesus316@hanmail.net</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>jesus316@hanmail.net</span>
                     </div>
                     <div className={style.card}><img src={person6} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>박재현 목사</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>박재현 목사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>중고등부, 청년부</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>중고등부, 청년부</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>praise5766@naver.com</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>praise5766@naver.com</span>
                     </div>
                 </div>
 
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>협동목사</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>협동목사</span>
                 </div>
                 <div className={style.box2}>
                 <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>박찬백 목사</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>박찬백 목사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>성인 예배 찬양팀</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>성인 예배 찬양팀</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>dvd65@naver.com</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>dvd65@naver.com</span>
                     </div>
                 </div>
 
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>전도사</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>전도사</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={person3} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이기영 전도사</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이기영 전도사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>구하리 학원</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>구하리 학원</span>
                         <br></br>
                         <br></br>
                     </div>
                     <div className={style.card}><img src={person4} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김선애 전도사</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김선애 전도사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>유치유년부</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>유치유년부</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>good21news@hanmail.net</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>good21news@hanmail.net</span>
                     </div>
                     <div className={style.card}><img src={person5} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김양애 전도사</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김양애 전도사</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>초등부</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>초등부</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>ya3340@hanmail.net</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>ya3340@hanmail.net</span>
                     </div>
                 </div>
 
@@ -149,110 +149,110 @@ class Welcome4_1 extends Component{
             content = 
             <div>
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>시무장로</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>시무장로</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김홍구 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김홍구 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김무령 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김무령 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>전병철 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>전병철 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>홍만기 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>홍만기 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                 </div>
 
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>은퇴장로</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>은퇴장로</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>류전규 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>류전규 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김세하 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김세하 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>황분옥 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>황분옥 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                 </div>
 
                 <div className={style.box}>
-                    <span className={style.text2} style={{fontSize: '20px', color: '#005bab'}}>명예장로</span>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>명예장로</span>
                 </div>
                 <div className={style.box2}>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>장준영 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>장준영 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
-                    <span className={style.text2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이방훈 장로</span>
+                    <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이방훈 장로</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
                         <br></br> 
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
                         <br></br>
-                        <span className={style.text} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
+                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                 </div>
             </div>

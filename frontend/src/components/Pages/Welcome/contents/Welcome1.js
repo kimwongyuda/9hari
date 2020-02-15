@@ -13,11 +13,11 @@ class Welcome1 extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>담임목사환영사</p>
+                   <p className={style.textb2} style={{fontSize: '22px', float: 'left'}}>담임목사환영사</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 담임목사환영사</p>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 담임목사환영사</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
                <img src={image1} style={{width: '40%', marginRight: '10px', float:'left', height: '393px'}}></img>
@@ -25,10 +25,10 @@ class Welcome1 extends Component{
 
                <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.text2} style={{fontSize: '30px', color: '#005bab'}}>인사말</span>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>인사말</span>
                         <br></br>
                         <br></br>
-                        <span className={style.text} style={{fontSize: '15px'}}>
+                        <span className={style.textb} style={{fontSize: '15px'}}>
                             어느 해인가 3월 2일로 기억합니다.
                             <br></br>
                             남편과 함께 차를 타고 가는데 차창 밖을 바라보던 나의 눈에 어느새 눈물이 하염없이 흐르고 있었습니다.
@@ -73,8 +73,8 @@ class Welcome1 extends Component{
                         </span>
                         <br></br>
                         <br></br>
-                        <span className={style.text2}>구하리교회 담임목사</span>
-                        <span className={style.text2}> 김인아</span>
+                        <span className={style.textb2}>구하리교회 담임목사</span>
+                        <span className={style.textb2}> 김인아</span>
                     </div>
                 </div>
 

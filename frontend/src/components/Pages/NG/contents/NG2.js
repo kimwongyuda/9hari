@@ -25,11 +25,11 @@ class NG2 extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>초등부</p>
+                   <p className={style.textb2} style={{fontSize: '22px', float: 'left'}}>초등부</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 초등부</p>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 다음 세대 >&nbsp;</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 초등부</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 다음 세대 >&nbsp;</p>
                </div>
 
                <div style={{width: "100%", float:'left', marginBottom: '30px'}}>

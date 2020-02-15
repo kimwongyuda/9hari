@@ -11,16 +11,16 @@ class Suggest1 extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>자유 게시판</p>
+                   <p className={style.textb2} style={{fontSize: '22px', float: 'left'}}>자유 게시판</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 자유 게시판</p>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 게시판 >&nbsp;</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 자유 게시판</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 게시판 >&nbsp;</p>
                </div>
 
                <div style={{width: '100%', float: 'left', marginTop: '10px'}}>
 
-                   <span className={style.text2} style={{fontSize: '20px'}}>준비중입니다</span>
+                   <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
                    <br></br>
                    <br></br>
                    <br></br>

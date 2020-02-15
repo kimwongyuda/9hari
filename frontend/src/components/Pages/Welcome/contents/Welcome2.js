@@ -51,11 +51,11 @@ class Welcome2 extends Component{
         return(
             <div style={{width: '100%', float: 'left'}}>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '22px', float: 'left'}}>연혁</p>
+                   <p className={style.textb2} style={{fontSize: '22px', float: 'left'}}>연혁</p>
                </div>
                <div style={{width: '50%', height: '50px', float: 'left'}}>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 연혁</p>
-                   <p className={style.text2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right', color: '#005bab'}}> 연혁</p>
+                   <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회소개 >&nbsp;</p>
                </div>
 
                {/* 연혁 사진 */}
@@ -80,9 +80,9 @@ class Welcome2 extends Component{
                        {days.map((value, index)=>{
                            return (
                            <li className={style.li}>
-                               <span className={style.text2} style={{fontSize: '30px', whiteSpace: 'pre-wrap'}}> {value}</span>
+                               <span className={style.textb2} style={{fontSize: '30px', whiteSpace: 'pre-wrap'}}> {value}</span>
                                <br></br>
-                               <pre className={style.text} style={{fontSize: '20px', marginLeft: '25px'}}>{content[index]}</pre>
+                               <pre className={style.textb} style={{fontSize: '20px', marginLeft: '25px'}}>{content[index]}</pre>
                            </li>
                            );
                        })}
