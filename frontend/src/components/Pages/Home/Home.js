@@ -45,7 +45,7 @@ class Home extends Component{
 
         return(
             <div>
-                <div className={style.wrapper} style={{height: '200px'}}>a</div>
+                <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper} style={{marginBottom: '10px'}}>
                     <div style={{width: '100%', height: '800px', marginBottom: '30px'}}>
                     <Slider {...settings}>
