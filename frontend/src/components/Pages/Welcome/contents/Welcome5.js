@@ -45,7 +45,7 @@ class Welcome5 extends Component{
                                     <td className={style.td+' '+style.textb1}>2층 대예배실</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb2} rowSpan='3'>교회 학교</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='4'>교회 학교</td>
                                     <td className={style.td+' '+style.textb1}>유치/유년예배</td>
                                     <td className={style.td+' '+style.textb1}>오전 11:00</td>
                                     <td className={style.td+' '+style.textb1}>1층 메빅실</td>
@@ -59,6 +59,11 @@ class Welcome5 extends Component{
                                     <td className={style.td+' '+style.textb1}>중등/고등예배</td>
                                     <td className={style.td+' '+style.textb1}>오전 10:30</td>
                                     <td className={style.td+' '+style.textb1}>B1층 중고등부실</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb1}>청년부 모임</td>
+                                    <td className={style.td+' '+style.textb1}>오후 12:30</td>
+                                    <td className={style.td+' '+style.textb1}>2층 새가족실</td>
                                 </tr>
                         </tbody>
                     </table>

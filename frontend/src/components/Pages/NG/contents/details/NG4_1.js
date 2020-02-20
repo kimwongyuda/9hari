@@ -25,7 +25,7 @@ class NG4_1 extends Component{
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>오후 12:30</td>
                                     </tr>
                                     <tr> 
-                                        <td className={style.td+' '+style.textb2} rowSpan='1'>담당자</td>
+                                        <td className={style.td+' '+style.textb2} rowSpan='1'>담당 교역자</td>
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>박재현 목사</td>
                                     </tr>
                                     <tr> 
@@ -70,7 +70,16 @@ class NG4_1 extends Component{
 
                 <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
+                        <br></br>
+                        <br></br>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>하나님을 사랑하는 청년이 되자!</span>
+                        <br></br>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>‘너는 마음을 다하고 뜻을 다하고 힘을 다하여 네 하나님 여호와를 사랑하라’(신6:5)</span>
+                    </div>
+
+                    <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>교육 목적</span>
                         <br></br>
                         <br></br>
                         <span className={style.textb2} style={{fontSize: '20px'}}>1) 하나님을 알게 한다.</span>
@@ -80,7 +89,7 @@ class NG4_1 extends Component{
                         <span className={style.textb2} style={{fontSize: '20px'}}>3) 하나님을 사랑함으로 하나님과 동행하는 삶을 살도록 한다.</span>
                     </div>
                     <div style={{width: '100%', float: 'left'}}>
-                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>청년부 목표</span>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>교육 목표</span>
                         <br></br>
                         <br></br>
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>

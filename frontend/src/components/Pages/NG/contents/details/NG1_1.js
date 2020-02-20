@@ -25,7 +25,7 @@ class NG1_1 extends Component{
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>오전 11:00</td>
                                     </tr>
                                     <tr> 
-                                        <td className={style.td+' '+style.textb2} rowSpan='1'>설교자</td>
+                                        <td className={style.td+' '+style.textb2} rowSpan='1'>담당 교역자</td>
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>김선애 전도사</td>
                                     </tr>
                                     <tr> 
@@ -75,12 +75,6 @@ class NG1_1 extends Component{
                 </div>
 
                 <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
-                    <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>2020년 주제</span>
-                        <br></br>
-                        <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>이는 곧 말로 씻어 말씀으로 깨끗하게 하사 거룩하게 하시고(엡 5:26-26)</span>
-                    </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
                         <br></br>

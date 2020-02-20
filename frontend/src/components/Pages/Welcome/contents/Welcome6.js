@@ -20,7 +20,7 @@ class Welcome6 extends Component{
             content = <Welcome6_1 props='2'></Welcome6_1>
         }
 
-        const elements = ['교회 위치', '주차 안내'];
+        const elements = ['교회 위치'];
 
         return(
             <div style={{width: '100%', float: 'left'}}>

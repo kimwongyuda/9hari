@@ -47,17 +47,20 @@ class Home extends Component{
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper} style={{marginBottom: '10px'}}>
-                    <div style={{width: '100%', height: '800px', marginBottom: '30px'}}>
+
+                    <div className={style.wrapper} style={{backgroundColor: 'rgb(236, 236, 236)', marginBottom: '30px'}}>
+                    <div className={style.content} style={{height: '500px'}}>
                     <Slider {...settings}>
                         {photos.map((photo)=>{
                             return(
                                 <div>
-                                    <img src={photo.url} style={{width: '100%', height: '800px', objectFit: 'cover'}}></img>
+                                    <img src={photo.url} style={{width: '100%', height: '500px', objectFit: 'cover'}}></img>
                                 </div>
                             )
                         })
                         }
                     </Slider>
+                    </div>
                     </div>
 
                     <div className={style.content}>

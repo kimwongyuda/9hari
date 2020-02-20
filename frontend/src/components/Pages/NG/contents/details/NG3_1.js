@@ -25,7 +25,7 @@ class NG3_1 extends Component{
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>오전 10:30</td>
                                     </tr>
                                     <tr> 
-                                        <td className={style.td+' '+style.textb2} rowSpan='1'>설교자</td>
+                                        <td className={style.td+' '+style.textb2} rowSpan='1'>담당 교역자</td>
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>박재현 목사</td>
                                     </tr>
                                     <tr> 
@@ -85,13 +85,7 @@ class NG3_1 extends Component{
 
                 <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>2020년 교회 표어</span>
-                        <br></br>
-                        <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>말씀으로 세워지는 교회(느2:17, 엡5:26-27)</span>
-                    </div>
-                    <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
-                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>2020년 중고등부 표어</span>
+                        <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
                         <br></br>
                         <br></br>
                         <span className={style.textb2} style={{fontSize: '20px'}}>하나님을 나의 기준으로 삼자”</span>

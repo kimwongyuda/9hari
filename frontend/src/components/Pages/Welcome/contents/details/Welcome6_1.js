@@ -114,6 +114,36 @@ class Welcome6_1 extends Component{
                 </table>
 
                 <div className={style.box}>
+                    <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>주차 및 장소 안내</span>
+                </div>
+
+                <table className={style.table}>
+                        <tbody>
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2} rowSpan='3'>주차 안내</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>주차 공간이 많지 않아 선착순</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb2} rowSpan='3'>장소 안내</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>교회 뒷편과 건너편</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
+                                </tr>
+                                <tr>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
+                                </tr>
+                        </tbody>
+                </table>
+
+
+                <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>버스 이용시</span>
                 </div>
                 <table className={style.table}>
