@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import style from './Event1.module.css';
-import image1 from '../../../../images/image6.JPG'
+import image1 from '../../../../images/event_1_1.JPG'
 import image2 from '../../../../images/image7.JPG'
 import image3 from '../../../../images/image8.JPG'
-import image4 from '../../../../images/image9.JPG'
+import image4 from '../../../../images/event_1_2.JPG'
 
 
 class Event1 extends Component{

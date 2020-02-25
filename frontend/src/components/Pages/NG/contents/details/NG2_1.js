@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import style from './NG2_1.module.css';
-import image1 from '../../../../../images/3040_1.jpeg';
+import image1 from '../../../../../images/NG_main_2.jpg';
+import image2 from '../../../../../images/NG_main_22.jpg';
 
 class NG2_1 extends Component{
 
@@ -47,6 +48,9 @@ class NG2_1 extends Component{
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
                     <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
+                    <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
+                    <img src={image2} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '40px'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>섬기는 사람들</span>
@@ -83,7 +87,7 @@ class NG2_1 extends Component{
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
                         <br></br>
                         <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>“예수님을 닮아 가며 열매 맺는 자”</span>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>“예수님을 닮아 가며 열매 맺는 자”(엡5:26)</span>
                     </div>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>교육 목적</span>

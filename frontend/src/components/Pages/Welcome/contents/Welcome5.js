@@ -77,12 +77,10 @@ class Welcome5 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='2'>수요 예배</td>
-                                    <td className={style.td+' '+style.textb2}>구분</td>
-                                    <td className={style.td+' '+style.textb2}>시간</td>
-                                    <td className={style.td+' '+style.textb2}>장소</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>시간</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>장소</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb1}>&nbsp;</td>
                                     <td className={style.td+' '+style.textb1}>오후 19:30</td>
                                     <td className={style.td+' '+style.textb1}>2층 대예배실</td>
                                 </tr>
@@ -98,12 +96,10 @@ class Welcome5 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='2'>금요 철야 예배</td>
-                                    <td className={style.td+' '+style.textb2}>구분</td>
-                                    <td className={style.td+' '+style.textb2}>시간</td>
-                                    <td className={style.td+' '+style.textb2}>장소</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>시간</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>장소</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb1}>&nbsp;</td>
                                     <td className={style.td+' '+style.textb1}>오후 21:00</td>
                                     <td className={style.td+' '+style.textb1}>2층 대예배실</td>
                                 </tr>

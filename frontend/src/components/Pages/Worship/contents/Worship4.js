@@ -31,7 +31,7 @@ class Worship4 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>특별 설교 모음</span>
                 </div>
 
-                <Pagination props={{type: 'spe'}}></Pagination>
+                <Pagination props={{type: 'spe', pageindex: 4}}></Pagination>
 
                <div style={{width: '100%', float: 'left', marginTop: '10px'}}>
                    <br></br>

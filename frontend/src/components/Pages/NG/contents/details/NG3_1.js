@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import style from './NG3_1.module.css';
-import image1 from '../../../../../images/3040_1.jpeg';
+import image1 from '../../../../../images/NG_main_3.JPG';
+import image2 from '../../../../../images/NG_main_32.jpg';
 
 class NG3_1 extends Component{
 
@@ -46,6 +47,9 @@ class NG3_1 extends Component{
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
                     <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
+                    <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
+                    <img src={image2} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '38px'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>섬기는 사람들</span>
@@ -88,7 +92,7 @@ class NG3_1 extends Component{
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>표어</span>
                         <br></br>
                         <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>하나님을 나의 기준으로 삼자”</span>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>하나님을 나의 기준으로 삼자”(롬12:1-2)</span>
                         <br></br>
                         <span className={style.textb2} style={{fontSize: '20px'}}>그러므로 형제들아 내가 하나님의 모든 자비하심으로 너희를 권하노니 너희 몸을  하나님이 기뻐하시는 거룩한 산 제물로 드리라 이는 너희가 드릴 영적 예배니라 너희는 이 세대를   본받지 말고 오직 마음을 새롭게 함으로 변화를 받아 하나님의 선하시고 기뻐하시고 온전하신 뜻이 무엇인지 분별하도록 하라(로마서 12장 1-2절)</span>
                     </div>

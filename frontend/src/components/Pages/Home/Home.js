@@ -8,27 +8,63 @@ import home_background1 from '../../../images/home_background1_op70.jpg';
 import home_background2 from '../../../images/home_background2.jpg';
 import home1 from '../../../images/home1_re2.jpg';
 import homebox1 from '../../../images/homebox1_re.jpg';
+import homebox2 from '../../../images/homebox2_re.jpg';
+import homebox3 from '../../../images/homebox3_re.jpg';
 import icon1 from '../../../images/home3_re_1.jpg';
 import icon2 from '../../../images/home3_re_2.jpg';
 import icon3 from '../../../images/home3_re_3.jpg';
 import icon4 from '../../../images/home3_re_4.jpg';
 import icon5 from '../../../images/home3_re_5.jpg';
-import icon6 from '../../../images/home3_re_6.jpg';
-import icon7 from '../../../images/home3_re_7.jpg';
+
+import home_main_1 from '../../../images/home_main_1.JPG';
+import home_main_2 from '../../../images/home_main_2.JPG';
+import home_main_3 from '../../../images/home_main_3.JPG';
+import home_main_4 from '../../../images/home_main_4.JPG';
+import home_main_5 from '../../../images/home_main_5.JPG';
+
 import {Link} from 'react-router-dom';
 
 const photos = [
     {
         name: 'photo1',
-        url: `${home_background1}`
+        url: `${home_main_1}`
     },
     {
         name: 'photo2',
-        url: `${home_background2}`
+        url: `${home_main_3}`
+    },
+    {
+        name: 'photo3',
+        url: `${home_main_2}`
+    },
+    {
+        name: 'photo4',
+        url: `${home_main_4}`
+    },
+    {
+        name: 'photo5',
+        url: `${home_main_5}`
     }
 ]
 
 class Home extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {posts:[]};
+    }
+
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({posts: res}))
+        .catch(err => console.log(err));
+    }
+
+    callApi = async () => {
+        const response = await fetch(`/api/posts/sun`);
+        const body = await response.json();
+        return body;
+    }
 
     render(){
         const settings = {
@@ -43,24 +79,24 @@ class Home extends Component{
             slidesToScroll: 1,
           };
 
+        var length_ = this.state.posts.length;
+
         return(
             <div>
                 <div className={style.wrapper} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper} style={{marginBottom: '10px'}}>
 
-                    <div className={style.wrapper} style={{backgroundColor: 'rgb(236, 236, 236)', marginBottom: '30px'}}>
-                    <div className={style.content} style={{height: '500px'}}>
+                    <div className={style.wrapper} style={{marginBottom: '30px'}}>
                     <Slider {...settings}>
                         {photos.map((photo)=>{
                             return(
                                 <div>
-                                    <img src={photo.url} style={{width: '100%', height: '500px', objectFit: 'cover'}}></img>
+                                    <img src={photo.url} style={{width: '100%', height: '800px', objectFit: 'cover'}}></img>
                                 </div>
                             )
                         })
                         }
                     </Slider>
-                    </div>
                     </div>
 
                     <div className={style.content}>
@@ -75,59 +111,31 @@ class Home extends Component{
                         
                         </div>
 
-                        <div style={{backgroundColor: 'rgb(16, 92, 150, 0.85)', width: '300px', height: '400px', float:'left', textAlign:'center', marginRight: '12.5px' , marginBottom: '30px'}}>
-                            <span className={style.textb2} style={{color: 'white', fontSize: '30px', marginTop: '30px',display: 'inline-block'}}>다음 세대</span>
-                            
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/1/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>유치유년부</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/1/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>초등부</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/2/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>중고등부</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/3/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>청년부</span>
+                        <div style={{backgroundImage: `url(${homebox2})`, width: '300px', height: '400px', float:'left', textAlign:'center', marginRight: '12.5px' , marginBottom: '30px'}}>
+                            <li style={{listStyleType: 'none', marginLeft: '35px', marginRight: '35px', marginTop: '150px'}}>
+                                <Link className={style.link} to="welcome/7"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>교회 소식</span>
                                 </Link>
                             </li>
                         
                         </div>
 
                         <div style={{backgroundImage: `url(${homebox1})`, width: '300px', height: '400px', float:'left', textAlign:'center', marginRight: '12.5px' , marginBottom: '30px'}}>
-                            <a href="https://www.youtube.com/channel/UCWn2WDpdx1eZfYmRHwUuyMA" target = "_blank">
-                                <span className={style.textb2} style={{color: 'white', fontSize: '30px', marginTop: '150px',display: 'inline-block'}}>구하리 유튜브 바로가기</span></a>
+                            <li style={{listStyleType: 'none', marginLeft: '35px', marginRight: '35px', marginTop: '150px'}}>
+                                <Link className={style.link} to={`/worship/1/1/${length_}`}><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>이번주 설교 영상</span>
+                                </Link>
+                            </li>
                         </div>
 
-                        <div style={{backgroundColor: '#297D99', width: '300px', height: '400px', float:'left', textAlign:'center', marginBottom: '30px'}}>
-                            <span className={style.textb2} style={{color: 'white', fontSize: '30px', marginTop: '30px',display: 'inline-block'}}>설교 영상 바로가기</span>
+                        <div style={{backgroundImage: `url(${homebox3})`, width: '300px', height: '400px', float:'left', textAlign:'center', marginBottom: '30px'}}>
                             
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/1/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>이번주 설교</span>
+                            <li style={{listStyleType: 'none', marginLeft: '35px', marginRight: '35px', marginTop: '150px'}}>
+                                <Link className={style.link} to="suggest/2"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>구하리 갤러리</span>
                                 </Link>
                             </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/1/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>주일 설교</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/2/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>수요 설교</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/3/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>금요 설교</span>
-                                </Link>
-                            </li>
-                            <li style={{listStyleType: 'none', borderBottom: '0.1px solid white', marginLeft: '35px', marginRight: '35px'}}>
-                                <Link className={style.link} to="worship/4/1"><span className={style.textb} style={{fontSize: '30px', marginTop: '15px',display: 'inline-block'}}>특별 설교</span>
-                                </Link>
-                            </li>
+                        
                         </div>
 
-                        <div style={{width:'100%', float: 'left', border: '0.1px solid #DCDCDC', marginBottom: '30px'}}>
+                        {/* <div style={{width:'100%', float: 'left', border: '0.1px solid #DCDCDC', marginBottom: '30px'}}>
                             <Link to="welcome/1"><li style={{backgroundImage: `url(${icon1})`, width: '200px', height: '200px', textAlign:'center', listStyleType: 'none', marginLeft: '65px', marginRight: '30px', marginTop: '30px', marginBottom: '30px', float:'left'}}>
                                 <span className={style.textb} style={{color: 'white',fontSize: '30px', marginTop: '80px',display: 'inline-block'}}>교회 소개</span>
                             </li></Link>
@@ -143,7 +151,7 @@ class Home extends Component{
                             <Link to="event/1"><li style={{backgroundImage: `url(${icon5})`, width: '200px', height: '200px', textAlign:'center', listStyleType: 'none', marginRight: '30px', marginTop: '30px', marginBottom: '30px', float:'left'}}>
                                 <span className={style.textb} style={{color: 'white',fontSize: '30px', marginTop: '80px',display: 'inline-block'}}>교회 행사</span>
                             </li></Link>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

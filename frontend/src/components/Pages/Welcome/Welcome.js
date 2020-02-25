@@ -6,6 +6,7 @@ import Welcome3 from './contents/Welcome3';
 import Welcome4 from './contents/Welcome4';
 import Welcome5 from './contents/Welcome5';
 import Welcome6 from './contents/Welcome6';
+import Welcome7 from './contents/Welcome7';
 import background1 from '../../../images/background1.jpg';
 import style from './Welcome.module.css';
 
@@ -36,7 +37,10 @@ class Welcome extends Component{
             page = <Welcome6></Welcome6>;
         }
         
-        const elements = ['담임목사환영사', '연혁', '목회철학', '섬기는분들', '예배 안내', '찾아오시는 길'];
+        else if(this.props.match.params.page == "7"){
+            page = <Welcome7></Welcome7>;
+        }
+        const elements = ['담임목사환영사', '연혁', '목회철학', '섬기는분들', '예배 안내', '찾아오시는 길', '교회 소식'];
 
 
         return(

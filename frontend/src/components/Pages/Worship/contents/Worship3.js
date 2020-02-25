@@ -33,12 +33,10 @@ class Worship3 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='2'>금요 철야 예배</td>
-                                    <td className={style.td+' '+style.textb2}>구분</td>
-                                    <td className={style.td+' '+style.textb2}>시간</td>
-                                    <td className={style.td+' '+style.textb2}>장소</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>시간</td>
+                                    <td className={style.td+' '+style.textb2} style={{width: '37.5%'}}>장소</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb1}>&nbsp;</td>
                                     <td className={style.td+' '+style.textb1}>오후 21:00</td>
                                     <td className={style.td+' '+style.textb1}>2층 대예배실</td>
                                 </tr>
@@ -49,7 +47,7 @@ class Worship3 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>금요 설교 모음</span>
                 </div>
 
-                <Pagination props={{type: 'fri'}}></Pagination>
+                <Pagination props={{type: 'fri', pageindex: 3}}></Pagination>
 
                 <div style={{width: '100%', float: 'left', marginTop: '10px'}}>
                     <br></br>

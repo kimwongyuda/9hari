@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Suggest1 from './contents/Suggest1';
+import Suggest2 from './contents/Suggest2';
 import background1 from '../../../images/background1.jpg';
 import style from './Suggest.module.css';
 
@@ -15,8 +16,11 @@ class Suggest extends Component{
         if(this.props.match.params.page == "1"){
             page = <Suggest1></Suggest1>;
         }
+        if(this.props.match.params.page == "2"){
+            page = <Suggest2></Suggest2>;
+        }
 
-        const elements = ['자유 게시판'];
+        const elements = ['자유 게시판', '구하리 갤러리'];
 
         return(
             <div>

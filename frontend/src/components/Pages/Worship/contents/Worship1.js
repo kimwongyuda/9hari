@@ -52,7 +52,7 @@ class Worship1 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>주일 설교 모음</span>
                 </div>
 
-                <Pagination props={{type: 'sun'}}></Pagination>
+                <Pagination props={{type: 'sun', pageindex: 1}}></Pagination>
 
                 <div style={{width: '100%', float: 'left', marginTop: '10px'}}>
                     <br></br>

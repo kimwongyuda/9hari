@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import style from './Event2.module.css';
-import image1 from '../../../../images/image6.JPG'
-import image2 from '../../../../images/image7.JPG'
-import image3 from '../../../../images/image8.JPG'
-import image4 from '../../../../images/image9.JPG'
+import image1 from '../../../../images/event_2_1.JPG'
+import image2 from '../../../../images/event_2_2.jpeg'
+import image4 from '../../../../images/event_2_4.jpeg'
+import image5 from '../../../../images/event_2_5.jpeg'
 
 class Event2 extends Component{
 
@@ -22,9 +22,9 @@ class Event2 extends Component{
                    <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회 행사 >&nbsp;</p>
                </div>
 
-               <img src={image1} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
+               <img src={image5} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
                <img src={image2} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
-               <img src={image3} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
+               <img src={image1} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
                <img src={image4} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
 
                <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>

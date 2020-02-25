@@ -8,6 +8,10 @@ import content_image5 from '../../../../images/image7.JPG';
 import content_image6 from '../../../../images/image8.JPG';
 import content_image7 from '../../../../images/image9.JPG';
 import content_image8 from '../../../../images/image2.JPG';
+import content_image10 from '../../../../images/image10.JPG';
+import content_image11 from '../../../../images/image11.JPG';
+import content_image12 from '../../../../images/image12.JPG';
+import content_image13 from '../../../../images/image13.JPG';
 
 class Welcome2 extends Component{
 
@@ -38,7 +42,7 @@ class Welcome2 extends Component{
     '대천 통나무 팬션으로 전교인 연합수련회를 가다.',
     '구하리교회 창립 5주년 감사예배를 드리고 \n취임식/위임식과 항존직을 하며\n장로6명, 안수집사 13명, 권사21명이 임직하다.',
     '전교인 국내 성지순례를 전남 여수 애양원으로 가다.',
-    '구하리교회 창립 6주년 감사예배를 드리고 기관별 찬양대회를 하다.',
+    '구하리교회 창립 6주년 감사예배를 드리고 \n기관별 찬양대회를 하다.',
     '제주도 명성 아카데미 하우스로 전교인 여름 수련회를\n가다.',
     '구하리 교회 창립7주년 감사예배를 드리다.',
     '구하리 교회에서 전교인 여름 수련회를 하다.',
@@ -61,16 +65,16 @@ class Welcome2 extends Component{
                {/* 연혁 사진 */}
                <div style={{width:'50%', float: 'left'}}>
                    <img src={content_image1} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image2} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image3} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image10} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image4} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image12} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image11} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+
+                   <img src={content_image13} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image8} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                </div>
 
                {/* 연혁 내용 */}

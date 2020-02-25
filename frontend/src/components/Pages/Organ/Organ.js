@@ -20,7 +20,7 @@ class Organ extends Component{
             page = <Organ2></Organ2>;
         }
 
-        const elements = ['구하리 학원', '구하리 카페'];
+        const elements = ['구하리 카페'];
 
 
         return(
@@ -38,7 +38,7 @@ class Organ extends Component{
                                 <div>
                                     {
                                     (() => {
-                                        if(this.props.match.params.page == String(index+1))
+                                        if(this.props.match.params.page == String(index+2))
                                         {
                                             if(false)
                                             {
@@ -47,11 +47,11 @@ class Organ extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/organ/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/organ/${index+2}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
-                                        else if(this.props.match.params.page != String(index+1))
+                                        else if(this.props.match.params.page != String(index+2))
                                         {
                                             if(false)
                                             {
@@ -60,7 +60,7 @@ class Organ extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/organ/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/organ/${index+2}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }
