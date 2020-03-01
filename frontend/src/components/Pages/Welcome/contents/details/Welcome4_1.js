@@ -15,6 +15,12 @@ import jangro5 from '../../../../../images/jangro5.PNG'
 import jangro6 from '../../../../../images/jangro6.PNG'
 import jangro7 from '../../../../../images/jangro7.PNG'
 import jangro8 from '../../../../../images/jangro8.PNG'
+import kimhongu from '../../../../../images/kimhongu.png';
+import ryujungyu from '../../../../../images/ryujungyu.jpeg';
+import hwangbunok from '../../../../../images/hwangbunok.jpeg';
+import kimseha from '../../../../../images/kimseha.jpg';
+import parkchanbaek from '../../../../../images/parkchanbaek.PNG';
+import junbyung from '../../../../../images/junbyung.jpg';
 
 class Welcome4_1 extends Component{
 
@@ -130,7 +136,7 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>협동목사</span>
                 </div>
                 <div className={style.box2}>
-                <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
+                <div className={style.card}><img src={parkchanbaek} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>박찬백 목사</span>
                         <br></br>
                         <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>성인 예배 찬양팀</span>
@@ -175,107 +181,51 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>시무장로</span>
                 </div>
                 <div className={style.box2}>
-                    <div className={style.card}><img src={jangro4} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={kimhongu} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김홍구 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
+                        </div>
                     <div className={style.card}><img src={jangro2} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김무령 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
-                    <div className={style.card}><img src={jangro1} style={{width: '100%', objectFit: 'fill'}}></img>
+                        </div>
+                    <div className={style.card}><img src={junbyung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>전병철 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
+                        </div>
                     <div className={style.card}><img src={jangro7} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>홍만기 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
+                        </div>
                 </div>
 
                 <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>은퇴장로</span>
                 </div>
                 <div className={style.box2}>
-                    <div className={style.card}><img src={jangro5} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={ryujungyu} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>류전규 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
-                    <div className={style.card}><img src={jangro3} style={{width: '100%', objectFit: 'fill'}}></img>
+                        </div>
+                    <div className={style.card}><img src={kimseha} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김세하 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
-                    <div className={style.card}><img src={jangro8} style={{width: '100%', objectFit: 'fill'}}></img>
+                        </div>
+                    <div className={style.card}><img src={hwangbunok} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>황분옥 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
-                    </div>
+                        </div>
                 </div>
 
                 <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>명예장로</span>
                 </div>
+
                 <div className={style.box2}>
+
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
+
                     <div className={style.card}><img src={jangro6} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>장준영 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
+
                     <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이방훈 장로</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>설교준비</span>
-                        <br></br> 
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>010-1234-5678</span>
-                        <br></br>
-                        <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>rladnjsrb9999@khu.ac.kr</span>
                     </div>
                 </div>
             </div>

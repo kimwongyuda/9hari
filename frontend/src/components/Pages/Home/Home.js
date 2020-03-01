@@ -91,7 +91,7 @@ class Home extends Component{
                         {photos.map((photo)=>{
                             return(
                                 <div>
-                                    <img src={photo.url} style={{width: '100%', height: '800px', objectFit: 'cover'}}></img>
+                                    <img src={photo.url} style={{width: '100%', height: '600px', objectFit: 'cover'}}></img>
                                 </div>
                             )
                         })
