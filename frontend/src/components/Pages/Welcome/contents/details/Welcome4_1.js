@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import style from './Welcome4_1.module.css';
 import temp from '../../../../../images/temp.jpg'
-import person1 from '../../../../../images/person1_re.png'
+import kimina from '../../../../../images/kimina.png'
 import person2 from '../../../../../images/person2.jpg'
-import person3 from '../../../../../images/person3_re.png'
+import leekiyoung from '../../../../../images/leekiyoung.png'
 import person4 from '../../../../../images/person4_re.jpg'
 import person5 from '../../../../../images/person5_re.jpg'
 import person6 from '../../../../../images/person6_re.jpg'
@@ -40,7 +40,7 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>담임목사</span>
                 </div>
                 <div className={style.box2} style={{borderBottom: '0.1px solid #DCDCDC'}}>
-                    <div className={style.card}><img src={person1} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={kimina} style={{width: '100%', objectFit: 'fill'}}></img>
                         <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김인아 목사</span>
                         <br></br>
                         <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>총괄</span>
@@ -149,7 +149,7 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>전도사</span>
                 </div>
                 <div className={style.box2}>
-                    <div className={style.card}><img src={person3} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={leekiyoung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이기영 전도사</span>
                         <br></br>
                         <span className={style.textb} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '15px'}}>구하리 학원</span>

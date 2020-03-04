@@ -188,7 +188,7 @@ class Group2_1 extends Component{
                 </div>
                 </div>
 
-                <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
+                {/* <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>2020년 주제</span>
                         <br></br>
@@ -222,7 +222,7 @@ class Group2_1 extends Component{
                         <span className={style.textb2} style={{fontSize: '20px'}}>6) 전교인 헌신/봉사하기</span>
                     <br></br>
                     </div>
-                </div>
+                </div> */}
 
             </div>
         }
