@@ -24,7 +24,7 @@ class Worship4 extends Component{
 
 
                 {/* 유튜브 홍보 이미지 */}
-                <a href="https://www.youtube.com/channel/UCWn2WDpdx1eZfYmRHwUuyMA" target = "_blank"><img src={headimage} style={{width:'100%', float: 'left', objectFit: 'cover', height: '300px', marginBottom: '40px'}}></img></a>
+                <a href="https://www.youtube.com/channel/UCmFo_13GBPqjQyPiSmWX4FA" target = "_blank"><img src={headimage} style={{width:'100%', float: 'left', objectFit: 'cover', height: '300px', marginBottom: '40px'}}></img></a>
 
 
                <div className={style.box} style={{marginTop: '10px'}}>

@@ -15,6 +15,7 @@ import jangro5 from '../../../../../images/jangro5.PNG'
 import jangro6 from '../../../../../images/jangro6.PNG'
 import jangro7 from '../../../../../images/jangro7.PNG'
 import jangro8 from '../../../../../images/jangro8.PNG'
+import leebanghoon from '../../../../../images/leebanghoon.jpg';
 import kimhongu from '../../../../../images/kimhongu.png';
 import ryujungyu from '../../../../../images/ryujungyu.jpeg';
 import hwangbunok from '../../../../../images/hwangbunok.jpeg';
@@ -224,7 +225,7 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>장준영 장로</span>
                     </div>
 
-                    <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={leebanghoon} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>이방훈 장로</span>
                     </div>
                 </div>

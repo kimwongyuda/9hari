@@ -21,7 +21,7 @@ class Bottom extends Component{
                             <span className={style.textb2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>FAX</span>
                             <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>070-4238-0191</span>
                             <span className={style.textb2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>EMAIL</span>
-                            <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>rladnjsrb9999@khu.ac.kr</span>
+                            <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>jesus316@hanmail.net</span>
                         </div>
                         <div style={{width: '100%', float: 'left', marginBottom: '30px', marginTop: '10px'}}>
                             <span className={style.textb} style={{width: '100%', textAlign: 'center', display: 'inline-block', color: 'white', fontSize: '20px', marginRight: '20px'}}>ⓒ 2020 구하리교회. All Rights Reserved. Designed by 김원규</span>   
