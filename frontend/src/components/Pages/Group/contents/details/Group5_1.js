@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import style from './Group5_1.module.css';
 import image1 from '../../../../../images/3040_1.jpeg';
+import Group_5_1 from '../../../../../images/Group_5_1.jpg'
 
 class Group5_1 extends Component{
 
@@ -24,7 +25,7 @@ class Group5_1 extends Component{
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>할렐루야 찬양대</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
-                    <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    <img src={Group_5_1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '40px'}}>

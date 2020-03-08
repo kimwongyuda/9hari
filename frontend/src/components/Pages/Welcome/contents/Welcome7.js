@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import style from './Welcome1.module.css';
-import image1 from '../../../../images/welcome1_1.JPG'
-import image2 from '../../../../images/welcome1_2.JPG'
+import jubo1 from '../../../../images/jubo11.jpg'
+import jubo2 from '../../../../images/jubo22.jpg'
 
 class Welcome7 extends Component{
 
@@ -21,9 +21,11 @@ class Welcome7 extends Component{
                </div>
 
                <div style={{width:'100%', float: 'left', marginBottom: '30px', borderBottom: '0.1px solid #DCDCDC'}}>
-                <   div className={style.box} style={{borderBottom: '0.1px solid #005bab'}}>
+                    <div className={style.box} style={{borderBottom: '0.1px solid #005bab'}}>
                         <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>주보</span>
-                    </div>    
+                    </div>
+                    <img src={jubo1} style={{width: '100%', float: 'left', marginBottom: '30px'}}></img>
+                    <img src={jubo2} style={{width: '100%', float: 'left', marginBottom: '30px'}}></img>
                 </div>
             </div>
         )

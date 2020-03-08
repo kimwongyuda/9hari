@@ -84,7 +84,7 @@ class Welcome6_1 extends Component{
                         </tbody>
                 </table>
 
-                <div className={style.box}>
+                {/* <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>자가차량 이용시</span>
                 </div>
 
@@ -111,7 +111,7 @@ class Welcome6_1 extends Component{
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
                                 </tr>
                         </tbody>
-                </table>
+                </table> */}
 
                 <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>주차 및 장소 안내</span>
@@ -120,24 +120,12 @@ class Welcome6_1 extends Component{
                 <table className={style.table}>
                         <tbody>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb2} rowSpan='3'>주차 안내</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>주차 공간이 많지 않아 선착순</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>주차 안내</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>주차 공간이 많지 않아 주의 부탁드립니다</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
-                                </tr>
-                                <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
-                                </tr>
-                                <tr>
-                                    <td className={style.td+' '+style.textb2} rowSpan='3'>장소 안내</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>장소 안내</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>교회 뒷편과 건너편</td>
-                                </tr>
-                                <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
-                                </tr>
-                                <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -167,7 +155,19 @@ class Welcome6_1 extends Component{
                                 <tr> 
                                     <td className={style.td+' '+style.textb2}>구성역</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>26번, 26-2번</td>
-                                </tr>                               
+                                </tr>     
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2}>동백역</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>21번, 21-A번</td>
+                                </tr>                            
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2}>언동중학교</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>26-1번, 26-3번</td>
+                                </tr>                            
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2}>단국대학교</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>26-3번</td>
+                                </tr>                            
                         </tbody>
                 </table>
 
@@ -178,12 +178,12 @@ class Welcome6_1 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2}>분당선</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>구성역, 죽전역, 오리역, 미금역 하차 후 버스 이용</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>분당선 구성역 하차 후 3번 출구에서 <br></br> 21, 21A, 26, 26-1, 26-2, 26-3 타고 <br></br> 구교동마을, 장욱진고택 정거장 하차  </td>
                                 </tr>                                   
                         </tbody>
                 </table>
 
-                <div className={style.box}>
+                {/* <div className={style.box}>
                     <span className={style.textb2} style={{fontSize: '20px', color: '#005bab'}}>교회 차량 안내</span>
                 </div>
 
@@ -210,7 +210,7 @@ class Welcome6_1 extends Component{
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>1부</td>
                                 </tr>
                         </tbody>
-                </table>
+                </table> */}
 
             </div>
         }

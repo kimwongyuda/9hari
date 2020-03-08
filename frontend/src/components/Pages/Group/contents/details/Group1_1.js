@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import style from './Group1_1.module.css';
 import image1 from '../../../../../images/3040_1.jpeg';
+import Group_1_1 from '../../../../../images/Group_1_1.jpg'
+import Group_1_2 from '../../../../../images/Group_1_2.JPG'
 
 class Group1_1 extends Component{
 
@@ -39,7 +41,7 @@ class Group1_1 extends Component{
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>제 1남선교회</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
-                    <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    <img src={Group_1_2} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '40px'}}>
@@ -76,7 +78,7 @@ class Group1_1 extends Component{
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>제 2남선교회</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
-                    <img src={image1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    <img src={Group_1_1} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '40px'}}>

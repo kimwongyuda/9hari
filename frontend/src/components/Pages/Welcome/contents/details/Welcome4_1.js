@@ -7,14 +7,9 @@ import leekiyoung from '../../../../../images/leekiyoung.png'
 import person4 from '../../../../../images/person4_re.jpg'
 import person5 from '../../../../../images/person5_re.jpg'
 import person6 from '../../../../../images/person6_re.jpg'
-import jangro1 from '../../../../../images/jangro1.PNG'
 import jangro2 from '../../../../../images/jangro2.PNG'
-import jangro3 from '../../../../../images/jangro3.PNG'
-import jangro4 from '../../../../../images/jangro4.PNG'
-import jangro5 from '../../../../../images/jangro5.PNG'
 import jangro6 from '../../../../../images/jangro6.PNG'
 import jangro7 from '../../../../../images/jangro7.PNG'
-import jangro8 from '../../../../../images/jangro8.PNG'
 import leebanghoon from '../../../../../images/leebanghoon.jpg';
 import kimhongu from '../../../../../images/kimhongu.png';
 import ryujungyu from '../../../../../images/ryujungyu.jpeg';
@@ -22,6 +17,8 @@ import hwangbunok from '../../../../../images/hwangbunok.jpeg';
 import kimseha from '../../../../../images/kimseha.jpg';
 import parkchanbaek from '../../../../../images/parkchanbaek.PNG';
 import junbyung from '../../../../../images/junbyung.jpg';
+import jangjunyoung from '../../../../../images/jangjunyoung.jpeg'
+import kimuryung from '../../../../../images/kimuryung.jpeg'
 
 class Welcome4_1 extends Component{
 
@@ -185,7 +182,7 @@ class Welcome4_1 extends Component{
                     <div className={style.card}><img src={kimhongu} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김홍구 장로</span>
                         </div>
-                    <div className={style.card}><img src={jangro2} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={kimuryung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>김무령 장로</span>
                         </div>
                     <div className={style.card}><img src={junbyung} style={{width: '100%', objectFit: 'fill'}}></img>
@@ -221,7 +218,7 @@ class Welcome4_1 extends Component{
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
                     </div>
 
-                    <div className={style.card}><img src={jangro6} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={jangjunyoung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>장준영 장로</span>
                     </div>
 

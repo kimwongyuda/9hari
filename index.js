@@ -17,6 +17,10 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     var option = req.params.option;
     var input = req.params.input;
 
+    console.log(type)
+    console.log(option)
+    console.log(input)
+
     if(option== 'title')
     {
     temp =
@@ -87,6 +91,7 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
             var json = JSON.parse(string);
             json = json.reverse();
             ret=json;
+            console.log(ret);
             res.send(ret);
         }
     });
@@ -95,7 +100,6 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
 
 app.get('/api/posts/:type', (req,res)=>{
     var type = req.params.type;
-    console.log(type);
     var temp =
     `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
     from 

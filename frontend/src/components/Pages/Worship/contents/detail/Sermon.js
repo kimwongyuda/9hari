@@ -44,7 +44,7 @@ class Sermon extends Component{
                     <span className={style.smallbox3+' '+ style.textb2} style={{width:'30%', textAlign: 'left', paddingLeft: '10px', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>설교 장소</span>
                     <span className={style.smallbox3+' '+ style.textb} style={{width:'70%', paddingLeft: '10px', textAlign: 'left', borderRight: '0.1px solid #DCDCDC'}}>{this.state.data.sermon_place}</span>
                     <span className={style.smallbox3+' '+ style.textb2} style={{width:'30%', textAlign: 'left', paddingLeft: '10px', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>설교 날짜</span>
-                    <span className={style.smallbox3+' '+ style.textb} style={{width:'70%', paddingLeft: '10px', textAlign: 'left', borderRight: '0.1px solid #DCDCDC'}}>{this.state.data.creation_date.substr(0,10)}</span>
+                    <span className={style.smallbox3+' '+ style.textb} style={{width:'70%', paddingLeft: '10px', textAlign: 'left', borderRight: '0.1px solid #DCDCDC'}}>{this.state.data.sermon_date.substr(0,10)}</span>
                     <span className={style.smallbox3+' '+ style.textb} style={{width:'100%', textAlign: 'center', borderBottom: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', paddingTop: '10px', paddingBottom: '10px'}}>{this.state.data.sermon_summary}</span>
                 </div>     
 

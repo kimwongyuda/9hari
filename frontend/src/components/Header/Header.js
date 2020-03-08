@@ -21,7 +21,7 @@ class Header extends Component{
                     ['/ng/1/1', '/ng/2/1', '/ng/3/1', '/ng/4/1'],
                     ['/group/1/1', '/group/2/1', '/group/3/1', '/group/4/1', '/group/5/1'],
                     ['/event/1', '/event/2', '/event/3'],
-                    ['/organ/1/1', '/organ/2/1'],
+                    ['/organ/2/1'],
                     ['/suggest/2']]
         };
     }

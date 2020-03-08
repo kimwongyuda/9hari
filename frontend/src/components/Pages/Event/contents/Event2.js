@@ -32,10 +32,10 @@ class Event2 extends Component{
                         <span className={style.textb2} style={{fontSize: '30px', color: '#005bab'}}>전교인 수련회는</span>
                         <br></br>
                         <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>성도들이 신앙의 성장과 성숙을 위한 집중적인 훈련을 위하여 교회학교에서는 여름 성경학교내지는 여름 수련회, 동계 수련회를 하게 되고 전교인들은 여름 수련회를 하게 된다.</span>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>성도들이 신앙의 성장과 성숙을 위한 집중적인 훈련을 위하여 교회학교에서는 여름 성경학교내지는 여름 수련회, 동계 수련회를 하게 되고 전교인들은 여름 수련회를 하게 됩니다.</span>
                         <br></br>
                         <br></br>
-                        <span className={style.textb2} style={{fontSize: '20px'}}>구하리 교회는 이러한 영적인 훈련과 성장과 성숙을 위하여 개척초기부터 교회학교는 여름성경학교와 전교인 여름 수련회를 하게 되었다. 이를 통하여 받은 은혜를 감사하며 새로 받은 은혜를 가지고 더욱더 열심히 신앙 생활하는 계기를 갖게 된다. 그 동안 수련회에 대한 발자취를 살펴보면 다음과 같다.</span>
+                        <span className={style.textb2} style={{fontSize: '20px'}}>구하리 교회는 이러한 영적인 훈련과 성장과 성숙을 위하여 개척초기부터 교회학교는 여름성경학교와 전교인 여름 수련회를 하게 되었습니다. 이를 통하여 받은 은혜를 감사하며 새로 받은 은혜를 가지고 더욱더 열심히 신앙 생활하는 계기를 갖게 되었습니다.</span>
                         
                     </div>
                 </div>

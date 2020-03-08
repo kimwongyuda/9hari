@@ -73,7 +73,10 @@ class Pagination extends Component{
 
         var posts = this.state.posts;
 
+        console.log(posts);
+
         var cur_page_index = this.state.pageindex;
+        console.log(cur_page_index);
 
         //현재 글 개수 inputcount개씩 짜름.
         var posts_size = posts.length;
@@ -84,7 +87,6 @@ class Pagination extends Component{
 
         var page = window.location.pathname.split('/')[3];
         var pageint = parseInt(page);
-        console.log(posts);
         console.log(posts_mod);
         if(posts.length!=0)
         {
@@ -245,7 +247,7 @@ class Pagination extends Component{
                                 <option value='writer' className={style.textb} style={{fontSize: '20px'}}>작성자</option>
                             </select>
                             <input type="textb" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
-                            <Link to="/worship/${cur_page_index}/1"><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
+                            <Link to={`/worship/${cur_page_index}/1`}><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
                         </div>
                     </div>
                 </div>
