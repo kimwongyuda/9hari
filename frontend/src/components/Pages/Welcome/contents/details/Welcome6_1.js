@@ -119,10 +119,6 @@ class Welcome6_1 extends Component{
 
                 <table className={style.table}>
                         <tbody>
-                                <tr> 
-                                    <td className={style.td+' '+style.textb2} rowSpan='1'>주차 안내</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>주차 공간이 많지 않아 주의 부탁드립니다</td>
-                                </tr>
                                 <tr>
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>장소 안내</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>교회 뒷편과 건너편</td>

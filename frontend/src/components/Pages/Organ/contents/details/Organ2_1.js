@@ -26,6 +26,10 @@ class Organ2_1 extends Component{
                                         <td className={style.td+' '+style.textb2} rowSpan='1'>영업 시간</td>
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>오전 09:00 - 오후 18:00</td>
                                     </tr>
+                                    <tr> 
+                                        <td className={style.td+' '+style.textb2} rowSpan='1'>연락처</td>
+                                        <td className={style.td+' '+style.textb} style={{width: '75%'}}>031-283-5005</td>
+                                    </tr>
                             </tbody>
                     </table>
                 </div>

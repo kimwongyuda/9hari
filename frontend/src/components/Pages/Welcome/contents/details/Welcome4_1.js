@@ -19,6 +19,8 @@ import parkchanbaek from '../../../../../images/parkchanbaek.PNG';
 import junbyung from '../../../../../images/junbyung.jpg';
 import jangjunyoung from '../../../../../images/jangjunyoung.jpeg'
 import kimuryung from '../../../../../images/kimuryung.jpeg'
+import hongmangi from '../../../../../images/hongmangi.jpg'
+import blank2 from '../../../../../images/blank2.png'
 
 class Welcome4_1 extends Component{
 
@@ -188,7 +190,7 @@ class Welcome4_1 extends Component{
                     <div className={style.card}><img src={junbyung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>전병철 장로</span>
                         </div>
-                    <div className={style.card}><img src={jangro7} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={hongmangi} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>홍만기 장로</span>
                         </div>
                 </div>
@@ -214,7 +216,7 @@ class Welcome4_1 extends Component{
 
                 <div className={style.box2}>
 
-                    <div className={style.card}><img src={temp} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={blank2} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
                     </div>
 
