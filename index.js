@@ -99,7 +99,11 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
 })
 
 app.get('/api/posts/:type', (req,res)=>{
+
+    console.log('asdasdasdasdd');
     var type = req.params.type;
+    console.log(type);
+
     var temp =
     `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
     from 
@@ -112,7 +116,6 @@ app.get('/api/posts/:type', (req,res)=>{
     on pid = ps.posts_id) as pus inner join sermons as s
     on pus.sermons_id = s.id;`;
 
-    
     var ret;
     connection.query(temp, function(err, rows){
         if(err)

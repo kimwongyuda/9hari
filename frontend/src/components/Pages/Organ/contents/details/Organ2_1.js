@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import style from './Organ2_1.module.css';
-import image1 from '../../../../../images/3040_1.jpeg';
 import cafe from '../../../../../images/cafe.jpg';
+import cafe2 from '../../../../../images/cafe2.jpg';
 
 class Organ2_1 extends Component{
 
@@ -38,7 +38,7 @@ class Organ2_1 extends Component{
                 <div style={{width: '50%', float: 'left', borderTop: '0.1px solid #DCDCDC', borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC', borderBottom: '0.1px solid #DCDCDC'}}>
                     <span className={style.textb2} style={{marginTop: '10px', textAlign: 'center' ,width: '100%',fontSize: '20px', color: 'black', display: 'inline-block'}}>구하리 카페</span>
                     <div style={{width:'100%', float: 'left', marginTop: '10px',marginBottom: '10px'}}>
-                    <img src={cafe} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
+                    <img src={cafe2} style={{width: '92%', objectFit: 'fill', marginRight: '4%', marginLeft: '4%', marginBottom: '10px'}}></img>
                     </div>
                 </div>
                 <div style={{width: '50%', float: 'left', height: '415px', paddingTop: '40px'}}>

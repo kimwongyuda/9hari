@@ -7,11 +7,11 @@ import content_image4 from '../../../../images/image6.JPG';
 import content_image5 from '../../../../images/image7.JPG';
 import content_image6 from '../../../../images/image8.JPG';
 import content_image7 from '../../../../images/image9.JPG';
-import content_image8 from '../../../../images/image2.JPG';
 import content_image10 from '../../../../images/image10.JPG';
 import content_image11 from '../../../../images/image11.JPG';
 import content_image12 from '../../../../images/image12.JPG';
 import content_image13 from '../../../../images/image13.JPG';
+import content_image14 from '../../../../images/image14.jpg';
 
 class Welcome2 extends Component{
 
@@ -72,6 +72,7 @@ class Welcome2 extends Component{
                    <img src={content_image12} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image11} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
 
+                   <img src={content_image14} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image13} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>

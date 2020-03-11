@@ -65,13 +65,13 @@ class NG1_1 extends Component{
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='3'>교사</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최봉희</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최봉희 권사</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김수희</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김수희 집사</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>조재현</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>조재현 청년</td>
                                 </tr>
                         </tbody>
                 </table>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import style from './Group5_1.module.css';
-import image1 from '../../../../../images/3040_1.jpeg';
 import Group_5_1 from '../../../../../images/Group_5_1.jpg'
+import Group_5_4 from '../../../../../images/Group_5_4.jpg'
 import blank from '../../../../../images/blank.png'
 
 class Group5_1 extends Component{
@@ -43,11 +43,11 @@ class Group5_1 extends Component{
                                 </tr>                                
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>지휘</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>정하진</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>정하진 집사</td>
                                 </tr>                                
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>반주</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이은영/오성빈</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이은영 집사/오성빈 청년</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -66,26 +66,32 @@ class Group5_1 extends Component{
                     <table className={style.table} style={{width: '90%', marginLeft: '5%', marginTop: '10px'}}>
                         <tbody>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb2} rowSpan='7'>구성원</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>리드 싱어</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>박찬백 목사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이은영</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>건반 1</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이은영 집사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>오성빈</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>건반 2</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>오성빈 청년</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>신애자</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>드럼</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>신애자 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최광혁</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>베이스</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최광혁 집사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>정하진</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>정하진 집사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김지수</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김지수 집사</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -104,23 +110,28 @@ class Group5_1 extends Component{
                     <table className={style.table} style={{width: '90%', marginLeft: '5%', marginTop: '10px'}}>
                         <tbody>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb2} rowSpan='7'>구성원</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>리드 싱어</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>박찬백 목사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>신애자</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>드럼</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>신애자 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최혜숙</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>건반</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>조완숙 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>조완숙</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>최혜숙 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김재덕</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김재덕 전도사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김민수</td>
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김민수 청년</td>
                                 </tr>
                         </tbody>
                 </table>

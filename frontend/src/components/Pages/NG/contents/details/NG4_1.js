@@ -33,10 +33,6 @@ class NG4_1 extends Component{
                                         <td className={style.td+' '+style.textb2} rowSpan='1'>모임 장소</td>
                                         <td className={style.td+' '+style.textb} style={{width: '75%'}}>새가족실</td>
                                     </tr>
-                                    <tr> 
-                                        <td className={style.td+' '+style.textb2} rowSpan='1'>회장</td>
-                                        <td className={style.td+' '+style.textb} style={{width: '75%'}}>전성이</td>
-                                    </tr>
                             </tbody>
                     </table>
                 </div>
@@ -65,7 +61,7 @@ class NG4_1 extends Component{
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>간사</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전성이</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전성이 청년</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -117,9 +113,9 @@ class NG4_1 extends Component{
                             <span className={style.textb2} style={{fontSize: '20px'}}>음악에 은사를 가지고 있는 청년들을 선별하여 교육 및 연습을 통해 청년 예배시 찬양으로 섬길 수 있게 한다.</span>
                             <br></br>
                             <br></br>
-                            <span className={style.textb2} style={{fontSize: '20px'}}>2) 에배팀</span>
+                            <span className={style.textb2} style={{fontSize: '20px'}}>2) 예배팀</span>
                             <br></br>
-                            <span className={style.textb2} style={{fontSize: '20px'}}>예배시 안내, 기도, 광고, 2부 특별활동을 섬길 수 있는 청년들을 선별해서 교육과정을 거쳐 예배시 적절한 요소에 배치하여 청년부를 섬길 수 있도록 한다.</span>
+                            <span className={style.textb2} style={{fontSize: '20px'}}>예배시 안내, 기도, 광고, 2부 특별활동을 섬길 수 있는 청년들을 선별해서 교육과정을 거쳐 예배시 적절한 요소에 배치하여 청년 부서를 섬길 수 있도록 한다.</span>
                         </div>
                         <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>
                             <span className={style.textb2} style={{fontSize: '25px', color: 'rgb(80, 80, 80)'}}>3) 모임 세우기</span>

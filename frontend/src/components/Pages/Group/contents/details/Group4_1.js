@@ -43,20 +43,20 @@ class Group4_1 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>부장</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이미라</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이미라 사모</td>
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='4'>부원</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>양행덕</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>양행덕 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박혜경</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박혜경 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>변갑순</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>변갑순 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>송윤자</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>송윤자 권사</td>
                                 </tr>
                         </tbody>
                 </table>
@@ -76,20 +76,20 @@ class Group4_1 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>부장</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>서완석</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>서완석 집사</td>
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='4'>부원</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>양행덕</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>양행덕 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박혜경</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박혜경 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>변갑순</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>변갑순 권사</td>
                                 </tr>
                                 <tr> 
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>송윤자</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>송윤자 권사</td>
                                 </tr>
                         </tbody>
                 </table>

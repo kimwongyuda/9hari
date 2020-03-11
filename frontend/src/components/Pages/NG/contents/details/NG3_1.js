@@ -65,22 +65,22 @@ class NG3_1 extends Component{
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='6'>교사</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전성이</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전성이 청년</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전수경</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전수경 청년</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전형우</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>전형우 청년</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김원규</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김원규 청년</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김민수</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김민수 청년</td>
                                 </tr>
                                 <tr>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이정서</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>이정서 청년</td>
                                 </tr>
                         </tbody>
                 </table>
