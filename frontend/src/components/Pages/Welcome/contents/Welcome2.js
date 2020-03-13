@@ -12,6 +12,7 @@ import content_image11 from '../../../../images/image11.JPG';
 import content_image12 from '../../../../images/image12.JPG';
 import content_image13 from '../../../../images/image13.JPG';
 import content_image14 from '../../../../images/image14.jpg';
+import content_image15 from '../../../../images/image15.jpg';
 
 class Welcome2 extends Component{
 
@@ -66,13 +67,13 @@ class Welcome2 extends Component{
                <div style={{width:'50%', float: 'left'}}>
                    <img src={content_image1} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image3} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image15} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image10} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image4} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image14} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image12} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image11} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
 
-                   <img src={content_image14} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image4} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image13} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>

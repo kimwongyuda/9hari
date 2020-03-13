@@ -83,7 +83,7 @@ class Home extends Component{
 
         return(
             <div>
-                <div className={style.wrapper} style={{height: '130px'}}>a</div>
+                <div className={style.wrapper+' '+style.blankbox} style={{height: '130px'}}>a</div>
                 <div className={style.wrapper} style={{marginBottom: '10px'}}>
 
                     <div className={style.wrapper} style={{marginBottom: '30px'}}>
@@ -154,30 +154,32 @@ class Home extends Component{
                         </div> */}
 
                     </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-
             </div>
         )
     };

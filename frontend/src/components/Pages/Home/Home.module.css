@@ -95,3 +95,14 @@
   color: #005bab;
   text-decoration: none;
 }
+
+.blankbox{
+
+}
+
+@media only screen and (max-width: 600px)
+{
+  .blankbox{
+    display: none;
+  }
+}

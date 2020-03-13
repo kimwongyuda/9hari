@@ -66,6 +66,18 @@
     z-index: 2;
 }
 
+@media only screen and (max-width:600px)
+{
+    .appbar{
+        position: relative;
+    }
+    
+    .navbar{
+        margin-left: calc((100vw - 1250px) / 2);
+        margin-right: calc((100vw - 1250px) / 2);       
+    }
+}
+
 .toolbar{
     width: 100%;
     border-bottom: 0.1px solid #DCDCDC;

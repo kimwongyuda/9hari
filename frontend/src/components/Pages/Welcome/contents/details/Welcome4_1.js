@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import style from './Welcome4_1.module.css';
-import temp from '../../../../../images/temp.jpg'
-import kimina from '../../../../../images/kimina.png'
+import kimina from '../../../../../images/kimina_real.jpg'
 import person2 from '../../../../../images/person2.jpg'
-import leekiyoung from '../../../../../images/leekiyoung.png'
-import person4 from '../../../../../images/person4_re.jpg'
+import leekiyoung from '../../../../../images/leeky.jpg'
+import person4 from '../../../../../images/kimsa.jpg'
 import person5 from '../../../../../images/person5_re.jpg'
-import person6 from '../../../../../images/person6_re.jpg'
-import jangro2 from '../../../../../images/jangro2.PNG'
-import jangro6 from '../../../../../images/jangro6.PNG'
-import jangro7 from '../../../../../images/jangro7.PNG'
+import person6 from '../../../../../images/parkjh.jpg'
 import leebanghoon from '../../../../../images/leebanghoon.jpg';
 import kimhongu from '../../../../../images/kimhongu.png';
 import ryujungyu from '../../../../../images/ryujungyu.jpeg';
@@ -20,7 +16,7 @@ import junbyung from '../../../../../images/junbyung.jpg';
 import jangjunyoung from '../../../../../images/jangjunyoung.jpeg'
 import kimuryung from '../../../../../images/kimuryung.jpeg'
 import hongmangi from '../../../../../images/hongmangi.jpg'
-import blank2 from '../../../../../images/blank2.png'
+import jogukjung from '../../../../../images/jogukjung.jpg'
 
 class Welcome4_1 extends Component{
 
@@ -216,7 +212,7 @@ class Welcome4_1 extends Component{
 
                 <div className={style.box2}>
 
-                    <div className={style.card}><img src={blank2} style={{width: '100%', objectFit: 'fill'}}></img>
+                    <div className={style.card}><img src={jogukjung} style={{width: '100%', objectFit: 'fill'}}></img>
                     <span className={style.textb2} style={{marginLeft: '5px', textAlign: 'center', display: 'inline-block', width: '100%', fontSize: '20px'}}>조국정 장로</span>
                     </div>
 
