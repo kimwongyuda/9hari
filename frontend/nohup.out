@@ -1,0 +1,1661 @@
+yarn run v1.22.4
+$ react-scripts start
+/bin/sh: 1: react-scripts: not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.22.4
+$ react-scripts start
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://10.0.1.92/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/ubuntu/9hari/frontend/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+Starting the development server...
+
+Compiled with warnings.
+
+./src/components/Pages/Suggest/Suggest.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 43:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 56:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Organ/Organ.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 41:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 54:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Event/contents/Event2.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 25:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event3.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/Event.js
+  Line 11:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 17:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 20:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 23:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 34:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 46:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 59:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/contents/detail/Pagination.js
+  Line 12:55:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 49:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 58:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 91:24:   Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 94:20:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 102:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 115:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 123:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 130:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 137:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 153:19:  Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 163:21:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 195:63:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 250:71:  <input> elements with type="image" must have a text alternative through the `alt`, `aria-label`, or `aria-labelledby` prop  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/Worship.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/NG/NG.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Group/Group.js
+  Line 13:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 22:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 25:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 28:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 31:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 42:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 53:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 66:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Bottom/Bottom.js
+  Line 15:42:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/Welcome.js
+  Line 15:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 21:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 36:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 40:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 50:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 73:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+  Line 75:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 75:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Worship/contents/detail/Sermon.js
+  Line 2:9:    'Link' is defined but never used                     no-unused-vars
+  Line 35:17:  <iframe> elements must have a unique title property  jsx-a11y/iframe-has-title
+
+./src/components/Header/Header.js
+  Line 32:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 68:99:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/details/Welcome6_1.js
+  Line 38:33:   Multiline support is limited to browsers supporting ES5 only  no-multi-str
+  Line 65:17:   Expected '===' and instead saw '=='                           eqeqeq
+  Line 213:22:  Expected '===' and instead saw '=='                           eqeqeq
+
+./src/components/Pages/Group/contents/details/Group2_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 12:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 20:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 53:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 86:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 118:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 143:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 172:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 234:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group4_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 136:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group1_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 81:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 146:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/details/Welcome4_1.js
+  Line 3:8:     'temp' is defined but never used                                                                           no-unused-vars
+  Line 10:8:    'jangro2' is defined but never used                                                                        no-unused-vars
+  Line 11:8:    'jangro6' is defined but never used                                                                        no-unused-vars
+  Line 12:8:    'jangro7' is defined but never used                                                                        no-unused-vars
+  Line 27:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 36:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 43:49:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 112:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 119:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 126:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 139:45:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 152:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 159:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 166:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 177:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 184:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 187:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 190:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 193:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 202:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 205:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 208:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 219:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 223:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 227:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Organ/contents/details/Organ2_1.js
+  Line 3:8:    'cafe' is defined but never used                                                                           no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 41:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome1.js
+  Line 3:8:    'image1' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 24:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome3.js
+  Line 3:8:    'image2' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome5.js
+  Line 3:9:  'Link' is defined but never used  no-unused-vars
+  Line 7:5:  Useless constructor               no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group5_1.js
+  Line 4:8:     'Group_5_4' is defined but never used                                                                      no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 29:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 61:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 105:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 144:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome2.js
+  Line 4:8:    'content_image2' is defined but never used                                                                 no-unused-vars
+  Line 18:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 67:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 68:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 69:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 71:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 73:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 75:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 76:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 77:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 78:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Suggest/contents/Suggest2.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Suggest/contents/Suggest1.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group3_1.js
+  Line 7:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 103:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ1_1.js
+  Line 7:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Home/Home.js
+  Line 7:8:    'home_background1' is defined but never used                                                               no-unused-vars
+  Line 8:8:    'home_background2' is defined but never used                                                               no-unused-vars
+  Line 13:8:   'icon1' is defined but never used                                                                          no-unused-vars
+  Line 14:8:   'icon2' is defined but never used                                                                          no-unused-vars
+  Line 15:8:   'icon3' is defined but never used                                                                          no-unused-vars
+  Line 16:8:   'icon4' is defined but never used                                                                          no-unused-vars
+  Line 17:8:   'icon5' is defined but never used                                                                          no-unused-vars
+  Line 94:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event1.js
+  Line 7:8:    'image5' is defined but never used                                                                         no-unused-vars
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 30:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship1.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 24:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 24:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship3.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 25:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 25:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship4.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 27:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 27:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/NG/contents/details/NG4_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 47:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG1_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 115:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG3_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 130:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG2_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 49:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 52:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 112:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome7.js
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome4.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 22:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 23:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 43:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome6.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Group/contents/Group1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group3.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group4.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group5.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/NG/contents/NG3.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG4.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG2.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG1.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/Worship/contents/Worship2.js
+  Line 9:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 26:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 26:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+yarn run v1.22.4
+$ react-scripts start
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://10.0.1.92/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/ubuntu/9hari/frontend/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+Starting the development server...
+
+Compiled with warnings.
+
+./src/components/Pages/Suggest/Suggest.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 43:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 56:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Organ/Organ.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 41:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 54:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Event/contents/Event2.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 25:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event3.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/Event.js
+  Line 11:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 17:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 20:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 23:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 34:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 46:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 59:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/contents/detail/Pagination.js
+  Line 12:55:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 49:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 58:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 91:24:   Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 94:20:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 102:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 115:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 123:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 130:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 137:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 153:19:  Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 163:21:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 195:63:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 250:71:  <input> elements with type="image" must have a text alternative through the `alt`, `aria-label`, or `aria-labelledby` prop  jsx-a11y/alt-text
+
+./src/components/Pages/NG/NG.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/Worship.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Group/Group.js
+  Line 13:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 22:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 25:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 28:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 31:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 42:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 53:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 66:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Bottom/Bottom.js
+  Line 15:42:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/Welcome.js
+  Line 15:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 21:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 36:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 40:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 50:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 73:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+  Line 75:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 75:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/details/Welcome4_1.js
+  Line 23:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 32:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 39:49:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 108:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 115:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 122:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 135:45:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 155:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 162:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 173:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 180:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 183:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 186:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 189:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 198:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 201:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 204:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 215:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 219:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 223:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/detail/Sermon.js
+  Line 2:9:    'Link' is defined but never used                     no-unused-vars
+  Line 35:17:  <iframe> elements must have a unique title property  jsx-a11y/iframe-has-title
+
+./src/components/Header/Header.js
+  Line 32:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 69:99:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/details/Welcome6_1.js
+  Line 38:33:   Multiline support is limited to browsers supporting ES5 only  no-multi-str
+  Line 65:17:   Expected '===' and instead saw '=='                           eqeqeq
+  Line 213:22:  Expected '===' and instead saw '=='                           eqeqeq
+
+./src/components/Pages/Group/contents/details/Group2_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 12:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 20:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 53:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 86:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 118:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 143:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 172:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 234:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group4_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 136:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group1_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 81:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 146:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ2_1.js
+  Line 3:8:    'cafe' is defined but never used                                                                           no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 41:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome1.js
+  Line 3:8:    'image1' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 24:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome3.js
+  Line 3:8:    'image2' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome5.js
+  Line 3:9:  'Link' is defined but never used  no-unused-vars
+  Line 7:5:  Useless constructor               no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group5_1.js
+  Line 4:8:     'Group_5_4' is defined but never used                                                                      no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 29:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 61:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 105:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 144:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome2.js
+  Line 4:8:    'content_image2' is defined but never used                                                                 no-unused-vars
+  Line 5:8:    'content_image3' is defined but never used                                                                 no-unused-vars
+  Line 19:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 68:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 69:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 71:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 73:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 74:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 76:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 77:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 78:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 79:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Suggest/contents/Suggest1.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Suggest/contents/Suggest2.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group3_1.js
+  Line 7:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 103:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ1_1.js
+  Line 7:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Home/Home.js
+  Line 7:8:    'home_background1' is defined but never used                                                               no-unused-vars
+  Line 8:8:    'home_background2' is defined but never used                                                               no-unused-vars
+  Line 13:8:   'icon1' is defined but never used                                                                          no-unused-vars
+  Line 14:8:   'icon2' is defined but never used                                                                          no-unused-vars
+  Line 15:8:   'icon3' is defined but never used                                                                          no-unused-vars
+  Line 16:8:   'icon4' is defined but never used                                                                          no-unused-vars
+  Line 17:8:   'icon5' is defined but never used                                                                          no-unused-vars
+  Line 94:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event1.js
+  Line 7:8:    'image5' is defined but never used                                                                         no-unused-vars
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 30:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship1.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 24:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 24:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship3.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 25:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 25:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship4.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 27:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 27:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/NG/contents/details/NG4_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 47:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG1_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 115:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG3_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 130:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG2_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 49:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 52:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 112:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome7.js
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome4.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 22:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 23:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 43:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome6.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Group/contents/Group1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group3.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group4.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group5.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/NG/contents/NG3.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG1.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG2.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG4.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/Worship/contents/Worship2.js
+  Line 9:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 26:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 26:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+yarn run v1.22.4
+$ react-scripts start
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://10.0.1.92/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/ubuntu/9hari/frontend/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+Starting the development server...
+
+Compiled with warnings.
+
+./src/components/Pages/Suggest/Suggest.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 43:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 56:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Organ/Organ.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 41:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 54:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Event/contents/Event2.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 25:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event3.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/Event.js
+  Line 11:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 17:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 20:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 23:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 34:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 46:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 59:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/contents/detail/Pagination.js
+  Line 12:55:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 49:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 58:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 91:24:   Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 94:20:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 102:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 115:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 123:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 130:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 137:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 153:19:  Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 163:21:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 195:63:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 250:71:  <input> elements with type="image" must have a text alternative through the `alt`, `aria-label`, or `aria-labelledby` prop  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/Worship.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/NG/NG.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Group/Group.js
+  Line 13:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 22:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 25:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 28:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 31:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 42:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 53:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 66:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Bottom/Bottom.js
+  Line 15:42:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/Welcome.js
+  Line 15:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 21:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 36:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 40:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 50:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 73:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+  Line 75:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 75:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/details/Welcome4_1.js
+  Line 23:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 32:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 39:49:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 108:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 115:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 122:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 135:45:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 155:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 162:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 173:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 180:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 183:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 186:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 189:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 198:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 201:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 204:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 215:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 219:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 223:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/detail/Sermon.js
+  Line 2:9:    'Link' is defined but never used                     no-unused-vars
+  Line 35:17:  <iframe> elements must have a unique title property  jsx-a11y/iframe-has-title
+
+./src/components/Header/Header.js
+  Line 32:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 69:99:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/details/Welcome6_1.js
+  Line 38:33:   Multiline support is limited to browsers supporting ES5 only  no-multi-str
+  Line 65:17:   Expected '===' and instead saw '=='                           eqeqeq
+  Line 213:22:  Expected '===' and instead saw '=='                           eqeqeq
+
+./src/components/Pages/Group/contents/details/Group2_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 12:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 20:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 53:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 86:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 118:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 143:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 172:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 234:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group4_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 136:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group1_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 81:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 146:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ2_1.js
+  Line 3:8:    'cafe' is defined but never used                                                                           no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 41:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome1.js
+  Line 3:8:    'image1' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 24:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome3.js
+  Line 3:8:    'image2' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome5.js
+  Line 3:9:  'Link' is defined but never used  no-unused-vars
+  Line 7:5:  Useless constructor               no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group5_1.js
+  Line 4:8:     'Group_5_4' is defined but never used                                                                      no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 29:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 61:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 105:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 144:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome2.js
+  Line 4:8:    'content_image2' is defined but never used                                                                 no-unused-vars
+  Line 5:8:    'content_image3' is defined but never used                                                                 no-unused-vars
+  Line 19:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 68:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 69:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 71:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 73:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 74:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 76:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 77:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 78:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 79:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Suggest/contents/Suggest2.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Suggest/contents/Suggest1.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group3_1.js
+  Line 7:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 103:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ1_1.js
+  Line 7:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Home/Home.js
+  Line 7:8:    'home_background1' is defined but never used                                                               no-unused-vars
+  Line 8:8:    'home_background2' is defined but never used                                                               no-unused-vars
+  Line 13:8:   'icon1' is defined but never used                                                                          no-unused-vars
+  Line 14:8:   'icon2' is defined but never used                                                                          no-unused-vars
+  Line 15:8:   'icon3' is defined but never used                                                                          no-unused-vars
+  Line 16:8:   'icon4' is defined but never used                                                                          no-unused-vars
+  Line 17:8:   'icon5' is defined but never used                                                                          no-unused-vars
+  Line 94:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event1.js
+  Line 7:8:    'image5' is defined but never used                                                                         no-unused-vars
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 30:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship1.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 24:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 24:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship3.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 25:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 25:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship4.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 27:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 27:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/NG/contents/details/NG4_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 47:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG1_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 115:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG3_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 130:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG2_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 49:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 52:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 112:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome7.js
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome4.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 22:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 23:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 43:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome6.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Group/contents/Group1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group3.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group4.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group5.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/NG/contents/NG4.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG3.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG1.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG2.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/Worship/contents/Worship2.js
+  Line 9:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 26:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 26:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/Pages/Suggest/Suggest.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:17:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 43:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 56:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Organ/Organ.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 16:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 19:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 41:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 54:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Event/contents/Event2.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 25:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event3.js
+  Line 10:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 26:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/Event.js
+  Line 11:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 17:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 20:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 23:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 34:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 46:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 59:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/contents/detail/Pagination.js
+  Line 12:55:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 49:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 58:15:   'response' is assigned a value but never used                                                                               no-unused-vars
+  Line 91:24:   Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 94:20:   Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 102:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 115:21:  'i' is already defined                                                                                                      no-redeclare
+  Line 123:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 130:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 137:25:  'i' is already defined                                                                                                      no-redeclare
+  Line 153:19:  Expected '===' and instead saw '=='                                                                                         eqeqeq
+  Line 163:21:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 195:63:  Expected '!==' and instead saw '!='                                                                                         eqeqeq
+  Line 250:71:  <input> elements with type="image" must have a text alternative through the `alt`, `aria-label`, or `aria-labelledby` prop  jsx-a11y/alt-text
+
+./src/components/Pages/NG/NG.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Worship/Worship.js
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 18:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 21:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 38:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 49:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Pages/Group/Group.js
+  Line 13:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 19:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 22:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 25:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 28:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 31:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 42:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 53:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 66:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+
+./src/components/Bottom/Bottom.js
+  Line 15:42:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/Welcome.js
+  Line 15:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 21:41:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 24:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 30:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 33:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 36:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 40:46:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 50:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:73:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 62:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 73:78:  Expected '!==' and instead saw '!='                                                                        eqeqeq
+  Line 75:64:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 75:90:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/details/Welcome4_1.js
+  Line 23:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 32:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 39:49:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 108:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 115:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 122:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 135:45:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 155:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 162:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 173:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 180:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 183:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 186:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 189:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 198:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 201:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 204:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 215:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 219:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 223:49:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/detail/Sermon.js
+  Line 2:9:    'Link' is defined but never used                     no-unused-vars
+  Line 35:17:  <iframe> elements must have a unique title property  jsx-a11y/iframe-has-title
+
+./src/components/Header/Header.js
+  Line 32:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 69:99:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/details/Welcome6_1.js
+  Line 38:33:   Multiline support is limited to browsers supporting ES5 only  no-multi-str
+  Line 65:17:   Expected '===' and instead saw '=='                           eqeqeq
+  Line 213:22:  Expected '===' and instead saw '=='                           eqeqeq
+
+./src/components/Pages/Group/contents/details/Group2_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 12:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 20:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 53:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 86:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 118:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 143:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 172:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 234:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group4_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 136:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Group/contents/details/Group1_1.js
+  Line 3:8:     'image1' is defined but never used                                                                         no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 81:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 146:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ2_1.js
+  Line 3:8:    'cafe' is defined but never used                                                                           no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 41:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome1.js
+  Line 3:8:    'image1' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 24:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome3.js
+  Line 3:8:    'image2' is defined but never used                                                                         no-unused-vars
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome5.js
+  Line 3:9:  'Link' is defined but never used  no-unused-vars
+  Line 7:5:  Useless constructor               no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group5_1.js
+  Line 4:8:     'Group_5_4' is defined but never used                                                                      no-unused-vars
+  Line 9:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 17:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 29:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 61:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 105:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 144:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome2.js
+  Line 4:8:    'content_image2' is defined but never used                                                                 no-unused-vars
+  Line 5:8:    'content_image3' is defined but never used                                                                 no-unused-vars
+  Line 19:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 68:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 69:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 70:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 71:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 72:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 73:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 74:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 76:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 77:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 78:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 79:20:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Suggest/contents/Suggest1.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Suggest/contents/Suggest2.js
+  Line 6:5:  Useless constructor  no-useless-constructor
+
+./src/components/Pages/Group/contents/details/Group3_1.js
+  Line 7:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 37:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 103:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Organ/contents/details/Organ1_1.js
+  Line 7:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 15:17:  Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 60:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Home/Home.js
+  Line 7:8:    'home_background1' is defined but never used                                                               no-unused-vars
+  Line 8:8:    'home_background2' is defined but never used                                                               no-unused-vars
+  Line 13:8:   'icon1' is defined but never used                                                                          no-unused-vars
+  Line 14:8:   'icon2' is defined but never used                                                                          no-unused-vars
+  Line 15:8:   'icon3' is defined but never used                                                                          no-unused-vars
+  Line 16:8:   'icon4' is defined but never used                                                                          no-unused-vars
+  Line 17:8:   'icon5' is defined but never used                                                                          no-unused-vars
+  Line 94:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Event/contents/Event1.js
+  Line 7:8:    'image5' is defined but never used                                                                         no-unused-vars
+  Line 12:5:   Useless constructor                                                                                        no-useless-constructor
+  Line 27:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 29:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 30:16:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship1.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 24:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 24:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship3.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 25:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 25:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/Worship/contents/Worship4.js
+  Line 8:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 27:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 27:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+./src/components/Pages/NG/contents/details/NG4_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 44:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 47:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 148:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG1_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 115:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG3_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 48:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 51:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 130:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/NG/contents/details/NG2_1.js
+  Line 8:5:     Useless constructor                                                                                        no-useless-constructor
+  Line 16:17:   Expected '===' and instead saw '=='                                                                        eqeqeq
+  Line 49:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 52:21:   img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 112:22:  Expected '===' and instead saw '=='                                                                        eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome7.js
+  Line 8:5:    Useless constructor                                                                                        no-useless-constructor
+  Line 27:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  Line 28:21:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+./src/components/Pages/Welcome/contents/Welcome4.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 22:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 23:23:  Imported JSX component Welcome4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 43:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Welcome/contents/Welcome6.js
+  Line 8:5:    Useless constructor                                                              no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 17:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                              eqeqeq
+  Line 20:23:  Imported JSX component Welcome6_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                              eqeqeq
+
+./src/components/Pages/Group/contents/Group1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 17:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 19:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 20:23:  Imported JSX component Group2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group3.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group3_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group4.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group4_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Group/contents/Group5.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Group5_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ1.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ1_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 40:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/Organ/contents/Organ2.js
+  Line 8:5:    Useless constructor                                                            no-useless-constructor
+  Line 17:17:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 18:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 20:22:  Expected '===' and instead saw '=='                                            eqeqeq
+  Line 21:23:  Imported JSX component Organ2_1 must be in PascalCase or SCREAMING_SNAKE_CASE  react/jsx-pascal-case
+  Line 39:39:  Expected '===' and instead saw '=='                                            eqeqeq
+
+./src/components/Pages/NG/contents/NG4.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG3.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG2.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/NG/contents/NG1.js
+  Line 8:5:    Useless constructor                  no-useless-constructor
+  Line 16:17:  Expected '===' and instead saw '=='  eqeqeq
+  Line 19:22:  Expected '===' and instead saw '=='  eqeqeq
+  Line 39:39:  Expected '===' and instead saw '=='  eqeqeq
+
+./src/components/Pages/Worship/contents/Worship2.js
+  Line 9:5:     Useless constructor                                                                                                           no-useless-constructor
+  Line 26:84:   Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+  Line 26:102:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                     jsx-a11y/alt-text
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+

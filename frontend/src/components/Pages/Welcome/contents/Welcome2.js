@@ -71,9 +71,9 @@ class Welcome2 extends Component{
                    <img src={content_image10} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image14} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image12} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-                   <img src={content_image11} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
-
                    <img src={content_image4} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+
+                   <img src={content_image11} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image13} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image5} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image6} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
