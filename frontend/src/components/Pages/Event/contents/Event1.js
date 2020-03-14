@@ -5,6 +5,13 @@ import image2 from '../../../../images/image7.JPG'
 import image3 from '../../../../images/image8.JPG'
 import image4 from '../../../../images/event_1_2.JPG'
 import image5 from '../../../../images/event_1_3.jpg'
+import image6 from '../../../../images/event_1_4.JPG'
+import image7 from '../../../../images/event_1_5.JPG'
+import image8 from '../../../../images/event_1_6.JPG'
+import image9 from '../../../../images/event_1_7.JPG'
+import image10 from '../../../../images/event_1_8.JPG'
+import image11 from '../../../../images/event_1_9.JPG'
+import image12 from '../../../../images/event_1_10.JPG'
 
 
 class Event1 extends Component{
@@ -24,10 +31,14 @@ class Event1 extends Component{
                    <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 교회 행사 >&nbsp;</p>
                </div>
 
-               <img src={image1} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
+               <img src={image6} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
                <img src={image2} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
-               <img src={image3} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
-               <img src={image4} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
+               <img src={image7} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
+               <img src={image8} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
+               <img src={image9} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
+               <img src={image10} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '10px'}}></img>
+               <img src={image11} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
+               <img src={image12} style={{width:'40%', float: 'left', marginLeft: '5%', marginRight: '5%', marginBottom: '30px'}}></img>
 
                <div style={{width:'100%', float: 'left', marginBottom: '30px'}}>
                     <div style={{width: '100%', float: 'left', paddingBottom: '20px', borderBottom: '0.1px solid #DCDCDC', marginBottom: '20px'}}>

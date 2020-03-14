@@ -13,6 +13,8 @@ import content_image12 from '../../../../images/image12.JPG';
 import content_image13 from '../../../../images/image13.JPG';
 import content_image14 from '../../../../images/image14.jpg';
 import content_image15 from '../../../../images/image15.jpg';
+import content_image16 from '../../../../images/image16.jpg';
+import content_image17 from '../../../../images/image17.jpg';
 
 class Welcome2 extends Component{
 
@@ -66,6 +68,8 @@ class Welcome2 extends Component{
                {/* 연혁 사진 */}
                <div style={{width:'50%', float: 'left'}}>
                    <img src={content_image1} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image16} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
+                   <img src={content_image17} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image7} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image15} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>
                    <img src={content_image10} style={{width: '80%', marginLeft: '10%', marginTop: '50px', float:'left'}}></img>

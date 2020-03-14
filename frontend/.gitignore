@@ -23,10 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
-
-db.txt
-
-sermons.PNG
-posts-sermons.PNG
-
-temp.txt
