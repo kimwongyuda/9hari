@@ -25,6 +25,7 @@ yarn-error.log*
 .env
 
 db.txt
+db_index.txt
 
 sermons.PNG
 posts-sermons.PNG
@@ -33,4 +34,3 @@ users.PNG
 config.js
 
 query.txt
-
