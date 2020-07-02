@@ -57,11 +57,11 @@ class Header extends Component{
             <div className= {style.appbar}>
                 <div className={style.toolbar} style={{height: '30px'}}>
                     <div className={style.navbar}>
-                        <div className={style.element} style={{float: 'left'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>처음으로</Link></div>
+                        <div className={style.element} style={{float: 'left'}}><Link to="/" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>처음으로</Link></div>
                         <div className={style.element} style={{float: 'left'}}><a href="https://m.cafe.daum.net/9hari" target = "-blank" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>구하리 다음 카페 가기</a></div>
-                        <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>회원가입</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/signup/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>회원가입</Link></div>
                         <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>아이디/패스워드 찾기</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>로그인</Link></div>
+                        <div className={style.element} style={{float: 'right'}}><Link to="/login/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그인</Link></div>
                     </div>
                 </div>
                 <div className={style.toolbar} style={{height: '100px'}}>

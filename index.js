@@ -4,6 +4,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 const dbconfig = require('./config.js');
 const mysql = require('mysql');
+const bcrypt = require('bcrypt');
+const async = require('async');
 
 var connection = mysql.createConnection(dbconfig);
 connection.connect();
@@ -146,6 +148,92 @@ app.get('/api/posts_up/:post_num', (req,res)=>{
             res.send('success');
         }
     })
+})
+
+app.post('/api/signup', async (req, res)=> {
+
+    let email = req.body.email;
+    let id = req.body.id;
+    let name = req.body.name;
+    let password = req.body.password;
+    let password2 = req.body.password2;
+    let rank = req.body.rank;
+    let authority = req.body.authority;
+    console.log(authority)
+    let approved = true;
+    if(authority === "교역자" || authority === "수정가능")
+    {
+        approved = false;
+    }
+
+    var temp1 = `select * from users where email = "${email}"`;
+    var temp2 = `select * from users where login_id = "${id}"`;
+
+
+    async.waterfall([
+    connection.query(temp1, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse()
+            console.log(json)
+            if(json.length !=0)
+            {    
+                res.json({
+                    message: "이메일이 중복되었습니다. 새로운 이메일을 입력해주세요.",
+                    dupE: "1",
+                    dupI: "0"
+                });
+            }
+        }
+    })
+    ,
+    //쿼리안의 쿼리안의 쿼리
+    connection.query(temp2, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse();
+
+            if(json.length !=0)
+            {
+                res.json({
+                message: "ID가 중복되었습니다. 새로운 ID를 입력해주세요.",
+                dupE: "0",
+                dupI: "1"
+                });
+            }
+            
+        }
+    })
+    ,
+    bcrypt.hash(password, 10, function(err, hash){
+        var register = `insert into users(login_id, password, email, name, rank, authority, approved) values ("${id}", "${hash}", "${email}", "${name}", "${rank}", "${authority}", ${approved})`;
+        connection.query(register, function (err,rows){
+            if(err)
+            {
+                throw err;
+            }
+            else{
+                res.json({
+                    message: "회원가입 완료",
+                    dupE: "0",
+                    dupI: "0"
+                });
+            }
+        })
+    })
+    ])
 })
 
 app.listen(port, ()=>{
