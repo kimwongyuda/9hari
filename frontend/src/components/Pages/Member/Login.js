@@ -5,11 +5,56 @@ import { Form, Button } from "react-bootstrap";
 import { loadReCaptcha, ReCaptcha } from "react-recaptcha-v3";
 import style from './Login.module.css';
 
+import axios from "axios";
+axios.defaults.withCredentials = true;
+const headers = { withCredentials: true };
+
 class Login extends Component{
 
     constructor(props){
         super(props);
     }
+
+    login = () => {
+        const loginID = this.loginID.value;
+        const loginPw = this.loginPw.value;
+    
+        if (loginID === "" || loginID === undefined) {
+          alert("아이디를 입력해주세요.");
+          this.loginID.focus();
+          return;
+        } else if (loginPw === "" || loginPw === undefined) {
+          alert("비밀번호를 입력해주세요.");
+          this.loginPw.focus();
+          return;
+        }
+    
+        const send_param = {
+          headers,
+          id: this.loginID.value,
+          password: this.loginPw.value
+        };
+
+        axios
+        .post("/api/login", send_param)
+        //정상 수행
+        .then(returnData => {
+          if (returnData.data.message) {
+            // // console.log("login_id:" + returnData.data._id);
+            // $.cookie("login_id", returnData.data._id, { expires: 1 });
+            // $.cookie("login_email", returnData.data.email, { expires: 1 });
+            alert(returnData.data.message);
+            window.location.reload();
+          } else {
+            alert(returnData.data.message);
+          }
+        })
+        //에러
+        .catch(err => {
+          console.log(err);
+        });
+
+    };
 
     render(){
 
@@ -24,7 +69,7 @@ class Login extends Component{
                     <img src={background1} style={{marginBottom: '10px',width: '100%', float: 'left', height: '300px', objectFit: 'cover'}}></img>
                     <div className={style.content}>
                         
-                        <div style={{width: '100%', marginBottom: '10px', float: 'left'}}>
+                        <div style={{width: '100%', marginBottom: '400px', float: 'left'}}>
                             <div style={{marginTop: '10px'}}>
                             <Form style={{width: '60%', marginLeft: '20%', marginRight: '20%'}}>
                                     <Form.Group controlId="loginForm">
@@ -33,7 +78,7 @@ class Login extends Component{
                                     <Form.Control
                                         type="text"
                                         maxLength="40"
-                                        ref={ref => (this.joinName = ref)}
+                                        ref={ref => (this.loginID = ref)}
                                         placeholder="아이디를 입력해 주세요."
                                         style={{marginBottom: '20px'}}
                                     />
@@ -43,14 +88,18 @@ class Login extends Component{
                                     <Form.Control
                                         type="password"
                                         maxLength="64"
-                                        ref={ref => (this.joinPw = ref)}
+                                        ref={ref => (this.loginPw = ref)}
                                         placeholder="비밀번호를 입력해 주세요"
                                         style={{marginBottom: '20px'}}
                                       />
+                                      
+                                    <Form.Text style={{marginBottom: '20px'}} className="text-muted">
+                                        사용자의 개인정보를 완전히 보호하고 있습니다.
+                                    </Form.Text>
 
                                     <Button
                                         style={buttonStyle}
-                                        onClick={this.join}
+                                        onClick={this.login}
                                         variant="outline-secondary"
                                         type="button"
                                         block

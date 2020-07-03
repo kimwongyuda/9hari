@@ -169,71 +169,182 @@ app.post('/api/signup', async (req, res)=> {
     var temp1 = `select * from users where email = "${email}"`;
     var temp2 = `select * from users where login_id = "${id}"`;
 
+    var tasks = [
+        function (callback){
+            connection.query(temp1, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+                    json = json.reverse()
+                    console.log(json)
+                    if(json.length !=0)
+                    {    
+                        res.json({
+                            message: "이메일이 중복되었습니다. 새로운 이메일을 입력해주세요.",
+                            dupE: "1",
+                            dupI: "0"
+                        });
+                        return callback('dup email');
+                    }
+                }
+                callback(null, 'aaa');
+            })
+        },
 
-    async.waterfall([
-    connection.query(temp1, function(err, rows){
+        function(data, callback){
+            connection.query(temp2, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+                    json = json.reverse();
+        
+                    if(json.length !=0)
+                    {
+                        res.json({
+                        message: "ID가 중복되었습니다. 새로운 ID를 입력해주세요.",
+                        dupE: "0",
+                        dupI: "1"
+                        });
+                        return callback('dup ID');
+                    }
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data2, callback){
+            bcrypt.hash(password, 10, function(err, hash){
+                var register = `insert into users(login_id, password, email, name, rank, authority, approved) values ("${id}", "${hash}", "${email}", "${name}", "${rank}", "${authority}", ${approved})`;
+                connection.query(register, function (err,rows){
+                    if(err)
+                    {
+                        return callback(err);
+                    }
+                    else{
+                        res.json({
+                            message: "회원가입 완료",
+                            dupE: "0",
+                            dupI: "0"
+                        });
+                    }
+                    callback(null);
+                })
+            })
+        }
+    ];
+
+    async.waterfall(tasks, function (err){
         if(err)
         {
-            throw err;
+            console.log('err');
         }
         else
         {
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
-            json = json.reverse()
-            console.log(json)
-            if(json.length !=0)
-            {    
-                res.json({
-                    message: "이메일이 중복되었습니다. 새로운 이메일을 입력해주세요.",
-                    dupE: "1",
-                    dupI: "0"
-                });
-            }
+            console.log('done');
         }
     })
-    ,
-    //쿼리안의 쿼리안의 쿼리
-    connection.query(temp2, function(err, rows){
+
+})
+
+app.post('/api/login', async (req, res)=> {
+
+    let id = req.body.id;
+    let password = req.body.password;
+
+    var temp1 = `select login_id from users where login_id = "${id}" `;
+    var temp2 = `select password from users where login_id = "${id}" `;
+
+    var tasks = [
+        function (callback){
+            connection.query(temp1, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+                    json = json.reverse()
+                    console.log(json)
+                    if(json.length ==0)
+                    {    
+                        res.json({
+                            message: "존재하지 않는 아이디입니다",
+                            NonI: "1"
+                        });
+                        return callback('non ID');
+                    }
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data, callback){
+
+            var pw = "";
+            connection.query(temp2, function (err,rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else{
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+                    json = json.reverse()
+                    console.log(json)
+                    pw = json[0]['password'];
+                    callback(null, pw);
+                }
+                
+            })
+        },
+
+        function(data2, callback)
+        {
+            console.log('adasdas');
+            console.log(data2);
+            bcrypt.compare(password, data2, function (err, result){
+                if(result)
+                {
+                    res.json({
+                        message: "로그인 완료",
+                        NonI: "0"
+                    });             
+                }
+                else
+                {
+                    res.json({
+                        message: "비밀번호 틀림",
+                        NonI: "0"
+                    });    
+                }
+            })
+            callback(null);
+
+        }
+    ]
+
+    async.waterfall(tasks, function (err){
         if(err)
         {
-            throw err;
+            console.log('err');
         }
         else
         {
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
-            json = json.reverse();
-
-            if(json.length !=0)
-            {
-                res.json({
-                message: "ID가 중복되었습니다. 새로운 ID를 입력해주세요.",
-                dupE: "0",
-                dupI: "1"
-                });
-            }
-            
+            console.log('done');
         }
     })
-    ,
-    bcrypt.hash(password, 10, function(err, hash){
-        var register = `insert into users(login_id, password, email, name, rank, authority, approved) values ("${id}", "${hash}", "${email}", "${name}", "${rank}", "${authority}", ${approved})`;
-        connection.query(register, function (err,rows){
-            if(err)
-            {
-                throw err;
-            }
-            else{
-                res.json({
-                    message: "회원가입 완료",
-                    dupE: "0",
-                    dupI: "0"
-                });
-            }
-        })
-    })
-    ])
 })
 
 app.listen(port, ()=>{
