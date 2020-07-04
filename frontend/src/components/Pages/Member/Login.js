@@ -40,11 +40,12 @@ class Login extends Component{
         //정상 수행
         .then(returnData => {
           if (returnData.data.message) {
-            // // console.log("login_id:" + returnData.data._id);
-            // $.cookie("login_id", returnData.data._id, { expires: 1 });
-            // $.cookie("login_email", returnData.data.email, { expires: 1 });
             alert(returnData.data.message);
-            window.location.reload();
+            // window.location.reload();
+            if(returnData.data.NonI == "0" && returnData.data.WrongP == "0")
+            {
+              window.location.href = "/";
+            }
           } else {
             alert(returnData.data.message);
           }

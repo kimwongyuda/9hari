@@ -2,11 +2,13 @@ import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import style from './Header.module.css';
 import logo from '../../images/logo.jpg';
+import { instanceOf } from 'prop-types';
 
 class Header extends Component{
 
     constructor(props){
         super(props);
+
         this.onMouseOver.bind(this);
         this.state = {showResults: [false, false, false, false, false, false, false, false], 
             headers:[['담임목사환영사', '연혁', '목회철학', '섬기는분들', '예배 안내', '찾아오시는 길', '교회 소식'],
@@ -53,15 +55,33 @@ class Header extends Component{
     }
 
     render(){
+
+        const cookiename = document.cookie.substr(5);
+        console.log(cookiename)
+
         return(
             <div className= {style.appbar}>
                 <div className={style.toolbar} style={{height: '30px'}}>
                     <div className={style.navbar}>
                         <div className={style.element} style={{float: 'left'}}><Link to="/" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>처음으로</Link></div>
                         <div className={style.element} style={{float: 'left'}}><a href="https://m.cafe.daum.net/9hari" target = "-blank" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>구하리 다음 카페 가기</a></div>
-                        <div className={style.element} style={{float: 'right'}}><Link to="/signup/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>회원가입</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>아이디/패스워드 찾기</Link></div>
-                        <div className={style.element} style={{float: 'right'}}><Link to="/login/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그인</Link></div>
+                        
+                        {
+                            (()=>{
+                                if(cookiename.length == 0)
+                                {
+                                    return <div><div className={style.element} style={{float: 'right'}}><Link to="/signup/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>회원가입</Link></div>
+                                    <div className={style.element} style={{float: 'right'}}><Link to="/find/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>아이디/패스워드 찾기</Link></div>
+                                    <div className={style.element} style={{float: 'right'}}><Link to="/login/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그인</Link></div></div>
+                                }
+                                else
+                                {
+                                    return <div className={style.element} style={{float: 'right'}}><Link to="/logout/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그아웃</Link></div>
+                                }
+                            })()
+                        }
+
+                        
                     </div>
                 </div>
                 <div className={style.toolbar} style={{height: '100px'}}>

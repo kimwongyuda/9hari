@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Pages/Home/Home';
+import Logout from './components/Pages/Member/Logout';
+import Find from './components/Pages/Member/Find';
 import Signup from './components/Pages/Member/Signup';
 import Login from './components/Pages/Member/Login';
 import Welcome from './components/Pages/Welcome/Welcome';
@@ -16,6 +18,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 export default () => (
     <Router>
         <Header/>
+        <Route path="/Find/:page" component={Find}></Route>
+        <Route path="/Logout/:page" component={Logout}></Route>
         <Route path="/Signup/:page" component={Signup}></Route>
         <Route path="/Login/:page" component={Login}></Route>
         <Route path="/group/:page" component={Group}></Route>

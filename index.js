@@ -6,6 +6,8 @@ const dbconfig = require('./config.js');
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const async = require('async');
+const jwt = require("jsonwebtoken");
+const secretObj = require("./jwt");
 
 var connection = mysql.createConnection(dbconfig);
 connection.connect();
@@ -18,10 +20,6 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     var type = req.params.type;
     var option = req.params.option;
     var input = req.params.input;
-
-    console.log(type)
-    console.log(option)
-    console.log(input)
 
     if(option== 'title')
     {
@@ -93,7 +91,6 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
             var json = JSON.parse(string);
             json = json.reverse();
             ret=json;
-            console.log(ret);
             res.send(ret);
         }
     });
@@ -102,9 +99,7 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
 
 app.get('/api/posts/:type', (req,res)=>{
 
-    console.log('asdasdasdasdd');
     var type = req.params.type;
-    console.log(type);
 
     var temp =
     `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
@@ -159,7 +154,7 @@ app.post('/api/signup', async (req, res)=> {
     let password2 = req.body.password2;
     let rank = req.body.rank;
     let authority = req.body.authority;
-    console.log(authority)
+
     let approved = true;
     if(authority === "교역자" || authority === "수정가능")
     {
@@ -181,7 +176,6 @@ app.post('/api/signup', async (req, res)=> {
                     var string = JSON.stringify(rows);
                     var json = JSON.parse(string);
                     json = json.reverse()
-                    console.log(json)
                     if(json.length !=0)
                     {    
                         res.json({
@@ -261,10 +255,17 @@ app.post('/api/login', async (req, res)=> {
     let id = req.body.id;
     let password = req.body.password;
 
-    var temp1 = `select login_id from users where login_id = "${id}" `;
+    var temp1 = `select * from users where login_id = "${id}" `;
     var temp2 = `select password from users where login_id = "${id}" `;
+    var login_id = "";
+    var email = "";
+    var name = "";
+    var rank = "";
+    var authority = "";
+    var approved = true;
 
     var tasks = [
+
         function (callback){
             connection.query(temp1, function(err, rows){
                 if(err)
@@ -276,15 +277,22 @@ app.post('/api/login', async (req, res)=> {
                     var string = JSON.stringify(rows);
                     var json = JSON.parse(string);
                     json = json.reverse()
-                    console.log(json)
                     if(json.length ==0)
                     {    
                         res.json({
-                            message: "존재하지 않는 아이디입니다",
-                            NonI: "1"
+                            message: "존재하지 않는 아이디입니다.",
+                            NonI: "1",
+                            WrongP: "0"
                         });
                         return callback('non ID');
                     }
+
+                    login_id = json[0]["login_id"];
+                    email = json[0]["email"];
+                    name = json[0]["name"];
+                    rank = json[0]["rank"];
+                    authority = json[0]["authority"];
+                    approved = json[0]["approved"];
                 }
                 callback(null, 'aaa');
             })
@@ -302,7 +310,6 @@ app.post('/api/login', async (req, res)=> {
                     var string = JSON.stringify(rows);
                     var json = JSON.parse(string);
                     json = json.reverse()
-                    console.log(json)
                     pw = json[0]['password'];
                     callback(null, pw);
                 }
@@ -312,26 +319,41 @@ app.post('/api/login', async (req, res)=> {
 
         function(data2, callback)
         {
-            console.log('adasdas');
-            console.log(data2);
             bcrypt.compare(password, data2, function (err, result){
                 if(result)
                 {
+                    let token = jwt.sign({
+                        Email: email,
+                        Login_id: login_id,
+                        Name: name,
+                        Rank: rank,
+                        Authority: authority,
+                        Approved: approved
+                    },
+                    secretObj.secret,
+                    {
+                        expiresIn: '20m'
+                    })
+
+                    res.cookie("user", token);
+
                     res.json({
-                        message: "로그인 완료",
-                        NonI: "0"
+                        message: "로그인에 성공하였습니다.",
+                        NonI: "0",
+                        token: token,
+                        WrongP: "0"
                     });             
                 }
                 else
                 {
                     res.json({
-                        message: "비밀번호 틀림",
-                        NonI: "0"
+                        message: "비밀번호가 틀렸습니다.",
+                        NonI: "0",
+                        WrongP: "1"
                     });    
                 }
             })
             callback(null);
-
         }
     ]
 
