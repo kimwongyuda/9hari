@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Pages/Home/Home';
-import Logout from './components/Pages/Member/Logout';
+import Upload_Sermon from './components/Pages/Super/Upload_Sermon';
 import Find from './components/Pages/Member/Find';
 import Signup from './components/Pages/Member/Signup';
 import Login from './components/Pages/Member/Login';
@@ -18,8 +18,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 export default () => (
     <Router>
         <Header/>
+        <Route path="/Upload_Sermon/:page" component={Upload_Sermon}></Route>
         <Route path="/Find/:page" component={Find}></Route>
-        <Route path="/Logout/:page" component={Logout}></Route>
         <Route path="/Signup/:page" component={Signup}></Route>
         <Route path="/Login/:page" component={Login}></Route>
         <Route path="/group/:page" component={Group}></Route>

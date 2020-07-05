@@ -141,6 +141,8 @@ class Signup extends Component{
                 this.joinRank.value = "";
                 this.joinAuthority.value = "";
             }
+            
+            window.location.href = "/login/1";
             } else {
             alert("회원가입 실패");
             }

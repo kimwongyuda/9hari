@@ -2,7 +2,9 @@ import {Link} from 'react-router-dom';
 import React, {Component} from 'react';
 import style from './Header.module.css';
 import logo from '../../images/logo.jpg';
-import { instanceOf } from 'prop-types';
+import axios from "axios";
+axios.defaults.withCredentials = true;
+const headers = { withCredentials: true };
 
 class Header extends Component{
 
@@ -10,6 +12,8 @@ class Header extends Component{
         super(props);
 
         this.onMouseOver.bind(this);
+        this.logout = this.logout.bind(this);
+
         this.state = {showResults: [false, false, false, false, false, false, false, false], 
             headers:[['담임목사환영사', '연혁', '목회철학', '섬기는분들', '예배 안내', '찾아오시는 길', '교회 소식'],
                     ['주일 예배', '수요 예배', '금요 예배', '특별 예배'],
@@ -54,10 +58,27 @@ class Header extends Component{
         alert("준비중입니다!")
     }
 
+    logout(){
+        axios
+        .post("/api/logout")
+        //정상 수행
+        .then(returnData => {
+            if (returnData.data.message) {
+            alert(returnData.data.message);
+            
+            window.location.href = "/";
+            }
+        })
+        //에러
+        .catch(err => {
+            console.log(err);
+        });
+    }
+
+
     render(){
 
         const cookiename = document.cookie.substr(5);
-        console.log(cookiename)
 
         return(
             <div className= {style.appbar}>
@@ -76,7 +97,7 @@ class Header extends Component{
                                 }
                                 else
                                 {
-                                    return <div className={style.element} style={{float: 'right'}}><Link to="/logout/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그아웃</Link></div>
+                                    return <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.logout}>로그아웃</Link></div>
                                 }
                             })()
                         }

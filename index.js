@@ -293,6 +293,16 @@ app.post('/api/login', async (req, res)=> {
                     rank = json[0]["rank"];
                     authority = json[0]["authority"];
                     approved = json[0]["approved"];
+
+                    if(!approved)
+                    {
+                        res.json({
+                            message: "아직 승인되지 않은 아이디입니다.",
+                            NonI: "1",
+                            WrongP: "0"
+                        });
+                        return callback('non approved');
+                    }
                 }
                 callback(null, 'aaa');
             })
@@ -367,6 +377,43 @@ app.post('/api/login', async (req, res)=> {
             console.log('done');
         }
     })
+})
+
+app.post('/api/logout', async (req, res)=> {
+    res.clearCookie('user');
+    return res.json({ message: '로그아웃 되었습니다.'});
+})
+
+app.post('/api/upload_sermon', async (req, res)=> {
+
+    return res.json({ message: '로그아웃 되었습니다.'});
+})
+
+app.post('/api/find', async (req, res)=> {
+    
+    let token = req.cookies.user;
+
+    let decoded = jwt.verify(token, secretObj.secret);
+
+    if(decoded['authority'])
+    {
+        return res.json({
+            authority: decoded['authority']
+        })
+    }
+})
+
+app.get('/api/auth', async (req, res)=> {
+    let token = req.headers.cookie.substr(5);
+
+    let decoded = jwt.verify(token, secretObj.secret);
+
+    if(decoded['Authority'])
+    {
+        return res.json({
+            authority: decoded['Authority']
+        })
+    }
 })
 
 app.listen(port, ()=>{
