@@ -4,15 +4,18 @@ import Sermon from './Sermon.js';
 import style from './Pagination.module.css';
 import dodbogi from '../../../../../images/dodbogi.jpg';
 
+import axios from "axios";
+axios.defaults.withCredentials = true;
+const headers = { withCredentials: true };
 class Pagination extends Component{
 
     constructor(props){
         super(props);
 
         if(window.location.pathname.split('/').length == 5)
-        {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex};}
+        {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0};}
         else
-        {this.state={isshow: false, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex};}
+        {this.state={isshow: false, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0};}
 
         this.change_false = this.change_false.bind(this);
         this.change_true = this.change_true.bind(this);
@@ -25,13 +28,14 @@ class Pagination extends Component{
 
     componentDidMount(){
         this.callApi()
-        .then(res => this.setState({posts: res}))
+        .then(res => this.setState({posts: res.json, writer_id: res.writer_id}))
         .catch(err => console.log(err));
     }
 
     callApi = async () => {
         const response = await fetch(`/api/posts/${this.state.type}`);
         const body = await response.json();
+        console.log(body)
         return body;
     }
 
@@ -69,6 +73,31 @@ class Pagination extends Component{
         this.setState({option_input: e.target.value});
     }
 
+    delete(pid, sid){
+        const send_param = {
+            headers,
+            pid,
+            sid
+          };
+    
+          axios
+          .post("/api/delete_post_sermon", send_param)
+          //정상 수행
+          .then(returnData => {
+            if (returnData.data.message) {
+              alert(returnData.data.message);
+              window.location.reload();
+    
+            } else {
+              alert(returnData.data.message);
+            }
+          })
+          //에러
+          .catch(err => {
+            console.log(err);
+          });
+    }
+
     render(){
 
         var posts = this.state.posts;
@@ -80,13 +109,17 @@ class Pagination extends Component{
 
         //현재 글 개수 inputcount개씩 짜름.
         var posts_size = posts.length;
-        var inputcount = 20;
+        var inputcount = 18;
         var halfcount = parseInt(inputcount/2) + 1;
         var posts_mod = posts_size % inputcount;
         var posts_list = [];
 
         var page = window.location.pathname.split('/')[3];
         var pageint = parseInt(page);
+        var writer_id = this.state.writer_id;
+
+        console.log('writer_id: ', writer_id);
+
         // console.log(posts_mod);
         if(posts.length!=0)
         {
@@ -108,7 +141,7 @@ class Pagination extends Component{
         // console.log(posts_list)
 
         //
-        var maxpage = parseInt(posts_size/(inputcount+1)) + 1;
+        var maxpage = parseInt(posts_size/(inputcount)) + 1;
         var pagination = [];
         if(maxpage <inputcount+1)
         {
@@ -158,23 +191,38 @@ class Pagination extends Component{
         ));
 
         const posts_show = posts_list.map((item, index) => (
-            
             <div style={{width: '100%', float: 'left'}}>
             {index+1!=posts_list.length ?
             <div>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%'}}>{item.title}</span></Link>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{width: '10%'}}>{item.views}</span></Link>
+            {
+                (()=>{
+                    if(writer_id == item.writer_id)
+                    {
+                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid, item.sid)}><strong>삭제</strong></button>
+                    }
+                })()
+            }
             </div>
             :
             <div>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '40%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
             <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC', width: '10%'}}>{item.views}</span></Link>
+            {
+                (()=>{
+                    if(writer_id > 0)
+                    {
+                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid, item.sid)}><strong>삭제</strong></button>
+                    }
+                })()
+            }
             </div>
             }
             </div>
@@ -214,10 +262,11 @@ class Pagination extends Component{
                             <tbody>
                                     <tr> 
                                         <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>번호</td>
-                                        <td className={style.td+' '+style.textb2} style={{width: '40%', backgroundColor: '#DCDCDC'}}>제목</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '35%', backgroundColor: '#DCDCDC'}}>제목</td>
                                         <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>작성자</td>
                                         <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>등록일</td>
-                                        <td className={style.td+' '+style.textb2} style={{width: '15%', backgroundColor: '#DCDCDC'}}>조회수</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '10%', backgroundColor: '#DCDCDC'}}>조회수</td>
+                                        <td className={style.td+' '+style.textb2} style={{width: '10%', backgroundColor: '#DCDCDC'}}></td>
                                     </tr>   
                                                       
                             </tbody>

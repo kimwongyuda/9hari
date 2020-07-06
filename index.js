@@ -101,12 +101,23 @@ app.get('/api/posts/:type', (req,res)=>{
 
     var type = req.params.type;
 
+    // let token = req.headers.cookie.substr(5);
+    var token = req.headers.cookie;
+    console.log(token)
+
+    let decoded = "";
+    if(token)
+    {
+        token = req.headers.cookie.substr(5);
+        decoded = jwt.verify(token, secretObj.secret);
+    }
+
     var temp =
-    `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
+    `select pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`, s.id as sid, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
     from 
-    (select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
+    (select pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
     from(
-    select p.id as pid, title, creation_date, views, content, email, \`name\`, \`rank\`
+    select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
     from posts as p inner join users as u
     on p.writer_id = u.id
     where \`type\` = '${type}') as pu inner join \`posts-sermons\` as ps
@@ -125,7 +136,22 @@ app.get('/api/posts/:type', (req,res)=>{
             var json = JSON.parse(string);
             json = json.reverse();
             ret=json;
-            res.send(ret);
+
+            if(token)
+            {
+            res.json({
+                json:ret,
+                authority: decoded['Authority'],
+                login_id: decoded['Login_id'],
+                writer_id: decoded['ID']
+            });
+            }
+            else
+            {
+                res.json({
+                    json: ret
+                })
+            }
         }
     });
 })
@@ -643,6 +669,78 @@ app.get('/api/auth', async (req, res)=> {
             writer_id: decoded['ID']
         });
     }
+})
+
+app.post('/api/delete_post_sermon', async (req,res)=>{
+
+    var pid = req.body.pid;
+    var sid = req.body.sid;
+
+    console.log("asdasdasdas");
+
+    var temp1 = `delete from posts where id = ${pid}`;
+    var temp2 = `delete from sermons where id = ${sid}`;
+    var temp3 = `delete from \`posts-sermons\` where posts_id = ${pid} and sermons_id = ${sid}`;
+
+    var tasks = [
+
+        function (callback){
+            connection.query(temp1, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data, callback){
+
+            connection.query(temp2, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data2, callback)
+        {
+            connection.query(temp3, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    res.json({
+                        message: "삭제 완료"
+                    });  
+                }
+            }) 
+            callback(null);
+        }
+    ]
+
+    async.waterfall(tasks, function (err){
+        if(err)
+        {
+            console.log('err');
+        }
+        else
+        {
+            console.log('done');
+        }
+    })
 })
 
 app.listen(port, ()=>{
