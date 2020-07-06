@@ -389,19 +389,99 @@ app.post('/api/upload_sermon', async (req, res)=> {
     return res.json({ message: '로그아웃 되었습니다.'});
 })
 
-app.post('/api/find', async (req, res)=> {
+app.post('/api/findID', async (req, res)=> {
     
-    let token = req.cookies.user;
+    let email = req.body.email;
+    var temp1 = `select login_id from users where email = "${email}"`;
+    connection.query(temp1, function(err, rows){
+        if(err)
+        {
+            return callback(err);
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse()
+            if(json.length ==0)
+            {    
+                res.json({
+                    message: "존재하지 않는 이메일입니다.",
+                    NonF: "1"
+                });
+            }
+            else
+            {
+                console.log(json);
+                res.json({
+                    message: `아이디 찾기 완료.`,
+                    NonF: "0",
+                    ID: json[0]['login_id']
+                });
+            }
+        }
+    })
 
-    let decoded = jwt.verify(token, secretObj.secret);
-
-    if(decoded['authority'])
-    {
-        return res.json({
-            authority: decoded['authority']
-        })
-    }
 })
+
+app.post('/api/findPW', async (req, res)=> {
+    
+    let email = req.body.email;
+    let id = req.body.id;
+    var temp1 = `select * from users where email = "${email}" and login_id = "${id}"`;
+    connection.query(temp1, function(err, rows){
+        if(err)
+        {
+            return callback(err);
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse()
+            if(json.length ==0)
+            {    
+                res.json({
+                    message: "존재하지 않는 이메일 또는 아이디입니다.",
+                    NonF: "1"
+                });
+            }
+            else
+            {
+                res.json({
+                    message: `비밀번호를 변경해 주세요`,
+                    NonF: "0"
+                });
+            }
+        }
+    })
+
+})
+
+app.post('/api/changePW', async (req, res)=> {
+    
+    let email = req.body.email;
+    let id = req.body.id;
+    let pw = req.body.pw;
+
+    bcrypt.hash(pw, 10, function(err, hash){
+        var change = `update users set password = "${hash}" where email = "${email}" and login_id = "${id}"`;
+        connection.query(change, function (err,rows){
+            if(err)
+            {
+                throw err;
+            }
+            else{
+                res.json({
+                    message: "비밀번호 변경 완료",
+                    SucC: "1",
+                });
+            }
+        })
+    })
+
+})
+
 
 app.get('/api/auth', async (req, res)=> {
     let token = req.headers.cookie.substr(5);

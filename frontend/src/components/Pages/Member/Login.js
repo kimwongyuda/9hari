@@ -103,12 +103,22 @@ class Login extends Component{
                                         onClick={this.login}
                                         variant="outline-secondary"
                                         type="button"
+                                        style={{marginBottom: '40px'}}
                                         block
                                     >
                                         로그인
                                     </Button>
                                     </Form.Group>
                                 </Form>
+
+                                
+                            <Link to ={`/find/1/1`} className={style.link2}><span className={style.smallbox} 
+                            style={{backgroundColor: '#666666', color: 'white', width:'24%', float:'left', marginLeft: '23%', marginRight: '3%', textAlign: 'center'}}>
+                              아이디 찾기</span></Link>
+
+                            <Link to ={`/find/1/2`} className={style.link2}><span className={style.smallbox}
+                            style={{backgroundColor: '#666666', color: 'white', width:'24%', float:'left', marginLeft: '3%', marginRight: '23%', textAlign: 'center'}}>
+                              비밀번호 찾기</span></Link>
 
                             </div>
                         </div>

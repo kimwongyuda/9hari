@@ -92,7 +92,6 @@ class Header extends Component{
                                 if(cookiename.length == 0)
                                 {
                                     return <div><div className={style.element} style={{float: 'right'}}><Link to="/signup/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>회원가입</Link></div>
-                                    <div className={style.element} style={{float: 'right'}}><Link to="/find/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.message}>아이디/패스워드 찾기</Link></div>
                                     <div className={style.element} style={{float: 'right'}}><Link to="/login/1" className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>로그인</Link></div></div>
                                 }
                                 else

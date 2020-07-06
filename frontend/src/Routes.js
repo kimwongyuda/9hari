@@ -19,7 +19,7 @@ export default () => (
     <Router>
         <Header/>
         <Route path="/Upload_Sermon/:page" component={Upload_Sermon}></Route>
-        <Route path="/Find/:page" component={Find}></Route>
+        <Route path="/Find/1/:page" component={Find}></Route>
         <Route path="/Signup/:page" component={Signup}></Route>
         <Route path="/Login/:page" component={Login}></Route>
         <Route path="/group/:page" component={Group}></Route>

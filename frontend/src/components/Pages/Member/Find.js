@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import background1 from '../../../images/background1.jpg';
 import { Form, Button } from "react-bootstrap";
+import {Link} from 'react-router-dom';
 import style from './Find.module.css';
+import Find1 from './contents/Find1';
+import Find2 from './contents/Find2';
 
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -60,7 +63,19 @@ class Find extends Component{
           const buttonStyle = {
             marginTop: 10
           };
+        let page;
+        let pagenum = this.props.match.params.page;
+        console.log(pagenum)
+        if(pagenum === '1')
+        {
+          page = <Find1></Find1>;
+        }
+        else
+        {
+          page = <Find2></Find2>;
+        }
 
+          
         return(
             <div>
                 <div className={style.wrapper+' '+style.blankbox} style={{height: '120px'}}>a</div>
@@ -70,44 +85,7 @@ class Find extends Component{
                         
                         <div style={{width: '100%', marginBottom: '400px', float: 'left'}}>
                             <div style={{marginTop: '10px'}}>
-                            <Form style={{width: '60%', marginLeft: '20%', marginRight: '20%'}}>
-                                    <Form.Group controlId="loginForm">
-
-                                    <Form.Label><strong>아이디</strong></Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        maxLength="40"
-                                        ref={ref => (this.loginID = ref)}
-                                        placeholder="아이디를 입력해 주세요."
-                                        style={{marginBottom: '20px'}}
-                                    />
-
-
-                                    <Form.Label><strong>비밀번호</strong></Form.Label>
-                                    <Form.Control
-                                        type="password"
-                                        maxLength="64"
-                                        ref={ref => (this.loginPw = ref)}
-                                        placeholder="비밀번호를 입력해 주세요"
-                                        style={{marginBottom: '20px'}}
-                                      />
-                                      
-                                    <Form.Text style={{marginBottom: '20px'}} className="text-muted">
-                                        사용자의 개인정보를 완전히 보호하고 있습니다.
-                                    </Form.Text>
-
-                                    <Button
-                                        style={buttonStyle}
-                                        onClick={this.login}
-                                        variant="outline-secondary"
-                                        type="button"
-                                        block
-                                    >
-                                        로그인
-                                    </Button>
-                                    </Form.Group>
-                                </Form>
-
+                              {page}
                             </div>
                         </div>
                     </div>
