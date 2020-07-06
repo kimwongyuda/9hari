@@ -12,84 +12,105 @@ class Upload_Sermon extends Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            writer_id:0
+        }
+        this.upload = this.upload.bind(this);
     }
 
-    login = () => {
-        const title = this.title.value;
-        const content = this.content.value;
-        const daytype = this.daytype.value;
-        const writer_id = this.writer_id.value;
-
-        const sermon_title = this.loginID.value;
-        const sermon_date = this.loginPw.value;
-        const youtube_link = this.loginID.value;
-        const sermon_person = this.loginPw.value;
-        const sermon_words = this.loginID.value;
-        const sermon_place = this.loginPw.value;
-        const sermon_summary = this.sermon_summary.value;
-    
-        if(title === "" || title === undefined)
-        {
-            alert("글 제목을 입력해주세요.");
-            this.title.focus();
-            return;
-        }else if (daytype === "" || daytype === undefined) {
-            alert("날짜 종류를 입력해주세요.");
-            this.daytype.focus();
-            return;
-        }
-        else if (sermon_title === "" || sermon_title === undefined) {
-          alert("설교 제목을 입력해주세요.");
-          this.sermon_title.focus();
-          return;
-        } else if (sermon_date === "" || sermon_date === undefined) {
-          alert("설교 날짜를 입력해주세요.");
-          this.sermon_date.focus();
-          return;
-        }else if (youtube_link === "" || youtube_link === undefined) {
-            alert("유튜브 링크를 입력해주세요.");
-            this.youtube_link.focus();
-            return;
-        }else if (sermon_person === "" || sermon_person === undefined) {
-            alert("설교자를 입력해주세요.");
-            this.sermon_person.focus();
-            return;
-        }else if (sermon_words === "" || sermon_words === undefined) {
-            alert("설교 말씀을 입력해주세요.");
-            this.sermon_words.focus();
-            return;
-        }else if (sermon_place === "" || sermon_place === undefined) {
-            alert("설교 장소를 입력해주세요.");
-            this.sermon_place.focus();
-            return;
-        }
-    
-        const send_param = {
-          headers,
-          title: this.title.value,
-          content: this.content.value,
-          daytype: this.daytype.value,
-          writer_id: 7,
-          sermon_title: this.sermon_title.value,
-          sermon_date: this.sermon_date.value,
-          youtube_link: this.youtube_link.value,
-          sermon_person: this.sermon_person.value,
-          sermon_words: this.sermon_words.value,
-          sermon_place: this.sermon_place.value,
-          sermon_summary: this.sermon_summary.value
-        };
+    upload = () => {
 
         axios
-        .post("/api/upload_sermon", send_param)
+        .get("/api/auth")
         //정상 수행
         .then(returnData => {
-          if (returnData.data.message) {
-            alert(returnData.data.message);
+          if (returnData.data.authority) {
+            // alert(returnData.data.message);
             // window.location.reload();
-            if(returnData.data.NonI == "0" && returnData.data.WrongP == "0")
+            this.setState({writer_id: returnData.data.writer_id});
+
+            const title = this.title.value;
+            const content = this.content.value;
+            const daytype = this.daytype.value;
+            const writer_id = this.state.writer_id;
+            console.log(writer_id)
+
+            const sermon_title = this.sermon_title.value;
+            const sermon_date = this.sermon_date.value;
+            const youtube_link = this.youtube_link.value;
+            const sermon_person = this.sermon_person.value;
+            const sermon_words = this.sermon_words.value;
+            const sermon_place = this.sermon_place.value;
+            const sermon_summary = this.sermon_summary.value;
+        
+            if(title === "" || title === undefined)
             {
-              window.location.href = "/worship/1/1";
+                alert("글 제목을 입력해주세요.");
+                this.title.focus();
+                return;
+            }else if (daytype === "" || daytype === undefined) {
+                alert("날짜 종류를 입력해주세요.");
+                this.daytype.focus();
+                return;
             }
+            else if (sermon_title === "" || sermon_title === undefined) {
+            alert("설교 제목을 입력해주세요.");
+            this.sermon_title.focus();
+            return;
+            } else if (sermon_date === "" || sermon_date === undefined) {
+            alert("설교 날짜를 입력해주세요.");
+            this.sermon_date.focus();
+            return;
+            }else if (youtube_link === "" || youtube_link === undefined) {
+                alert("유튜브 링크를 입력해주세요.");
+                this.youtube_link.focus();
+                return;
+            }else if (sermon_person === "" || sermon_person === undefined) {
+                alert("설교자를 입력해주세요.");
+                this.sermon_person.focus();
+                return;
+            }else if (sermon_words === "" || sermon_words === undefined) {
+                alert("설교 말씀을 입력해주세요.");
+                this.sermon_words.focus();
+                return;
+            }else if (sermon_place === "" || sermon_place === undefined) {
+                alert("설교 장소를 입력해주세요.");
+                this.sermon_place.focus();
+                return;
+            }
+        
+            const send_param = {
+            headers,
+            title: this.title.value,
+            content: this.content.value,
+            daytype: this.daytype.value,
+            writer_id: writer_id,
+            sermon_title: this.sermon_title.value,
+            sermon_date: this.sermon_date.value,
+            youtube_link: this.youtube_link.value,
+            sermon_person: this.sermon_person.value,
+            sermon_words: this.sermon_words.value,
+            sermon_place: this.sermon_place.value,
+            sermon_summary: this.sermon_summary.value
+            };
+
+            axios
+            .post("/api/upload_sermon", send_param)
+            //정상 수행
+            .then(returnData => {
+            if (returnData.data.message) {
+                alert(returnData.data.message);
+                window.location.href = "/worship/1/1";
+            } else {
+                alert(returnData.data.message);
+            }
+            })
+            //에러
+            .catch(err => {
+            console.log(err);
+            });
+
+            
           } else {
             alert(returnData.data.message);
           }
@@ -98,7 +119,6 @@ class Upload_Sermon extends Component{
         .catch(err => {
           console.log(err);
         });
-
     };
 
     render(){

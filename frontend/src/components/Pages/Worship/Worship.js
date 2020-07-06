@@ -44,7 +44,6 @@ class Worship extends Component{
 
         const cookiename = document.cookie.substr(5);
         const auth = this.state.auth;
-        console.log(auth);
 
         return(
             <div>

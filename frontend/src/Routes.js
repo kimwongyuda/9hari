@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Pages/Home/Home';
 import Upload_Sermon from './components/Pages/Super/Upload_Sermon';
+import Admin from './components/Pages/Member/Admin';
 import Find from './components/Pages/Member/Find';
 import Signup from './components/Pages/Member/Signup';
 import Login from './components/Pages/Member/Login';
@@ -19,6 +20,7 @@ export default () => (
     <Router>
         <Header/>
         <Route path="/Upload_Sermon/:page" component={Upload_Sermon}></Route>
+        <Route path="/Admin/:page" component={Admin}></Route>
         <Route path="/Find/1/:page" component={Find}></Route>
         <Route path="/Signup/:page" component={Signup}></Route>
         <Route path="/Login/:page" component={Login}></Route>

@@ -28,8 +28,21 @@ class Header extends Component{
                     ['/group/1/1', '/group/2/1', '/group/3/1', '/group/4/1', '/group/5/1'],
                     ['/event/1', '/event/2', '/event/3'],
                     ['/organ/2/1'],
-                    ['/suggest/2']]
+                    ['/suggest/2']],
+            auth: ''
         };
+    }
+
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({auth: res.authority}))
+        .catch(err => console.log(err));
+    }
+
+    callApi = async () => {
+        const response = await fetch(`/api/auth`);
+        const body = await response.json();
+        return body;
     }
 
     onMouseOver(idx){
@@ -79,6 +92,7 @@ class Header extends Component{
     render(){
 
         const cookiename = document.cookie.substr(5);
+        const auth = this.state.auth;
 
         return(
             <div className= {style.appbar}>
@@ -97,6 +111,17 @@ class Header extends Component{
                                 else
                                 {
                                     return <div className={style.element} style={{float: 'right'}}><Link className={style.link+' '+style.textb2} style={{fontSize: '15px'}} onClick={this.logout}>로그아웃</Link></div>
+                                }
+                            })()
+                        }
+                        {
+                            (()=>{
+                                if(cookiename.length != 0)
+                                {
+                                    if(auth == 'admin')
+                                    {
+                                        return <div className={style.element} style={{float: 'right'}}><Link to="/admin/1"className={style.link+' '+style.textb2} style={{fontSize: '15px'}}>권한관리</Link></div>
+                                    }
                                 }
                             })()
                         }

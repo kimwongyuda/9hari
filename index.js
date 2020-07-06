@@ -261,6 +261,7 @@ app.post('/api/login', async (req, res)=> {
     var email = "";
     var name = "";
     var rank = "";
+    var indexid = 0;
     var authority = "";
     var approved = true;
 
@@ -293,6 +294,7 @@ app.post('/api/login', async (req, res)=> {
                     rank = json[0]["rank"];
                     authority = json[0]["authority"];
                     approved = json[0]["approved"];
+                    indexid = json[0]["id"];
 
                     if(!approved)
                     {
@@ -338,11 +340,12 @@ app.post('/api/login', async (req, res)=> {
                         Name: name,
                         Rank: rank,
                         Authority: authority,
-                        Approved: approved
+                        Approved: approved,
+                        ID: indexid
                     },
                     secretObj.secret,
                     {
-                        expiresIn: '20m'
+                        expiresIn: '60m'
                     })
 
                     res.cookie("user", token);
@@ -384,9 +387,152 @@ app.post('/api/logout', async (req, res)=> {
     return res.json({ message: '로그아웃 되었습니다.'});
 })
 
+app.get('/api/list_admin', async(req,res)=>{
+    var temp = `select * from users where approved = false`;
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse()
+
+            res.send(json);
+        }
+    })
+    
+})
+
+app.post('/api/approve_admin', async(req,res)=>{
+    const id = req.body.id;
+
+    var temp = `update users set approved = true where id = ${id}`;
+
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            res.json({
+                message: "승인 완료"
+            });  
+        }
+    })
+    
+})
+
+
 app.post('/api/upload_sermon', async (req, res)=> {
 
-    return res.json({ message: '로그아웃 되었습니다.'});
+    let title = req.body.title;
+    let content = req.body.content;
+    let writer_id = req.body.writer_id;
+    let daytype ="";
+    if(req.body.daytype == "주일")
+    {
+        daytype = "sun";
+    }
+    else if(req.body.daytype == "수요")
+    {
+        daytype = "wed";
+    }
+    else if(req.body.daytype == "금요")
+    {
+        daytype ="fri";
+    }
+    else{
+        daytype = "spe";
+    }
+
+
+    let sermon_title = req.body.sermon_title;
+    let sermon_date = req.body.sermon_date;
+    let youtube_link = req.body.youtube_link;
+    let sermon_person = req.body.sermon_person;
+    let sermon_words = req.body.sermon_words;
+    let sermon_place = req.body.sermon_place;
+
+    var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place) 
+    values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}')`;
+    var posts = `insert into posts(title, writer_id, content, \`type\`) values('${title}', ${writer_id}, '${content}', '${daytype}')`;
+
+    var pid = 0;
+    var sid = 0;
+
+    var tasks = [
+
+        function (callback){
+            connection.query(sermons, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    console.log(rows);
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+
+                    sid = json['insertId'];
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data, callback){
+
+            connection.query(posts, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    console.log(rows);
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+
+                    pid = json['insertId'];
+                }
+                callback(null, 'aaa');
+            })
+        },
+
+        function(data2, callback)
+        {
+            var posts_seromons = `insert into \`posts-sermons\`(posts_id, sermons_id) values(${pid}, ${sid})`;
+            connection.query(posts_seromons, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    res.json({
+                        message: "설교 올리기 완료"
+                    });  
+                }
+            }) 
+            callback(null);
+        }
+    ]
+
+    async.waterfall(tasks, function (err){
+        if(err)
+        {
+            console.log('err');
+        }
+        else
+        {
+            console.log('done');
+        }
+    })
+
 })
 
 app.post('/api/findID', async (req, res)=> {
@@ -412,7 +558,6 @@ app.post('/api/findID', async (req, res)=> {
             }
             else
             {
-                console.log(json);
                 res.json({
                     message: `아이디 찾기 완료.`,
                     NonF: "0",
@@ -472,6 +617,7 @@ app.post('/api/changePW', async (req, res)=> {
                 throw err;
             }
             else{
+                
                 res.json({
                     message: "비밀번호 변경 완료",
                     SucC: "1",
@@ -490,9 +636,12 @@ app.get('/api/auth', async (req, res)=> {
 
     if(decoded['Authority'])
     {
+        console.log('adsadsadsa');
         return res.json({
-            authority: decoded['Authority']
-        })
+            authority: decoded['Authority'],
+            login_id: decoded['Login_id'],
+            writer_id: decoded['ID']
+        });
     }
 })
 
