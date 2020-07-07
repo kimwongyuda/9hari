@@ -656,7 +656,19 @@ app.post('/api/changePW', async (req, res)=> {
 
 
 app.get('/api/auth', async (req, res)=> {
-    let token = req.headers.cookie.substr(5);
+    let token = '';
+    if(req.headers.cookie)
+    {
+        token = req.headers.cookie.substr(5);
+    }
+    else
+    {
+        return res.json({
+            authority: undefined,
+            login_id: undefined,
+            writer_id: undefined
+        });
+    }
 
     let decoded = jwt.verify(token, secretObj.secret);
 
