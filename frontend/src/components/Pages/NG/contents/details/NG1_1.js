@@ -115,7 +115,7 @@ class NG1_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                aa
             </div>
         }
 

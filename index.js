@@ -7,6 +7,20 @@ const mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const async = require('async');
 const jwt = require("jsonwebtoken");
+const path = require('path');
+const multer = require('multer');
+const upload = multer({
+    storage: multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, 'uploads/');
+      },
+      filename: function (req, file, cb) {
+        cb(null, new Date().valueOf() + '_'+file.originalname+path.extname(file.originalname));
+      }
+    }),
+  });
+
+const moment = require('moment');
 const secretObj = require("./jwt");
 
 var connection = mysql.createConnection(dbconfig);
@@ -452,6 +466,119 @@ app.post('/api/approve_admin', async(req,res)=>{
     
 })
 
+app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content' },{name: 'writer_id'}, {name: 'daytype'}, {name: 'files'}]), async (req, res)=> {
+
+
+    console.log(req);
+    console.log('asdsad');
+    let title = req.body.title;
+    let content = req.body.content;
+    let writer_id = req.body.writer_id;
+    let daytype = req.body.daytype;
+    let files = req.files.files;
+
+    console.log(files[0]);
+    // if(req.body.daytype == "주일")
+    // {
+    //     daytype = "sun";
+    // }
+    // else if(req.body.daytype == "수요")
+    // {
+    //     daytype = "wed";
+    // }
+    // else if(req.body.daytype == "금요")
+    // {
+    //     daytype ="fri";
+    // }
+    // else{
+    //     daytype = "spe";
+    // }
+
+
+    // let sermon_title = req.body.sermon_title;
+    // let sermon_date = req.body.sermon_date;
+    // let youtube_link = req.body.youtube_link;
+    // let sermon_person = req.body.sermon_person;
+    // let sermon_words = req.body.sermon_words;
+    // let sermon_place = req.body.sermon_place;
+
+    // var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place) 
+    // values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}')`;
+    // var posts = `insert into posts(title, writer_id, content, \`type\`) values('${title}', ${writer_id}, '${content}', '${daytype}')`;
+
+    // var pid = 0;
+    // var sid = 0;
+
+    // var tasks = [
+
+    //     function (callback){
+    //         connection.query(sermons, function(err, rows){
+    //             if(err)
+    //             {
+    //                 return callback(err);
+    //             }
+    //             else
+    //             {
+    //                 console.log(rows);
+    //                 var string = JSON.stringify(rows);
+    //                 var json = JSON.parse(string);
+
+    //                 sid = json['insertId'];
+    //             }
+    //             callback(null, 'aaa');
+    //         })
+    //     },
+
+    //     function(data, callback){
+
+    //         connection.query(posts, function(err, rows){
+    //             if(err)
+    //             {
+    //                 return callback(err);
+    //             }
+    //             else
+    //             {
+    //                 console.log(rows);
+    //                 var string = JSON.stringify(rows);
+    //                 var json = JSON.parse(string);
+
+    //                 pid = json['insertId'];
+    //             }
+    //             callback(null, 'aaa');
+    //         })
+    //     },
+
+    //     function(data2, callback)
+    //     {
+    //         var posts_seromons = `insert into \`posts-sermons\`(posts_id, sermons_id) values(${pid}, ${sid})`;
+    //         connection.query(posts_seromons, function(err, rows){
+    //             if(err)
+    //             {
+    //                 return callback(err);
+    //             }
+    //             else
+    //             {
+    //                 res.json({
+    //                     message: "설교 올리기 완료"
+    //                 });  
+    //             }
+    //         }) 
+    //         callback(null);
+    //     }
+    // ]
+
+    // async.waterfall(tasks, function (err){
+    //     if(err)
+    //     {
+    //         console.log('err');
+    //     }
+    //     else
+    //     {
+    //         console.log('done');
+    //     }
+    // })
+
+})
 
 app.post('/api/upload_sermon', async (req, res)=> {
 
