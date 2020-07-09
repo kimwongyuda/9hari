@@ -24,9 +24,6 @@ class Upload_Board extends Component{
 
     upload = () => {
 
-        
-
-
         console.log('sadjsajsjadj');
         axios
         .get("/api/auth")
@@ -81,8 +78,30 @@ class Upload_Board extends Component{
             //정상 수행
             .then(returnData => {
             if (returnData.data.message) {
-                alert(returnData.data.message);
-                window.location.href = "/worship/1/1";
+
+                const send_param = {
+                headers,
+                pid: returnData.data.pid,
+                aids: returnData.data.aids,
+                paths: returnData.data.paths
+                };
+
+                axios.post("/api/upload_board_2", send_param)
+                .then(returnData=>{
+                    if(returnData.data.message){
+
+                        alert(returnData.data.message);
+                        window.location.href = "/";
+                    }
+                    else
+                    {
+
+                        alert(returnData.data.message);
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                    });
             } else {
                 alert(returnData.data.message);
             }

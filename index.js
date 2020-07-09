@@ -9,16 +9,38 @@ const async = require('async');
 const jwt = require("jsonwebtoken");
 const path = require('path');
 const multer = require('multer');
+const multerS3 = require('multer-s3');
+const AWS = require('aws-sdk');
+AWS.config.loadFromPath('./aws.json');
+let s3 = new AWS.S3();
+
+// const upload = multer({
+//     storage: multer.diskStorage({
+//       destination: function (req, file, cb) {
+//         cb(null, 'uploads/');
+//       },
+//       filename: function (req, file, cb) {
+//         cb(null, new Date().valueOf() + '_'+file.originalname+path.extname(file.originalname));
+//       }
+//     }),
+//   });
+// const upload = multer({
+//     storage: multer.memoryStorage(),
+// });
+
 const upload = multer({
-    storage: multer.diskStorage({
-      destination: function (req, file, cb) {
-        cb(null, 'uploads/');
-      },
-      filename: function (req, file, cb) {
-        cb(null, new Date().valueOf() + '_'+file.originalname+path.extname(file.originalname));
-      }
-    }),
-  });
+
+    storage: multerS3({
+    s3: s3,
+    bucket : "9hari",
+    key: function (req, file, cb) {
+        let extension = path.extname(file.originalname);
+        cb(null, 'uploads/'+Date.now().toString()+'_'+file.originalname)
+    },
+    acl: 'public-read-write'
+})
+
+})
 
 const moment = require('moment');
 const secretObj = require("./jwt");
@@ -30,19 +52,96 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 //검색 시
+app.get('/api/posts_b_search/:option/:input/:type', (req,res) => {
+    var type = req.params.type;
+    var option = req.params.option;
+    var input = req.params.input;
+
+    var token = req.headers.cookie;
+    console.log(token)
+
+    let decoded = "";
+    if(token)
+    {
+        token = req.headers.cookie.substr(5);
+        decoded = jwt.verify(token, secretObj.secret);
+    }
+    
+
+    if(option== 'title')
+    {
+        temp =
+        `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
+        from posts as p inner join users as u
+        on p.writer_id = u.id
+        where \`type\` = '${type}' and title like '%${input}%'`;
+    }
+    else if(option == 'writer')
+    {
+        temp =
+        `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
+        from posts as p inner join users as u
+        on p.writer_id = u.id
+        where \`type\` = '${type}' and \`name\` like '%${input}%'`;
+    }
+    var ret;
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse();
+            ret=json;
+            if(token)
+            {
+            res.json({
+                json:ret,
+                authority: decoded['Authority'],
+                login_id: decoded['Login_id'],
+                writer_id: decoded['ID']
+            });
+            }
+            else
+            {
+                res.json({
+                    json: ret
+                })
+            }
+        }
+    });
+
+})
+
+//검색 시
 app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     var type = req.params.type;
     var option = req.params.option;
     var input = req.params.input;
 
+    // let token = req.headers.cookie.substr(5);
+    var token = req.headers.cookie;
+    console.log(token)
+
+    let decoded = "";
+    if(token)
+    {
+        token = req.headers.cookie.substr(5);
+        decoded = jwt.verify(token, secretObj.secret);
+    }
+    
+
     if(option== 'title')
     {
     temp =
-    `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
+    `select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
     from 
-    (select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
+    (select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
     from(
-    select p.id as pid, title, creation_date, views, content, email, \`name\`, \`rank\`
+    select p.id as pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`
     from posts as p inner join users as u
     on p.writer_id = u.id
     where \`type\` = '${type}' and title like '%${input}%') as pu inner join \`posts-sermons\` as ps
@@ -52,11 +151,11 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     else if(option == 'words')
     {
         temp =
-        `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
+        `select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
         from 
-        (select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
+        (select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
         from(
-        select p.id as pid, title, creation_date, views, content, email, \`name\`, \`rank\`
+        select p.id as pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`
         from posts as p inner join users as u
         on p.writer_id = u.id
         where \`type\` = '${type}') as pu inner join \`posts-sermons\` as ps
@@ -67,11 +166,11 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     else if(option == 'person')
     {
         temp =
-        `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
+        `select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
         from 
-        (select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
+        (select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
         from(
-        select p.id as pid, title, creation_date, views, content, email, \`name\`, \`rank\`
+        select p.id as pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`
         from posts as p inner join users as u
         on p.writer_id = u.id
         where \`type\` = '${type}') as pu inner join \`posts-sermons\` as ps
@@ -82,11 +181,11 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
     else if(option == 'writer')
     {
         temp =
-        `select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
+        `select pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`, sermon_title, sermon_person, sermon_words, sermon_place, sermon_summary, sermon_date, youtube_link
         from 
-        (select pid, title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
+        (select pid, writer_id,title, creation_date, views, content, email, \`name\`, \`rank\`, sermons_id
         from(
-        select p.id as pid, title, creation_date, views, content, email, \`name\`, \`rank\`
+        select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
         from posts as p inner join users as u
         on p.writer_id = u.id
         where \`type\` = '${type}' and \`name\` like '%${input}%') as pu inner join \`posts-sermons\` as ps
@@ -105,10 +204,80 @@ app.get('/api/posts_search/:option/:input/:type', (req,res) => {
             var json = JSON.parse(string);
             json = json.reverse();
             ret=json;
-            res.send(ret);
+            console.log(ret);
+            if(token)
+            {
+            res.json({
+                json:ret,
+                authority: decoded['Authority'],
+                login_id: decoded['Login_id'],
+                writer_id: decoded['ID']
+            });
+            }
+            else
+            {
+                res.json({
+                    json: ret
+                })
+            }
         }
     });
 
+})
+
+app.get('/api/posts_b/:type', (req,res)=>{
+
+    var type = req.params.type;
+
+    // let token = req.headers.cookie.substr(5);
+    var token = req.headers.cookie;
+    console.log(token)
+
+    let decoded = "";
+    if(token)
+    {
+        token = req.headers.cookie.substr(5);
+        decoded = jwt.verify(token, secretObj.secret);
+    }
+
+    var temp =
+    `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
+    from posts as p inner join users as u
+    on p.writer_id = u.id
+    where \`type\` = '${type}'`;
+
+    var ret;
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse();
+            ret=json;
+
+            console.log(ret);
+
+            if(token)
+            {
+            res.json({
+                json:ret,
+                authority: decoded['Authority'],
+                login_id: decoded['Login_id'],
+                writer_id: decoded['ID']
+            });
+            }
+            else
+            {
+                res.json({
+                    json: ret
+                })
+            }
+        }
+    });
 })
 
 app.get('/api/posts/:type', (req,res)=>{
@@ -476,108 +645,100 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
     let writer_id = req.body.writer_id;
     let daytype = req.body.daytype;
     let files = req.files.files;
-
-    console.log(files[0]);
-    // if(req.body.daytype == "주일")
-    // {
-    //     daytype = "sun";
-    // }
-    // else if(req.body.daytype == "수요")
-    // {
-    //     daytype = "wed";
-    // }
-    // else if(req.body.daytype == "금요")
-    // {
-    //     daytype ="fri";
-    // }
-    // else{
-    //     daytype = "spe";
-    // }
+    let kind = req.body.kind;
 
 
-    // let sermon_title = req.body.sermon_title;
-    // let sermon_date = req.body.sermon_date;
-    // let youtube_link = req.body.youtube_link;
-    // let sermon_person = req.body.sermon_person;
-    // let sermon_words = req.body.sermon_words;
-    // let sermon_place = req.body.sermon_place;
+    var posts = `insert into posts(title, writer_id, content, \`type\`, \`kind\`) values('${title}', ${writer_id}, '${content}', '${daytype}', '${kind}')`;
 
-    // var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place) 
-    // values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}')`;
-    // var posts = `insert into posts(title, writer_id, content, \`type\`) values('${title}', ${writer_id}, '${content}', '${daytype}')`;
+    var pid = 0;
+    var aids = [];
 
-    // var pid = 0;
-    // var sid = 0;
+    var tasks = [
 
-    // var tasks = [
+        function (callback){
+            connection.query(posts, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    console.log(rows);
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
 
-    //     function (callback){
-    //         connection.query(sermons, function(err, rows){
-    //             if(err)
-    //             {
-    //                 return callback(err);
-    //             }
-    //             else
-    //             {
-    //                 console.log(rows);
-    //                 var string = JSON.stringify(rows);
-    //                 var json = JSON.parse(string);
+                    pid = json['insertId'];
+                }
+                callback(null, 'aaa');
+            })
+        },
 
-    //                 sid = json['insertId'];
-    //             }
-    //             callback(null, 'aaa');
-    //         })
-    //     },
+        function(data, callback){
 
-    //     function(data, callback){
+            for(var i =0; i < files.length;i++)
+            {
+                var path_ = files[i].key;
+                var temp = `insert into attachments(\`path\`) values('${path_}')`;
+                connection.query(temp, function(err, rows){
+                    if(err)
+                    {
+                        return callback(err);
+                    }
+                    else
+                    {
+                        console.log(rows);
+                        var string = JSON.stringify(rows);
+                        var json = JSON.parse(string);
 
-    //         connection.query(posts, function(err, rows){
-    //             if(err)
-    //             {
-    //                 return callback(err);
-    //             }
-    //             else
-    //             {
-    //                 console.log(rows);
-    //                 var string = JSON.stringify(rows);
-    //                 var json = JSON.parse(string);
+                        aids.push(json['insertId']);
+                        if(aids.length == files.length)
+                        {
+                            res.json({
+                                message: '1차 완료',
+                                pid: pid,
+                                aids: aids
+                            })
+                        }
+                    }
+                })
+            }
+        }
+    ]
 
-    //                 pid = json['insertId'];
-    //             }
-    //             callback(null, 'aaa');
-    //         })
-    //     },
+    async.waterfall(tasks, function (err){
+        if(err)
+        {
+            console.log('err');
+        }
+        else
+        {
+            console.log('done');
+        }
+    })
 
-    //     function(data2, callback)
-    //     {
-    //         var posts_seromons = `insert into \`posts-sermons\`(posts_id, sermons_id) values(${pid}, ${sid})`;
-    //         connection.query(posts_seromons, function(err, rows){
-    //             if(err)
-    //             {
-    //                 return callback(err);
-    //             }
-    //             else
-    //             {
-    //                 res.json({
-    //                     message: "설교 올리기 완료"
-    //                 });  
-    //             }
-    //         }) 
-    //         callback(null);
-    //     }
-    // ]
+})
 
-    // async.waterfall(tasks, function (err){
-    //     if(err)
-    //     {
-    //         console.log('err');
-    //     }
-    //     else
-    //     {
-    //         console.log('done');
-    //     }
-    // })
+app.post('/api/upload_board_2', async (req,res)=>{
+    let pid = req.body.pid;
+    let aids = req.body.aids;
 
+    for(var i =0; i<aids.length; i++)
+    {
+        var temp = `insert into \`posts-attachments\`(posts_id, attachments_id) values(${pid}, ${aids[i]})`;
+        connection.query(temp, function(err, rows){
+            if(err)
+            {
+                throw err;
+            }
+            else
+            {
+            }
+        })
+    }
+
+    res.json({
+        message: '게시물 올리기 완료'
+    })
 })
 
 app.post('/api/upload_sermon', async (req, res)=> {
@@ -612,7 +773,7 @@ app.post('/api/upload_sermon', async (req, res)=> {
 
     var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place) 
     values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}')`;
-    var posts = `insert into posts(title, writer_id, content, \`type\`) values('${title}', ${writer_id}, '${content}', '${daytype}')`;
+    var posts = `insert into posts(title, writer_id, content, \`type\`, \`kind\`) values('${title}', ${writer_id}, '${content}', '${daytype}', '설교')`;
 
     var pid = 0;
     var sid = 0;

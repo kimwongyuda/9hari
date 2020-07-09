@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Sermon from './Sermon.js';
+import Attachments from './Attachments.js';
 import style from './Pagination.module.css';
-import dodbogi from '../../../../../images/dodbogi.jpg';
+import dodbogi from '../../../../../../images/dodbogi.jpg';
 
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -12,6 +12,7 @@ class Pagination extends Component{
     constructor(props){
         super(props);
 
+        console.log(props);
         if(window.location.pathname.split('/').length == 5)
         {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0};}
         else
@@ -33,7 +34,7 @@ class Pagination extends Component{
     }
 
     callApi = async () => {
-        const response = await fetch(`/api/posts/${this.state.type}`);
+        const response = await fetch(`/api/posts_b/${this.state.type}`);
         const body = await response.json();
         console.log(body)
         return body;
@@ -60,7 +61,7 @@ class Pagination extends Component{
 
     search(){
         const response = 
-        fetch(`/api/posts_search/${this.state.option_input}/${this.state.search_input}/${this.state.type}`)
+        fetch(`/api/posts_b_search/${this.state.option_input}/${this.state.search_input}/${this.state.type}`)
         .then(res => res.json())
         .then((res) => {this.setState({posts: res.json, writer_id: res.writer_id})});
     }
@@ -115,10 +116,12 @@ class Pagination extends Component{
         var posts_list = [];
 
         var page = window.location.pathname.split('/')[3];
-        var pageint = parseInt(page);
+        var pageint = 1
         var writer_id = this.state.writer_id;
 
         console.log('writer_id: ', writer_id);
+
+        console.log(posts);
 
         // console.log(posts_mod);
         if(posts.length!=0)
@@ -195,11 +198,11 @@ class Pagination extends Component{
             <div style={{width: '100%', float: 'left'}}>
             {index+1!=posts_list.length ?
             <div>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%'}}>{item.title}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{width: '10%'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{width: '10%'}}>{item.views}</span></Link>
             {
                 (()=>{
                     if(writer_id == item.writer_id)
@@ -211,14 +214,14 @@ class Pagination extends Component{
             </div>
             :
             <div>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/worship/${cur_page_index}/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC', width: '10%'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC', width: '10%'}}>{item.views}</span></Link>
             {
                 (()=>{
-                    if(writer_id == item.writer_id) 
+                    if(writer_id == item.writer_id)
                     {
                         return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid, item.sid)}><strong>삭제</strong></button>
                     }
@@ -244,9 +247,9 @@ class Pagination extends Component{
                     if(this.state.posts[posts_size-sermon_num]!=undefined)
                     {
                         return <div>
-                            <Sermon props={{data: this.state.posts[posts_size-sermon_num]}}></Sermon>
+                            <Attachments props={{data: this.state.posts[posts_size-sermon_num]}}></Attachments>
                             <div style={{width: '100%', float: 'left'}}>
-                            <Link to={`/worship/${cur_page_index}/${pageint}`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
+                            <Link to={`/worship/${cur_page_index}/2`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
                             </div>
                             </div>
                     }
@@ -292,12 +295,10 @@ class Pagination extends Component{
                         <div style={{width: '50%', float: 'left', marginLeft: '25%', marginTop: '20px'}}>
                             <select onChange={this.handleChangeS} style={{width: '25%', float: 'left',fontSize: '20px', marginRight: '5px', height: '40px'}}>
                                 <option value='title' className={style.textb} style={{fontSize: '20px'}}>제목</option>
-                                <option value='words' className={style.textb} style={{fontSize: '20px'}}>말씀</option>
-                                <option value='person' className={style.textb} style={{fontSize: '20px'}}>설교자</option>
                                 <option value='writer' className={style.textb} style={{fontSize: '20px'}}>작성자</option>
                             </select>
                             <input type="textb" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
-                            <Link to={`/worship/${cur_page_index}/1`}><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
+                            <Link to={`/ng/${cur_page_index}/2`}><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
                         </div>
                     </div>
                 </div>
