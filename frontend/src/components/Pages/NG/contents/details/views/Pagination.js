@@ -249,7 +249,7 @@ class Pagination extends Component{
                         return <div>
                             <Attachments props={{data: this.state.posts[posts_size-sermon_num]}}></Attachments>
                             <div style={{width: '100%', float: 'left'}}>
-                            <Link to={`/worship/${cur_page_index}/2`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
+                            <Link to={`/ng/${cur_page_index}/2`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
                             </div>
                             </div>
                     }

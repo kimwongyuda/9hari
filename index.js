@@ -51,6 +51,35 @@ connection.connect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.get('/api/attachments/:pid', (req,res)=>{
+
+    console.log('sssss');
+    var pid = req.params.pid;
+
+    var temp = `select * from 
+    \`posts-attachments\` as pa inner join attachments as a 
+    on pa.attachments_id = a.id
+    where posts_id = ${pid}`;
+
+    connection.query(temp, function(err, rows){
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            json = json.reverse();
+            ret=json;
+            console.log(ret);
+            res.json({
+                json:ret
+            });
+        }
+    });
+})
+
 //검색 시
 app.get('/api/posts_b_search/:option/:input/:type', (req,res) => {
     var type = req.params.type;
