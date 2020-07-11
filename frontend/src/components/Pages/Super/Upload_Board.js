@@ -15,7 +15,7 @@ class Upload_Board extends Component{
         this.state = {
             writer_id:0,
             files: [],
-            raw_files: null
+            raw_files: []
         }
         this.upload = this.upload.bind(this);
         this.setFiles = this.setFiles.bind(this);
@@ -62,6 +62,7 @@ class Upload_Board extends Component{
             // };
 
             var formData = new FormData();
+            console.log(this.state)
             for( const file_ of this.state.raw_files)
             {
                 console.log(file_);
@@ -129,6 +130,12 @@ class Upload_Board extends Component{
 
         for(var i =0; i<e.target.files.length; i++)
         {
+            if(e.target.files[i].size > 20000000)
+            {
+                alert("파일 1개의 용량이 20MB가 넘어가면 안됩니다.(여러 개의 파일이 합 20MB가 넘어가는건 상관 없습니다.");
+                e.target.value = '';
+                return;
+            }
             console.log(e.target.files[i].name);
             upfiles.push(e.target.files[i].name);
         }

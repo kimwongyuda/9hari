@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
+    "fs": "0.0.1-security",
+    "js-file-download": "^0.4.12",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-bootstrap": "^1.0.1",

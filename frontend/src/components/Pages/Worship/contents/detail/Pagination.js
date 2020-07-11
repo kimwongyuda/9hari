@@ -76,8 +76,8 @@ class Pagination extends Component{
     delete(pid, sid){
         const send_param = {
             headers,
-            pid,
-            sid
+            pid: pid,
+            sid: sid
           };
     
           axios

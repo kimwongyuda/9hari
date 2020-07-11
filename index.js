@@ -8,39 +8,45 @@ const bcrypt = require('bcrypt');
 const async = require('async');
 const jwt = require("jsonwebtoken");
 const path = require('path');
+var mime = require('mime');
+
+var fs = require('fs');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 const AWS = require('aws-sdk');
 AWS.config.loadFromPath('./aws.json');
 let s3 = new AWS.S3();
 
-// const upload = multer({
-//     storage: multer.diskStorage({
-//       destination: function (req, file, cb) {
-//         cb(null, 'uploads/');
-//       },
-//       filename: function (req, file, cb) {
-//         cb(null, new Date().valueOf() + '_'+file.originalname+path.extname(file.originalname));
-//       }
-//     }),
-//   });
+
+var getdownloadfn = require('./getdownloadfn').getdownloadfn;
+
+const upload = multer({
+    storage: multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, 'uploads/');
+      },
+      filename: function (req, file, cb) {
+        cb(null, new Date().valueOf() + '_'+file.originalname);
+      }
+    }),
+  });
 // const upload = multer({
 //     storage: multer.memoryStorage(),
 // });
 
-const upload = multer({
+// const upload = multer({
 
-    storage: multerS3({
-    s3: s3,
-    bucket : "9hari",
-    key: function (req, file, cb) {
-        let extension = path.extname(file.originalname);
-        cb(null, 'uploads/'+Date.now().toString()+'_'+file.originalname)
-    },
-    acl: 'public-read-write'
-})
+//     storage: multerS3({
+//     s3: s3,
+//     bucket : "9hari",
+//     key: function (req, file, cb) {
+//         let extension = path.extname(file.originalname);
+//         cb(null, 'uploads/'+Date.now().toString()+'_'+file.originalname)
+//     },
+//     acl: 'public-read-write'
+// })
 
-})
+// })
 
 const moment = require('moment');
 const secretObj = require("./jwt");
@@ -51,9 +57,35 @@ connection.connect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.post('/api/download', (req,res)=>{
+    var file = req.body.path;
+
+    // var File = file.replace('uploads/','');
+    // // let rs = fs.createReadStream(file); 
+
+    // // console
+    // // res.attachment("rates.txt"); 
+    // // rs.pipe(res);
+
+    // // res.set( 'Content-Type', 'application/blob' );
+    // res.attachment(file);
+    // res.download(file, File,(err) => {
+    //               if (err) console.log(err);
+    // });\
+
+    var filename = path.basename(file);
+    var mimetype = mime.lookup(file);
+  
+    res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+    res.setHeader('Content-type', mimetype);
+  
+    var filestream = fs.createReadStream(file);
+    filestream.pipe(res);
+
+})
+
 app.get('/api/attachments/:pid', (req,res)=>{
 
-    console.log('sssss');
     var pid = req.params.pid;
 
     var temp = `select * from 
@@ -583,7 +615,7 @@ app.post('/api/login', async (req, res)=> {
                     },
                     secretObj.secret,
                     {
-                        expiresIn: '60m'
+                        expiresIn: '180m'
                     })
 
                     res.cookie("user", token);
@@ -676,7 +708,12 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
     let files = req.files.files;
     let kind = req.body.kind;
 
+    console.log(files);
 
+    if(files == undefined)
+    {
+        files = [];
+    }
     var posts = `insert into posts(title, writer_id, content, \`type\`, \`kind\`) values('${title}', ${writer_id}, '${content}', '${daytype}', '${kind}')`;
 
     var pid = 0;
@@ -697,6 +734,15 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
                     var json = JSON.parse(string);
 
                     pid = json['insertId'];
+
+                    if(files.length == 0)
+                    {
+                        return   res.json({
+                            message: '1차 완료',
+                            pid: pid,
+                            aids: aids
+                        })
+                    }
                 }
                 callback(null, 'aaa');
             })
@@ -706,7 +752,7 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
 
             for(var i =0; i < files.length;i++)
             {
-                var path_ = files[i].key;
+                var path_ = files[i].destination + files[i].filename;
                 var temp = `insert into attachments(\`path\`) values('${path_}')`;
                 connection.query(temp, function(err, rows){
                     if(err)
@@ -750,7 +796,7 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
 app.post('/api/upload_board_2', async (req,res)=>{
     let pid = req.body.pid;
     let aids = req.body.aids;
-
+    console.log('lll');
     for(var i =0; i<aids.length; i++)
     {
         var temp = `insert into \`posts-attachments\`(posts_id, attachments_id) values(${pid}, ${aids[i]})`;
@@ -799,9 +845,10 @@ app.post('/api/upload_sermon', async (req, res)=> {
     let sermon_person = req.body.sermon_person;
     let sermon_words = req.body.sermon_words;
     let sermon_place = req.body.sermon_place;
+    let sermon_summary = req.body.sermon_summary;
 
-    var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place) 
-    values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}')`;
+    var sermons = `insert into sermons(sermon_title, sermon_date, youtube_link, sermon_person, sermon_words, sermon_place, sermon_summary) 
+    values('${sermon_title}', '${sermon_date}', '${youtube_link}', '${sermon_person}', '${sermon_words}', '${sermon_place}', '${sermon_summary}')`;
     var posts = `insert into posts(title, writer_id, content, \`type\`, \`kind\`) values('${title}', ${writer_id}, '${content}', '${daytype}', '설교')`;
 
     var pid = 0;
@@ -998,6 +1045,89 @@ app.get('/api/auth', async (req, res)=> {
             writer_id: decoded['ID']
         });
     }
+})
+
+app.post('/api/delete_post_attachment', async (req,res)=>{
+
+    var pid = req.body.pid;
+
+    console.log(pid);
+
+    console.log("asdasdasdas");
+
+    var temp1 = `select * from \`posts-attachments\` as pa inner join attachments as a on pa.attachments_id = a.id where posts_id = ${pid}`;
+    var temp2 = `delete from posts where id = ${pid}`;
+
+    var tasks = [
+
+        function (callback){
+            connection.query(temp1, function(err, rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else
+                {
+                    var string = JSON.stringify(rows);
+                    var json = JSON.parse(string);
+                    json = json.reverse()
+                }
+                callback(null, json);
+            })
+        },
+
+        function(data, callback){
+            connection.query(temp2, function(err,rows){
+                if(err)
+                {
+                    return callback(err);
+                }
+                else{
+                }
+                callback(null, data);
+            })
+        },
+
+        function(data, callback){
+
+            console.log(data);
+            for(var i =0; i < data.length;i++)
+            {
+                var temp = `delete from attachments where id = ${data[i].attachments_id}`;
+                console.log(data[i])
+                fs.unlink(`${data[i].path}`, function(err){
+                    if( err ) throw err;
+                    console.log('file deleted');
+                });
+                connection.query(temp, function(err, rows){
+                    if(err)
+                    {
+                        return callback(err);
+                    }
+                    else
+                    {
+
+                    }
+                })
+
+
+            }
+            res.json({
+                message: '삭제 완료'
+            })
+        }
+    ]
+
+    async.waterfall(tasks, function (err){
+        if(err)
+        {
+            console.log('err');
+        }
+        else
+        {
+            console.log('done');
+        }
+    })
 })
 
 app.post('/api/delete_post_sermon', async (req,res)=>{

@@ -74,15 +74,14 @@ class Pagination extends Component{
         this.setState({option_input: e.target.value});
     }
 
-    delete(pid, sid){
+    delete(pid){
         const send_param = {
             headers,
-            pid,
-            sid
+            pid: pid
           };
     
           axios
-          .post("/api/delete_post_sermon", send_param)
+          .post("/api/delete_post_attachment", send_param)
           //정상 수행
           .then(returnData => {
             if (returnData.data.message) {
@@ -207,7 +206,7 @@ class Pagination extends Component{
                 (()=>{
                     if(writer_id == item.writer_id)
                     {
-                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid, item.sid)}><strong>삭제</strong></button>
+                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid)}><strong>삭제</strong></button>
                     }
                 })()
             }
@@ -223,7 +222,7 @@ class Pagination extends Component{
                 (()=>{
                     if(writer_id == item.writer_id)
                     {
-                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid, item.sid)}><strong>삭제</strong></button>
+                        return <button className={style.smallbox3+' '+style.button} style={{width:'10%'}} onClick={()=>this.delete(item.pid)}><strong>삭제</strong></button>
                     }
                 })()
             }
