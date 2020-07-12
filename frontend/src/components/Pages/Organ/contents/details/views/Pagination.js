@@ -114,6 +114,7 @@ class Pagination extends Component{
         var posts_mod = posts_size % inputcount;
         var posts_list = [];
 
+
         var page = window.location.pathname.split('/')[4];
         var pageint = parseInt(page);
         var writer_id = this.state.writer_id;
@@ -176,18 +177,18 @@ class Pagination extends Component{
             }
         }
         const pagef1 = (<div>
-            { pageint < inputcount+1 ? <Link to ={`/ng/${cur_page_index}/2/1`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>
-            : <Link to ={`/ng/${cur_page_index}/2/${pageint-inputcount}`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>}</div>)
+            { pageint < inputcount+1 ? <Link to ={`/organ/${cur_page_index}/2/1`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>
+            : <Link to ={`/organ/${cur_page_index}/2/${pageint-inputcount}`} className={style.link2}><span className={style.smallbox2}>{'<'}</span></Link>}</div>)
 
         const pagef2 = (<div>
-            { pageint > maxpage-(inputcount+1) ? <Link to ={`/ng/${cur_page_index}/2/${maxpage}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>
-            : <Link to ={`/ng/${cur_page_index}/2/${pageint+inputcount}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>}</div>)
+            { pageint > maxpage-(inputcount+1) ? <Link to ={`/organ/${cur_page_index}/2/${maxpage}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>
+            : <Link to ={`/organ/${cur_page_index}/2/${pageint+inputcount}`} className={style.link2}><span className={style.smallbox2}>{'>'}</span></Link>}</div>)
 
         const pagilist = pagination.map((value, index) => (
             <div>
             {page == String(value) ? 
-            <Link to ={`/ng/${cur_page_index}/2/${value}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#DCDCDC'}}>{value}</span></Link>
-        : <Link to ={`/ng/${cur_page_index}/2/${value}`} className={style.link2}><span className={style.smallbox}>{value}</span></Link>
+            <Link to ={`/organ/${cur_page_index}/2/${value}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#DCDCDC'}}>{value}</span></Link>
+        : <Link to ={`/organ/${cur_page_index}/2/${value}`} className={style.link2}><span className={style.smallbox}>{value}</span></Link>
         }
         </div>
         ));
@@ -197,11 +198,11 @@ class Pagination extends Component{
             <div style={{width: '100%', float: 'left'}}>
             {index+1!=posts_list.length ?
             <div>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%'}}>{item.title}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{width: '10%'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{width: '10%'}}>{item.views}</span></Link>
             {
                 (()=>{
                     if(writer_id == item.writer_id)
@@ -213,11 +214,11 @@ class Pagination extends Component{
             </div>
             :
             <div>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
-            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/ng/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC', width: '10%'}}>{item.views}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{inputcount*(maxpage-pageint) + (posts_list.length-index)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{textAlign: 'left', width: '35%', borderBottom: '0.1px solid #DCDCDC'}}>{item.title}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.name}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC'}}>{item.creation_date.substr(0,10)}</span></Link>
+            <Link onClick={() => this.warpfunc(inputcount*(maxpage-pageint) + (posts_list.length-index))} to ={`/organ/${cur_page_index}/2/${pageint}/${inputcount*(maxpage-pageint) + (posts_list.length-index)}`} className={style.tablelink}><span className={style.smallbox3} style={{borderBottom: '0.1px solid #DCDCDC', width: '10%'}}>{item.views}</span></Link>
             {
                 (()=>{
                     if(writer_id == item.writer_id)
@@ -248,7 +249,7 @@ class Pagination extends Component{
                         return <div>
                             <Attachments props={{data: this.state.posts[posts_size-sermon_num]}}></Attachments>
                             <div style={{width: '100%', float: 'left'}}>
-                            <Link to={`/ng/${cur_page_index}/2/${pageint}`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
+                            <Link to={`/organ/${cur_page_index}/2/${pageint}`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
                             </div>
                             </div>
                     }
@@ -281,11 +282,11 @@ class Pagination extends Component{
                     {/* 페이지리스트 */}
                     <div style={{width: '60%', marginLeft: '35%', marginTop: '10px', float:'left'}}>
                     {pagef1}
-                    <Link to ={`/ng/${cur_page_index}/2/1`} className={style.link2}><span className={style.smallbox}>1</span></Link>
+                    <Link to ={`/organ/${cur_page_index}/2/1`} className={style.link2}><span className={style.smallbox}>1</span></Link>
                     <span className={style.smallbox2}>...</span>
                     {pagilist}
                     <span className={style.smallbox2}>...</span>
-                    <Link to ={`/ng/${cur_page_index}/2/${maxpage}`} className={style.link2}><span className={style.smallbox}>{maxpage}</span></Link>
+                    <Link to ={`/organ/${cur_page_index}/2/${maxpage}`} className={style.link2}><span className={style.smallbox}>{maxpage}</span></Link>
                     {pagef2}
                     </div>
 
@@ -297,7 +298,7 @@ class Pagination extends Component{
                                 <option value='writer' className={style.textb} style={{fontSize: '20px'}}>작성자</option>
                             </select>
                             <input type="textb" style={{fontSize: '20px', color: '#005bab', width: '65%', float:'left', marginRight: '5px', height: '40px'}} onChange={this.handleChange}></input>
-                            <Link to={`/ng/${cur_page_index}/2/1`}><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
+                            <Link to={`/organ/${cur_page_index}/2/1`}><input type="image" src={dodbogi} style={{width: '40px', objectFit: 'fill'}} onClick={this.search}></input></Link>
                         </div>
                     </div>
                 </div>

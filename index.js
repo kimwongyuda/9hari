@@ -60,7 +60,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.post('/api/download', (req,res)=>{
     var file = req.body.path;
 
-    // var File = file.replace('uploads/','');
+    var File = file.replace('uploads/','');
     // // let rs = fs.createReadStream(file); 
 
     // // console
@@ -69,18 +69,18 @@ app.post('/api/download', (req,res)=>{
 
     // // res.set( 'Content-Type', 'application/blob' );
     // res.attachment(file);
-    // res.download(file, File,(err) => {
-    //               if (err) console.log(err);
-    // });\
+    res.download(file, File,(err) => {
+                  if (err) console.log(err);
+    });
 
-    var filename = path.basename(file);
-    var mimetype = mime.lookup(file);
+    // var filename = path.basename(file);
+    // var mimetype = mime.lookup(file);
   
-    res.setHeader('Content-disposition', 'attachment; filename=' + filename);
-    res.setHeader('Content-type', mimetype);
+    // res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+    // res.setHeader('Content-type', mimetype);
   
-    var filestream = fs.createReadStream(file);
-    filestream.pipe(res);
+    // var filestream = fs.createReadStream(file);
+    // filestream.pipe(res);
 
 })
 
@@ -135,7 +135,7 @@ app.get('/api/posts_b_search/:option/:input/:type', (req,res) => {
         `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
         from posts as p inner join users as u
         on p.writer_id = u.id
-        where \`type\` = '${type}' and title like '%${input}%'`;
+        where \`kind\` = '${type}' and title like '%${input}%'`;
     }
     else if(option == 'writer')
     {
@@ -143,7 +143,7 @@ app.get('/api/posts_b_search/:option/:input/:type', (req,res) => {
         `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
         from posts as p inner join users as u
         on p.writer_id = u.id
-        where \`type\` = '${type}' and \`name\` like '%${input}%'`;
+        where \`kind\` = '${type}' and \`name\` like '%${input}%'`;
     }
     var ret;
     connection.query(temp, function(err, rows){
@@ -305,7 +305,7 @@ app.get('/api/posts_b/:type', (req,res)=>{
     `select p.id as pid, writer_id, title, creation_date, views, content, email, \`name\`, \`rank\`
     from posts as p inner join users as u
     on p.writer_id = u.id
-    where \`type\` = '${type}'`;
+    where \`kind\` = '${type}'`;
 
     var ret;
     connection.query(temp, function(err, rows){

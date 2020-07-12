@@ -28,7 +28,7 @@ class Header extends Component{
                     ['/group/1/1', '/group/2/1', '/group/3/1', '/group/4/1', '/group/5/1'],
                     ['/event/1', '/event/2', '/event/3'],
                     ['/organ/2/1'],
-                    ['/suggest/2']],
+                    ['/suggest/1/1','/suggest/2/1']],
             auth: ''
         };
     }
@@ -138,7 +138,7 @@ class Header extends Component{
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/group/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(3)}>부서 및 모임</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/event/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(4)}>교회 행사</Link></div>
                         <div className={style.element2} style={{marginTop: '40px'}}><Link to="/organ/2/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(5)}>부속 기관</Link></div>
-                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/suggest/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(6)}>게시판</Link></div>
+                        <div className={style.element2} style={{marginTop: '40px'}}><Link to="/suggest/1/1" className={style.link2} style={{fontSize: '20px'}} onMouseOver={() => this.onMouseOver(6)}>게시판</Link></div>
                     </div>
                 </div>
                 <div className={style.toolbar} style={{height: '30px', backgroundColor: 'rgba(0,0,0,0.25)', textAlign: 'center'}}>

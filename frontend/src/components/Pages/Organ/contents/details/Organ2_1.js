@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import style from './Organ2_1.module.css';
 import cafe from '../../../../../images/cafe.jpg';
 import cafe2 from '../../../../../images/cafe2.jpg';
+import Pagination from './views/Pagination';
 
 class Organ2_1 extends Component{
 
@@ -72,7 +73,7 @@ class Organ2_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '구하리 카페', pageindex: 2}}></Pagination>
             </div>
         }
 

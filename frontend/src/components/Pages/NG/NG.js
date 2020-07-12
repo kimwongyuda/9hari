@@ -94,7 +94,7 @@ class NG extends Component{
                             })}
                             {
                                 (()=>{
-                                    if(auth == "admin" || auth == "교역자" || auth == "수정가능")
+                                    if(auth == "admin" || auth == "교역자" || auth == "수정가능" || auth == "일반")
                                     {
                                         return <Link to ={`/upload_Board/1`} className={style.link2}><span className={style.smallbox}>
                                                 게시물 올리기</span></Link>

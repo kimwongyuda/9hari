@@ -116,7 +116,7 @@ class NG1_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <Pagination props={{type: 'board', pageindex: 1}}></Pagination>
+                <Pagination props={{type: '유치유년부', pageindex: 1}}></Pagination>
             </div>
         }
 

@@ -36,3 +36,5 @@ config.js
 jwt.js
 
 query.txt
+
+/uploads

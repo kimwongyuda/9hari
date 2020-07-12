@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import style from './Group3_1.module.css';
 import image1 from '../../../../../images/3040_1.jpeg';
+import Pagination from './views/Pagination';
 
 class Group3_1 extends Component{
 
@@ -103,7 +104,7 @@ class Group3_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '3040 선교회', pageindex: 3}}></Pagination>
             </div>
         }
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import style from './NG3_1.module.css';
 import image1 from '../../../../../images/NG_main_3.JPG';
 import image2 from '../../../../../images/NG_main_32.jpg';
+import Pagination from './views/Pagination';
 
 class NG3_1 extends Component{
 
@@ -130,7 +131,7 @@ class NG3_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '중고등부', pageindex: 3}}></Pagination>
             </div>
         }
 

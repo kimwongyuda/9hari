@@ -3,6 +3,7 @@ import style from './Group1_1.module.css';
 import image1 from '../../../../../images/3040_1.jpeg';
 import Group_1_1 from '../../../../../images/Group_1_1.jpg'
 import Group_1_2 from '../../../../../images/Group_1_2.JPG'
+import Pagination from './views/Pagination';
 
 class Group1_1 extends Component{
 
@@ -146,7 +147,7 @@ class Group1_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '남선교회', pageindex: 1}}></Pagination>
             </div>
         }
 

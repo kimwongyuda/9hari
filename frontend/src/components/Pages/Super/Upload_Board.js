@@ -15,31 +15,33 @@ class Upload_Board extends Component{
         this.state = {
             writer_id:0,
             files: [],
-            raw_files: []
+            raw_files: [],
+            auth: ''
         }
         this.upload = this.upload.bind(this);
         this.setFiles = this.setFiles.bind(this);
         
     }
 
-    upload = () => {
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({writer_id: res.writer_id, auth: res.authority}))
+        .catch(err => console.log(err));
+    }
 
-        console.log('sadjsajsjadj');
-        axios
-        .get("/api/auth")
-        //정상 수행
-        .then(returnData => {
-          if (returnData.data.authority) {
-            // alert(returnData.data.message);
-            // window.location.reload();
-            this.setState({writer_id: returnData.data.writer_id});
+    callApi = async () => {
+        const response = await fetch(`/api/auth`);
+        const body = await response.json();
+        return body;
+    }
+
+    upload = () => {
 
             const kind = this.kind.value;
             const title = this.title.value;
             const content = this.content.value;
             const daytype = 'board';
             const writer_id = this.state.writer_id;
-            console.log(writer_id)
         
             if(title === "" || title === undefined)
             {
@@ -51,15 +53,6 @@ class Upload_Board extends Component{
                 this.kind.focus();
                 return;
             }
-        
-            // const send_param = {
-            // headers,
-            // kind: this.kind.value,
-            // title: this.title.value,
-            // content: this.content.value,
-            // daytype: this.daytype.value,
-            // writer_id: writer_id
-            // };
 
             var formData = new FormData();
             console.log(this.state)
@@ -111,16 +104,6 @@ class Upload_Board extends Component{
             .catch(err => {
             console.log(err);
             });
-
-            
-          } else {
-            alert(returnData.data.message);
-          }
-        })
-        //에러
-        .catch(err => {
-          console.log(err);
-        });
     };
 
     
@@ -165,10 +148,14 @@ class Upload_Board extends Component{
                                     <Form.Group controlId="loginForm">
 
                                     <Form.Label><strong style={{color: '#005bab'}}>게시판 종류</strong></Form.Label>
-                                    <Form.Control as="select"
+
+                                    {(()=>{
+                                        if(this.state.auth == 'admin' || this.state.auth == '교역자' || this.state.auth == '수정가능')
+                                        {
+                                        return <Form.Control as="select"
                                         ref={ref => (this.kind = ref)}
                                         style={{marginBottom: '20px'}}
-                                    >
+                                        >
                                         <option>유치유년부</option>
                                         <option>초등부</option>
                                         <option>중고등부</option>
@@ -180,7 +167,22 @@ class Upload_Board extends Component{
                                         <option>찬양대</option>
                                         <option>구하리 카페</option>
                                         <option>구하리 갤러리</option>
-                                    </Form.Control>
+                                        <option>자유 게시판</option>
+                                        </Form.Control>
+                                        }
+                                        else
+                                        {
+                                        return <Form.Control as="select"
+                                        ref={ref => (this.kind = ref)}
+                                        style={{marginBottom: '20px'}}
+                                        >
+                                        <option>자유게시판</option>
+                                        </Form.Control>
+                                        }
+                        
+
+                                    })()
+                                    }
 
                                     <Form.Label><strong style={{color: '#005bab'}}>글 제목</strong></Form.Label>
                                     <Form.Control
