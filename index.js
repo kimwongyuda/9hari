@@ -56,6 +56,7 @@ connection.connect();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static('uploads'));
 
 app.post('/api/download', (req,res)=>{
     var file = req.body.path;
@@ -699,7 +700,6 @@ app.post('/api/approve_admin', async(req,res)=>{
 app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content' },{name: 'writer_id'}, {name: 'daytype'}, {name: 'files'}]), async (req, res)=> {
 
 
-    console.log(req);
     console.log('asdsad');
     let title = req.body.title;
     let content = req.body.content;
@@ -707,8 +707,6 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
     let daytype = req.body.daytype;
     let files = req.files.files;
     let kind = req.body.kind;
-
-    console.log(files);
 
     if(files == undefined)
     {
@@ -719,6 +717,7 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
     var pid = 0;
     var aids = [];
 
+    console.log(files);
     var tasks = [
 
         function (callback){
@@ -735,14 +734,14 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
 
                     pid = json['insertId'];
 
-                    if(files.length == 0)
-                    {
-                        return   res.json({
-                            message: '1차 완료',
-                            pid: pid,
-                            aids: aids
-                        })
-                    }
+                    // if(files.length == 0)
+                    // {
+                    //     return   res.json({
+                    //         message: '1차 완료',
+                    //         pid: pid,
+                    //         aids: aids
+                    //     })
+                    // }
                 }
                 callback(null, 'aaa');
             })
@@ -750,6 +749,8 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
 
         function(data, callback){
 
+            if(files.length != 0)
+            {
             for(var i =0; i < files.length;i++)
             {
                 var path_ = files[i].destination + files[i].filename;
@@ -767,6 +768,34 @@ app.post('/api/upload_board', upload.fields([{ name: 'title' }, { name: 'content
 
                         aids.push(json['insertId']);
                         if(aids.length == files.length)
+                        {
+                            res.json({
+                                message: '1차 완료',
+                                pid: pid,
+                                aids: aids
+                            })
+                        }
+                    }
+                })
+            }
+            }
+            else
+            {
+                var path_ = 'uploads/temp.pdf';
+                var temp = `insert into attachments(\`path\`) values('${path_}')`;
+                connection.query(temp, function(err, rows){
+                    if(err)
+                    {
+                        return callback(err);
+                    }
+                    else
+                    {
+                        console.log(rows);
+                        var string = JSON.stringify(rows);
+                        var json = JSON.parse(string);
+
+                        aids.push(json['insertId']);
+                        if(aids.length == 1)
                         {
                             res.json({
                                 message: '1차 완료',
@@ -1094,11 +1123,13 @@ app.post('/api/delete_post_attachment', async (req,res)=>{
             for(var i =0; i < data.length;i++)
             {
                 var temp = `delete from attachments where id = ${data[i].attachments_id}`;
-                console.log(data[i])
-                fs.unlink(`${data[i].path}`, function(err){
-                    if( err ) throw err;
-                    console.log('file deleted');
-                });
+                if(fs.existsSync(`${data[i].path}`))
+                {
+                    fs.unlink(`${data[i].path}`, function(err){
+                        if( err ) throw err;
+                        console.log('file deleted');
+                    });
+                }
                 connection.query(temp, function(err, rows){
                     if(err)
                     {

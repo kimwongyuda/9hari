@@ -73,6 +73,8 @@ class Upload_Board extends Component{
             .then(returnData => {
             if (returnData.data.message) {
 
+                console.log(returnData.data)
+                
                 const send_param = {
                 headers,
                 pid: returnData.data.pid,
@@ -213,10 +215,15 @@ class Upload_Board extends Component{
                                         multiple
                                     >
                                     </Form.Control>
+                                    <Form.Text style={{marginBottom: '20px'}} className="text-muted">
+                                        기능상의 문제로 한글파일은 작동하지 않습니다.
+                                        나머지 파일은 모두 작동합니다.
+                                    </Form.Text>
                                     
                                     <Form.Text style={{marginBottom: '20px'}} className="text-muted">
                                         {view_files}
                                     </Form.Text>
+
                                     
 
                                     <Button

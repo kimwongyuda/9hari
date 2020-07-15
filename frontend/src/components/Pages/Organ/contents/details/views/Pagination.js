@@ -242,7 +242,7 @@ class Pagination extends Component{
                     
                     if(flag)
                     {
-                    var sermon_num = parseInt(window.location.pathname.split('/')[4]);
+                    var sermon_num = parseInt(window.location.pathname.split('/')[5]);
 
                     if(this.state.posts[posts_size-sermon_num]!=undefined)
                     {

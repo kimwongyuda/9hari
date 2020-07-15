@@ -12,11 +12,10 @@ class Pagination extends Component{
     constructor(props){
         super(props);
 
-        console.log(props);
         if(window.location.pathname.split('/').length == 6)
-        {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0};}
+        {this.state={isshow: true, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0, res: []};}
         else
-        {this.state={isshow: false, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0};}
+        {this.state={isshow: false, posts: [], type: this.props.props.type, option_input: 'title',search_input: '', pageindex: this.props.props.pageindex, writer_id: 0, res: []};}
 
         this.change_false = this.change_false.bind(this);
         this.change_true = this.change_true.bind(this);
@@ -25,6 +24,7 @@ class Pagination extends Component{
         this.search = this.search.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeS = this.handleChangeS.bind(this);
+        this.attachments = this.attachments.bind(this);
     }
 
     componentDidMount(){
@@ -36,7 +36,6 @@ class Pagination extends Component{
     callApi = async () => {
         const response = await fetch(`/api/posts_b/${this.state.type}`);
         const body = await response.json();
-        console.log(body)
         return body;
     }
 
@@ -98,6 +97,19 @@ class Pagination extends Component{
           });
     }
 
+    attachments(pid){
+
+        axios.get(`/api/attachments/${pid}`)
+        .then(returnData=>{
+            this.setState({res: returnData.data.json});
+            console.log(this.state);
+
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
+
     render(){
 
         var posts = this.state.posts;
@@ -118,10 +130,6 @@ class Pagination extends Component{
         var pageint = parseInt(page);
         var writer_id = this.state.writer_id;
 
-        console.log('writer_id: ', writer_id);
-
-        console.log(posts);
-
         // console.log(posts_mod);
         if(posts.length!=0)
         {
@@ -140,7 +148,6 @@ class Pagination extends Component{
             }
         }
         }
-        console.log(posts_list)
 
         //
         var maxpage = parseInt(posts_size/(inputcount)) + 1;
@@ -192,7 +199,6 @@ class Pagination extends Component{
         </div>
         ));
 
-        console.log(posts_list);
         const posts_show = posts_list.map((item, index) => (
             <div style={{width: '100%', float: 'left'}}>
             {index+1!=posts_list.length ?
@@ -241,16 +247,18 @@ class Pagination extends Component{
                     
                     if(flag)
                     {
-                    var sermon_num = parseInt(window.location.pathname.split('/')[4]);
+                    var sermon_num = parseInt(window.location.pathname.split('/')[5]);
 
                     if(this.state.posts[posts_size-sermon_num]!=undefined)
                     {
+
                         return <div>
                             <Attachments props={{data: this.state.posts[posts_size-sermon_num]}}></Attachments>
                             <div style={{width: '100%', float: 'left'}}>
                             <Link to={`/ng/${cur_page_index}/2/${pageint}`} onClick={this.change_false} className={style.tablelink}><span className={style.smallbox3} style={{borderLeft: '0.1px solid #DCDCDC', borderRight: '0.1px solid #DCDCDC'}}>목록으로</span></Link>
                             </div>
                             </div>
+                        
                     }
                     else
                     {

@@ -12,13 +12,24 @@ class Attachments extends Component{
 
     constructor(props){
         super(props);
+        console.log(props);
         this.state= {data: this.props.props.data, res: []};
         this.download_ = this.download_.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
         if(prevProps.props.data !== this.props.props.data) {
           this.setState({data: this.props.props.data});
+          console.log(this.state.a);
+
+        }
+        
+
+        if(this.state.res.length == 0 || this.state.data.pid != this.state.res[0].posts_id)
+        {
+            this.callApi()
+            .then(res => this.setState({res: res.json}))
+            .catch(err => console.log(err));
         }
     }
 
@@ -29,6 +40,7 @@ class Attachments extends Component{
     }
 
     callApi = async () => {
+        console.log(this.state.data.pid);
         const response = await fetch(`/api/attachments/${this.state.data.pid}`);
         const body = await response.json();
         
@@ -36,21 +48,17 @@ class Attachments extends Component{
     }
 
     download_(path){
-        const send_param = {
-            headers,
-            path: path
+        setTimeout(() => {
+            const response = {
+              file: `http://localhost:5000/${path.replace('uploads/', '')}`,
             };
+            // server sent the url to the file!
+            // now, let's download:
+            window.open(response.file, 'Download');
+            // you could also do:
+            //window.location.assign(response.file);
+          }, 100);
 
-        axios
-        .post('/api/download',send_param)
-        //정상 수행
-        .then(resp => {
-            download(resp.data, path.replace('uploads/',''));
-        })
-        //에러
-        .catch(err => {
-        console.log(err);
-        });
     }
 
     render(){
@@ -58,7 +66,7 @@ class Attachments extends Component{
         this.state.data.title = this.state.data.title.replace(/(\r\n|\n|\r)/gm, "\n");
         this.state.data.content = this.state.data.content.replace(/(\r\n|\n|\r)/gm, "\n");
         
-        console.log(this.state)
+
         return(
             <div key={this.state.data} style={{width: '100%', float: 'left'}}>
 
@@ -77,17 +85,33 @@ class Attachments extends Component{
                     })}  
                     </span>
 
-
-                    <span className={style.smallbox3+' '+ style.textb} style={{marginTop: '100px', width:'100%', textAlign: 'center', paddingRight: '10px', borderTop: '0.1px solid #005bab', borderBottom: '0.1px solid #005bab', borderLeft: '0.1px solid #005bab', borderRight: '0.1px solid #005bab'}}>파일 다운로드</span>
                     {
-                        this.state.res.map((item)=>(
+                        this.state.res.map((item)=>{
                             
+                            return item.path.includes('.png') || item.path.includes('.jpg') || item.path.includes('.jpeg') ?
+                            <img src={`http://localhost:5000/${item.path.replace('uploads/', '')}`} style={{marginTop: '10px',width: '60%', float: 'left', objectFit: 'cover'}}></img>
+                            : <div></div>
+                        })
+                    }
+
+                    
+
+                    <span className={style.smallbox3+' '+ style.textb} style={{marginTop: '10px', width:'100%', textAlign: 'left', paddingLeft: '10px', paddingRight: '10px', borderTop: '0.1px solid #005bab', borderBottom: '0.1px solid #005bab', borderLeft: '0.1px solid #005bab', borderRight: '0.1px solid #005bab'}}>
+                        파일 다운로드<br></br><strong style={{fontSize: '12px'}}>이미지와 pdf는 새로운 창이 열린 뒤 수작업으로 저장해야 합니다.</strong></span>
+                    {
+                        this.state.res.map((item)=>{
+                            
+                            return item.path.replace('uploads/', '') != 'temp.pdf' ?
                             <Link className={style.smallbox3+' '+ style.textb}
-                            style={{width:'100%', textAlign: 'center', borderBottom: '0.1px solid #005bab', borderLeft: '0.1px solid #005bab', borderRight: '0.1px solid #005bab', paddingTop: '10px', paddingBottom: '10px'}}
+                            // herf={`http://localhost:5000/${item.path.replace('uploads/', '')}`}
+                            style={{width:'100%', textAlign: 'left', paddingLeft: '10px', borderBottom: '0.1px solid #005bab', borderLeft: '0.1px solid #005bab', borderRight: '0.1px solid #005bab', paddingTop: '10px', paddingBottom: '10px'}}
                             onClick={() => this.download_(item.path)}
+                            // target="_blank"
+                            // download={`${item.path.replace('uploads/', '')}`}
                             >
-                            {item.path.replace('uploads/', '')}</Link>   
-                        ))
+                            {item.path.replace('uploads/', '')}</Link>
+                            : <div></div>
+                        })
                     }
 
                     
