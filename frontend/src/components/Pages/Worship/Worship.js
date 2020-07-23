@@ -11,8 +11,20 @@ class Worship extends Component{
 
     constructor(props){
         super(props);
+        this.state = {auth: ''}
     }
 
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({auth: res.authority}))
+        .catch(err => console.log(err));
+    }
+
+    callApi = async () => {
+        const response = await fetch(`/api/auth`);
+        const body = await response.json();
+        return body;
+    }
     render(){
         let page;
         if(this.props.match.params.page == "1"){
@@ -30,6 +42,8 @@ class Worship extends Component{
         
         const elements = ['주일 예배', '수요 예배', '금요 예배', '특별 예배'];
 
+        const cookiename = document.cookie.substr(5);
+        const auth = this.state.auth;
 
         return(
             <div>
@@ -76,6 +90,15 @@ class Worship extends Component{
                                 </div>
                             );
                             })}
+                            {
+                                (()=>{
+                                    if(auth == "admin" || auth == "교역자" || auth == "수정가능")
+                                    {
+                                        return <Link to ={`/upload_sermon/1`} className={style.link2}><span className={style.smallbox}>
+                                                설교 올리기</span></Link>
+                                    }
+                                })()
+                            }
                         </div>
 
                         <div style={{width: '80%', float: 'left'}}>

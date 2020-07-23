@@ -39,7 +39,7 @@ class Group3 extends Component{
                             <div>
                                 {page == String(index+1) ? 
                                 <Link to ={`/Group/3/${index+1}`} className={style.link}><span className={style.smallbox} style={{backgroundColor: '#005bab'}}>{value}</span></Link>
-                            : <Link to ={`/Group/3/${index+1}`} className={style.link}><span className={style.smallbox}>{value}</span></Link>
+                            : <Link to ={`/Group/3/${index+1}/1`} className={style.link}><span className={style.smallbox}>{value}</span></Link>
                             }
                             </div>
                         );

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import style from './Suggest1.module.css';
+import Pagination from './views/Pagination';
 
 class Suggest1 extends Component{
 
@@ -18,9 +19,9 @@ class Suggest1 extends Component{
                    <p className={style.textb2} style={{fontSize: '17px', float: 'right'}}> 메인 > 게시판 >&nbsp;</p>
                </div>
 
+               <Pagination props={{type: '자유 게시판', pageindex: 1}}></Pagination>
                <div style={{width: '100%', float: 'left', marginTop: '10px'}}>
 
-                   <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
                    <br></br>
                    <br></br>
                    <br></br>

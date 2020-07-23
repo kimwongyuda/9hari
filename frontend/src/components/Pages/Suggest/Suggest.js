@@ -9,6 +9,19 @@ class Suggest extends Component{
 
     constructor(props){
         super(props);
+        this.state = {auth: ''}
+    }
+
+    componentDidMount(){
+        this.callApi()
+        .then(res => this.setState({auth: res.authority}))
+        .catch(err => console.log(err));
+    }
+
+    callApi = async () => {
+        const response = await fetch(`/api/auth`);
+        const body = await response.json();
+        return body;
     }
 
     render(){
@@ -22,6 +35,8 @@ class Suggest extends Component{
 
         const elements = ['자유 게시판', '구하리 갤러리'];
 
+
+        const auth = this.state.auth;
         return(
             <div>
                 
@@ -49,7 +64,7 @@ class Suggest extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/suggest/${index+1}`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
+                                                return <Link to ={`/suggest/${index+1}/1`} className={style.link2}><span className={style.smallbox} style={{backgroundColor: '#666666', color: 'white'}}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -62,7 +77,7 @@ class Suggest extends Component{
                                             }
                                             else
                                             {
-                                                return <Link to ={`/suggest/${index+1}`} className={style.link2}><span className={style.smallbox}>
+                                                return <Link to ={`/suggest/${index+1}/1`} className={style.link2}><span className={style.smallbox}>
                                                 {value}</span></Link>
                                             }
                                         }
@@ -70,6 +85,16 @@ class Suggest extends Component{
                                 </div>
                             );
                         })}
+                                                    {
+                                (()=>{
+                                    if(auth == "admin" || auth == "교역자" || auth == "수정가능" || auth == "일반")
+                                    {
+                                        return <Link to ={`/upload_Board/1`} className={style.link2}><span className={style.smallbox}>
+                                                게시물 올리기</span></Link>
+                                    }
+                                })()
+                            }
+
                     </div>
 
                 <div style={{width: '80%', float: 'left'}}>

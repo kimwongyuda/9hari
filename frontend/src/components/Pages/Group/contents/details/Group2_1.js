@@ -6,6 +6,7 @@ import Group_2_2 from '../../../../../images/Group_2_2.JPG'
 import Group_2_3 from '../../../../../images/Group_2_3.JPG'
 import Group_2_4 from '../../../../../images/Group_2_4.jpeg'
 import blank from '../../../../../images/blank.png'
+import Pagination from './views/Pagination';
 
 class Group2_1 extends Component{
 
@@ -234,7 +235,7 @@ class Group2_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '여전도회', pageindex: 2}}></Pagination>
             </div>
         }
 

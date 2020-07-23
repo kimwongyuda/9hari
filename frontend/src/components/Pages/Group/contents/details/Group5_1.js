@@ -3,6 +3,7 @@ import style from './Group5_1.module.css';
 import Group_5_1 from '../../../../../images/Group_5_1.jpg'
 import Group_5_4 from '../../../../../images/Group_5_4.jpg'
 import blank from '../../../../../images/blank.png'
+import Pagination from './views/Pagination';
 
 class Group5_1 extends Component{
 
@@ -144,7 +145,7 @@ class Group5_1 extends Component{
         else if(page == '2'){
             content = 
             <div>
-                <span className={style.textb2} style={{fontSize: '20px'}}>준비중입니다</span>
+                <Pagination props={{type: '찬양대', pageindex: 5}}></Pagination>
             </div>
         }
 
