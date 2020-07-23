@@ -19,7 +19,7 @@ class Bottom extends Component{
                             <span className={style.textb2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>번호</span>
                             <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>070-4238-0191</span>
                             <span className={style.textb2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>FAX</span>
-                            <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>070-4238-0191</span>
+                            <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>031-287-5007</span>
                             <span className={style.textb2} style={{color: 'white', fontSize: '20px', marginRight: '5px'}}>EMAIL</span>
                             <span className={style.textb} style={{color: 'white', fontSize: '20px', marginRight: '20px'}}>jesus316@hanmail.net</span>
                         </div>
