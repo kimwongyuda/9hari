@@ -58,10 +58,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('uploads'));
 
-app.post('/api/download', (req,res)=>{
-    var file = req.body.path;
+app.get('/api/download/:path', (req,res)=>{
 
-    var File = file.replace('uploads/','');
+    console.log('sssssssssssssssss');
+    var file = req.params.path;
+
+    console.log(file)
+
+    var File = __dirname+'/uploads/'+file;
     // // let rs = fs.createReadStream(file); 
 
     // // console
@@ -70,19 +74,13 @@ app.post('/api/download', (req,res)=>{
 
     // // res.set( 'Content-Type', 'application/blob' );
     // res.attachment(file);
-    res.download(file, File,(err) => {
-                  if (err) console.log(err);
-    });
-
-    // var filename = path.basename(file);
-    // var mimetype = mime.lookup(file);
-  
-    // res.setHeader('Content-disposition', 'attachment; filename=' + filename);
-    // res.setHeader('Content-type', mimetype);
-  
-    // var filestream = fs.createReadStream(file);
-    // filestream.pipe(res);
-
+    res.download(File, file,(err) => {
+                  if (err) 
+                  {console.log(err)
+                  }
+                  else{
+                      res.end();
+                  };});
 })
 
 app.get('/api/attachments/:pid', (req,res)=>{
