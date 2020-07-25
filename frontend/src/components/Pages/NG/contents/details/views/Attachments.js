@@ -59,7 +59,7 @@ class Attachments extends Component{
         //     //window.location.assign(response.file);
         //   }, 100);
 
-        window.location = `http://localhost:5000/api/download/${path.replace('uploads/','')}`;
+        window.location = `http://guhari.org:5000/api/download/${path.replace('uploads/','')}`;
 
     }
 
@@ -91,7 +91,7 @@ class Attachments extends Component{
                         this.state.res.map((item)=>{
                             
                             return item.path.includes('.png') || item.path.includes('.jpg') || item.path.includes('.jpeg') ?
-                            <img src={`http://localhost:5000/${item.path.replace('uploads/', '')}`} style={{marginTop: '10px',width: '60%', float: 'left', objectFit: 'cover'}}></img>
+                            <img src={`http://guhari.org:5000/${item.path.replace('uploads/', '')}`} style={{marginTop: '10px',width: '60%', float: 'left', objectFit: 'cover'}}></img>
                             : <div></div>
                         })
                     }

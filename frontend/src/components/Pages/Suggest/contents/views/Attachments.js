@@ -48,17 +48,7 @@ class Attachments extends Component{
     }
 
     download_(path){
-        setTimeout(() => {
-            const response = {
-              file: `http://localhost:5000/${path.replace('uploads/', '')}`,
-            };
-            // server sent the url to the file!
-            // now, let's download:
-            window.open(response.file, 'Download');
-            // you could also do:
-            //window.location.assign(response.file);
-          }, 100);
-
+        window.location = `http://guhari.org:5000/api/download/${path.replace('uploads/','')}`;
     }
 
     render(){
@@ -89,7 +79,7 @@ class Attachments extends Component{
                         this.state.res.map((item)=>{
                             
                             return item.path.includes('.png') || item.path.includes('.jpg') || item.path.includes('.jpeg') ?
-                            <img src={`http://localhost:5000/${item.path.replace('uploads/', '')}`} style={{marginTop: '10px',width: '60%', float: 'left', objectFit: 'cover'}}></img>
+                            <img src={`http://guhari.org:5000/${item.path.replace('uploads/', '')}`} style={{marginTop: '10px',width: '60%', float: 'left', objectFit: 'cover'}}></img>
                             : <div></div>
                         })
                     }
