@@ -112,7 +112,7 @@ class Group5_1 extends Component{
                         <tbody>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>리드 싱어</td>
-                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박찬백 목사</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>박재현 목사</td>
                                 </tr>
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>드럼</td>
@@ -133,6 +133,14 @@ class Group5_1 extends Component{
                                 <tr> 
                                     <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
                                     <td className={style.td+' '+style.textb} style={{width: '75%'}}>김민수 청년</td>
+                                </tr>
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>김양애 전도사</td>
+                                </tr>
+                                <tr> 
+                                    <td className={style.td+' '+style.textb2} rowSpan='1'>싱어</td>
+                                    <td className={style.td+' '+style.textb} style={{width: '75%'}}>정윤지 학생</td>
                                 </tr>
                         </tbody>
                 </table>

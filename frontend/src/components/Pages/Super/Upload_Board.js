@@ -189,7 +189,7 @@ class Upload_Board extends Component{
                                     <Form.Label><strong style={{color: '#005bab'}}>글 제목</strong></Form.Label>
                                     <Form.Control
                                         type="text"
-                                        maxLength="500"
+                                        maxLength="25"
                                         ref={ref => (this.title = ref)}
                                         placeholder="글 제목을 입력해주세요."
                                     />
