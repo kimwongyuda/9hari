@@ -48,16 +48,18 @@ class Attachments extends Component{
     }
 
     download_(path){
-        setTimeout(() => {
-            const response = {
-              file: `http://localhost:5000/${path.replace('uploads/', '')}`,
-            };
-            // server sent the url to the file!
-            // now, let's download:
-            window.open(response.file, 'Download');
-            // you could also do:
-            //window.location.assign(response.file);
-          }, 100);
+        // setTimeout(() => {
+        //     const response = {
+        //       file: `http://localhost:5000/${path.replace('uploads/', '')}`,
+        //     };
+        //     // server sent the url to the file!
+        //     // now, let's download:
+        //     window.open(response.file, 'Download');
+        //     // you could also do:
+        //     //window.location.assign(response.file);
+        //   }, 100);
+
+        window.location = `http://localhost:5000/api/download/${path.replace('uploads/','')}`;
 
     }
 
